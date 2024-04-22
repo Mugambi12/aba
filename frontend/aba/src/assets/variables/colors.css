@@ -1,0 +1,26 @@
+/* Colors components. */
+
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --light: #f4f4f4;
+    --dark: #333333;
+    --primary: #3f51b5;
+    --secondary: #f50057;
+    --danger: #f44336;
+    --success: #4caf50;
+    --warning: #ff9800;
+    --info: #2196f3;
+    --lightPrimary: #c5cae9;
+    --lightSecondary: #ff4081;
+    --lightDanger: #ef9a9a;
+    --lightSuccess: #a5d6a7;
+    --lightWarning: #ffe082;
+    --lightInfo: #90caf9;
+    --darkPrimary: #303f9f;
+    --darkSecondary: #c51162;
+    --darkDanger: #b71c1c;
+    --darkSuccess: #388e3c;
+    --darkWarning: #f57c00;
+    --darkInfo: #1976d2;
+  }
