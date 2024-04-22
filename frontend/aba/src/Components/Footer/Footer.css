@@ -1,0 +1,42 @@
+/* Import the colors from the variables */
+@import url("../../assets/variables/colors.css");
+
+/* Footer container */
+.footer {
+  background: var(--black);
+  color: var(--white);
+  padding: 20px;
+}
+
+/* Footer sections */
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+/* Footer section headings */
+.footer-section h3 {
+  margin-bottom: 10px;
+  color: var(--primary);
+}
+
+/* Footer lists */
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Footer list items */
+.footer-section ul li {
+  margin: 5px 0;
+}
+
+/* Footer bottom */
+.footer-bottom {
+  margin-top: 20px;
+  border-top: 1px solid var(--light);
+  padding-top: 10px;
+  text-align: center;
+}
