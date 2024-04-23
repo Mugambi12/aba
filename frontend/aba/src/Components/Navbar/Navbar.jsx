@@ -11,9 +11,17 @@ const Navbar = () => {
   };
   return (
     <nav className="container navbar">
-      {/* Logo */}
-      <div className="logo">
-        <img src={logo} alt="Biodiversity Alliance Logo" />
+      {/* Navbar header */}
+      <div className="nav-header">
+        {/* Logo */}
+        <div className="logo">
+          <img src={logo} alt="Biodiversity Alliance Logo" />
+        </div>
+
+        {/* Hamburger menu */}
+        <div className="menu-toggle" onClick={toggleMenu}>
+          <MdOutlineDensityMedium />
+        </div>
       </div>
 
       {/* Navbar links */}
@@ -218,11 +226,6 @@ const Navbar = () => {
           </a>
         </li>
       </ul>
-
-      {/* Hamburger menu */}
-      <div className="menu-toggle" onClick={toggleMenu}>
-        <MdOutlineDensityMedium />
-      </div>
     </nav>
   );
 };

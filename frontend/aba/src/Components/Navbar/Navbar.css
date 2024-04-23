@@ -127,39 +127,74 @@
 .menu-toggle {
   display: none;
   margin-right: 10px;
-  background: none;
-  border: none;
   font-size: 24px;
   cursor: pointer;
 }
 
 @media (max-width: 768px) {
-  /* Display the menu toggle button on smaller screens */
+  .navbar {
+    flex-direction: column;
+    height: 100vh;
+    padding: 0 10px;
+    overflow-y: auto;
+  }
+  .nav-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+
   .menu-toggle {
     display: block;
+    margin-left: auto;
   }
 
-  /* Adjust the height of the navbar for the logo and menu toggle */
-  .navbar {
-    height: auto;
-    flex-direction: column;
-  }
-
-  /* Adjust logo alignment */
-  .logo {
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  /* Display navigation links as a column */
   .nav-links {
+    display: none;
     flex-direction: column;
     width: 100%;
-    background-color: var(--light);
+    padding: 10px 0;
     position: absolute;
     top: 60px;
     left: 0;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-item {
+    padding: 10px 20px;
+    width: 100%;
+    text-align: left;
+  }
+
+  .dropdown-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
     padding: 10px;
-    z-index: 10;
+  }
+
+  .partners-dropdown {
+    display: block;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+    width: 80vw;
+    transform: translateX(0%);
+  }
+
+  .region {
+    width: 100%;
+    padding: 10px 20px;
   }
 }
