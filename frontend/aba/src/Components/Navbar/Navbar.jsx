@@ -44,7 +44,7 @@ const Navbar = () => {
           </a>
           <ul className="dropdown-menu basic-dropdown">
             <li>
-              <a href="#" className="nav-link">
+              <a href="#">
                 <span className="list-icon">
                   <MdNavigateNext />
                 </span>{" "}
@@ -52,7 +52,7 @@ const Navbar = () => {
               </a>
             </li>
             <li>
-              <a href="#" className="nav-link">
+              <a href="#">
                 <span className="list-icon">
                   <MdNavigateNext />
                 </span>{" "}
@@ -60,7 +60,7 @@ const Navbar = () => {
               </a>
             </li>
             <li>
-              <a href="#" className="nav-link">
+              <a href="#">
                 <span className="list-icon">
                   <MdNavigateNext />
                 </span>{" "}
@@ -68,7 +68,7 @@ const Navbar = () => {
               </a>
             </li>
             <li>
-              <a href="#" className="nav-link">
+              <a href="#">
                 <span className="list-icon">
                   <MdNavigateNext />
                 </span>{" "}
@@ -76,7 +76,7 @@ const Navbar = () => {
               </a>
             </li>
             <li>
-              <a href="#" className="nav-link">
+              <a href="#">
                 <span className="list-icon">
                   <MdNavigateNext />
                 </span>{" "}
@@ -417,12 +417,10 @@ const Navbar = () => {
         </li>
       </ul>
 
-      {/* Login button */}
+      {/* Join us button */}
       <ul className="nav-links">
         <li className="nav-item">
-          <a href="#" className="login">
-            Login
-          </a>
+          <button className="join-us">Be One of Us</button>
         </li>
       </ul>
     </nav>
