@@ -1,12 +1,10 @@
-/* Import colors */
 @import url("../../assets/variables/colors.css");
 
-/* Navbar styling */
 .navbar {
   width: 100%;
   height: 60px;
-  background-color: var(--dark);
-  color: var(--white);
+  background-color: var(--light);
+  color: var(--black);
   padding: 0 20px;
   position: fixed;
   top: 0;
@@ -14,17 +12,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px -8px rgba(0, 0, 0, 0.1);
   z-index: 10;
 }
-
-/* Logo */
 .logo img {
   height: 50px;
   width: auto;
 }
-
-/* Navbar links */
 .nav-links {
   list-style: none;
   display: flex;
@@ -32,111 +26,140 @@
   margin: 0;
   padding: 0;
 }
-
-/* Navbar list item */
 .nav-item {
-  margin: 0 15px;
+  margin: 0 8px;
   position: relative;
 }
-
-/* Navbar link */
 .nav-link {
-  color: var(--white);
+  color: var(--dark);
   font-size: 16px;
   font-weight: 500;
-  padding: 8px 10px;
+  padding: 4px 8px;
   cursor: pointer;
 }
-
-/* Hover effect for navbar link */
 .nav-link:hover {
   color: var(--primary);
   text-decoration: none;
 }
+.login {
+  color: var(--info);
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
 
-/* Dropdown menu */
 .dropdown-menu {
   position: absolute;
   top: 200%;
   left: 0;
   transform: translateX(-50%);
-  background-color: var(--white);
+  background-color: var(--light);
   color: var(--black);
   border-radius: 4px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px -12px rgba(0, 0, 0, 0.2);
   list-style: none;
   padding: 10px;
   margin: 0;
-  min-width: 200px;
+  min-width: 220px;
   max-width: auto;
   width: auto;
   z-index: 10;
   opacity: 0;
   visibility: hidden;
-  border-top: 2px solid var(--danger);
-  transition: opacity 0.2s ease-in-out, visibility 0s 0.2s ease-in-out; /* Transition for showing */
-
-  /* Add transition for hiding */
+  border-top: 2px solid var(--success);
+  transition: opacity 0.2s ease-in-out, visibility 0s 0.2s ease-in-out;
   &.hide {
     transition: opacity 2s ease-in, visibility 0s 2s ease-in;
   }
 }
-
-/* Show dropdown on hover */
 .nav-item:hover .dropdown-menu {
   opacity: 1;
   visibility: visible;
 }
-
-/* Dropdown menu list item */
 .dropdown-menu li {
   padding: 8px 15px;
   cursor: pointer;
+  font-size: 15px;
 }
-
-/* Dropdown menu list item hover effect */
 .dropdown-menu li:hover {
-  background-color: var(--white);
   color: var(--primary);
+  border-radius: 4px;
 }
 
-/* Partners Dropdown */
 .partners-dropdown {
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 20px;
   padding: 10px;
+  width: 80vw;
+  position: absolute;
+  left: 0;
+  transform: translateX(-52%);
 }
-
-/* Region styles */
 .region {
   display: flex;
   flex-direction: column;
+  width: 20%;
+  padding: 10px;
 }
-
 .region h1 {
   margin-bottom: 10px;
   font-size: 1.2em;
-  color: var(--dark);
+  color: var(--darkPrimary);
 }
-
-/* Columns for partner lists */
 .column {
   display: flex;
   flex-direction: column;
-  padding: 10px;
 }
-
 .column li {
   margin-bottom: 5px;
 }
-
 .column li a {
   color: var(--dark);
+  font-size: 15px;
   text-decoration: none;
 }
-
 .column li a:hover {
   color: var(--primary);
+}
+
+.menu-toggle {
+  display: none;
+  margin-right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  /* Display the menu toggle button on smaller screens */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Adjust the height of the navbar for the logo and menu toggle */
+  .navbar {
+    height: auto;
+    flex-direction: column;
+  }
+
+  /* Adjust logo alignment */
+  .logo {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  /* Display navigation links as a column */
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--light);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 10px;
+    z-index: 10;
+  }
 }
