@@ -27,13 +27,6 @@
   --success-rgb: 40, 167, 69;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Outfit", sans-serif;
-}
-
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -45,9 +38,16 @@
   background-color: var(--light);
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
 body {
   background-color: var(--white);
   overflow-y: scroll;
+  transition: all 0.3s ease;
 }
 a {
   text-decoration: none;
