@@ -1,430 +1,220 @@
-import React, { useState } from "react";
-import { MdOutlineMenu, MdOutlineClose, MdNavigateNext } from "react-icons/md";
-import "./Navbar.css";
+import React from "react";
+import {
+  Button,
+  Col,
+  Container,
+  Form,
+  Nav,
+  Navbar,
+  NavDropdown,
+  Row,
+} from "react-bootstrap";
+//import "./Navbar.css";
 import logo from "../../assets/images/logo.svg";
+import styles from "../../assets/variables/styles";
 
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+function AppNav() {
   return (
-    <nav className="container navbar">
-      {/* Navbar header */}
-      <div className="nav-header">
-        {/* Logo */}
-        <div className="logo">
-          <img src={logo} alt="African Biodiversity Alliance Logo" />
-        </div>
+    <Navbar expand="lg" bg="light" variant="light" sticky="top">
+      <Container fluid>
+        <Navbar.Brand href="#">
+          <img src={logo} alt="Logo" className="navbar-logo" />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="navbarScroll" />
+        <Navbar.Collapse id="navbarScroll">
+          <Nav className="me-auto my-2 my-lg-0" navbarScroll>
+            <Nav.Link href="#">Home</Nav.Link>
 
-        {/* Hamburger menu */}
-        <div className="menu-toggle" onClick={toggleMenu}>
-          <ul className={`nav-links ${isOpen ? "open" : ""}`}></ul>
-          {isOpen ? (
-            <MdOutlineClose className="menu-icon" />
-          ) : (
-            <MdOutlineMenu className="menu-icon" />
-          )}
-        </div>
-      </div>
+            <NavDropdown title="About Us" id="aboutUsDropdown">
+              <NavDropdown.Item href="#" style={styles.padding.half}>
+                Our Story
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#" style={styles.padding.half}>
+                Vision & Mission
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#" style={styles.padding.half}>
+                Our History
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#" style={styles.padding.half}>
+                Team
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#" style={styles.padding.half}>
+                Testimonials
+              </NavDropdown.Item>
+            </NavDropdown>
 
-      {/* Navbar links */}
-      <ul className={`nav-links ${isOpen ? "open" : ""}`}>
-        <li className="nav-item">
-          <a href="#" className="nav-link">
-            Home
-          </a>
-        </li>
+            <NavDropdown
+              className="dropdown"
+              title="Programs"
+              id="programsDropdown"
+            >
+              <NavDropdown.Item href="#" style={styles.padding.half}>
+                Conservation Initiatives
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#" style={styles.padding.half}>
+                Research Projects
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#" style={styles.padding.half}>
+                Community Engagement
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#" style={styles.padding.half}>
+                Education and Outreach
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#" style={styles.padding.half}>
+                Future Programs
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#" style={styles.padding.half}>
+                Completed Programs
+              </NavDropdown.Item>
+            </NavDropdown>
 
-        {/* About Us Dropdown */}
-        <li className="nav-item dropdown">
-          <a href="#" className="nav-link">
-            About Us
-          </a>
-          <ul className="dropdown-menu basic-dropdown">
-            <li>
-              <a href="#">
-                <span className="list-icon">
-                  <MdNavigateNext />
-                </span>{" "}
-                <span className="list-name">Our Story</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span className="list-icon">
-                  <MdNavigateNext />
-                </span>{" "}
-                <span className="list-name">Vision & Mission</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span className="list-icon">
-                  <MdNavigateNext />
-                </span>{" "}
-                <span className="list-name">Our History</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span className="list-icon">
-                  <MdNavigateNext />
-                </span>{" "}
-                <span className="list-name">Team</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span className="list-icon">
-                  <MdNavigateNext />
-                </span>{" "}
-                <span className="list-name">Testimonials</span>
-              </a>
-            </li>
-          </ul>
-        </li>
+            <Nav.Link href="#">Thematic Areas</Nav.Link>
 
-        {/* Programs Dropdown */}
-        <li className="nav-item dropdown">
-          <a href="#" className="nav-link">
-            Programs
-          </a>
-          <ul className="dropdown-menu basic-dropdown">
-            <li>
-              <a href="#">
-                <span className="list-icon">
-                  <MdNavigateNext />
-                </span>{" "}
-                <span className="list-name">Conservation Initiatives</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span className="list-icon">
-                  <MdNavigateNext />
-                </span>{" "}
-                <span className="list-name">Research Projects</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span className="list-icon">
-                  <MdNavigateNext />
-                </span>{" "}
-                <span className="list-name">Community Engagement</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span className="list-icon">
-                  <MdNavigateNext />
-                </span>{" "}
-                <span className="list-name">Education and Outreach</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span className="list-icon">
-                  <MdNavigateNext />
-                </span>{" "}
-                <span className="list-name">Future Programs</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span className="list-icon">
-                  <MdNavigateNext />
-                </span>{" "}
-                <span className="list-name">Completed Programs</span>
-              </a>
-            </li>
-          </ul>
-        </li>
-
-        <li className="nav-item">
-          <a href="#" className="nav-link">
-            Thematic Areas
-          </a>
-        </li>
-
-        {/* Partners Dropdown */}
-        <li className="nav-item dropdown">
-          <a href="#" className="nav-link">
-            Our Partners
-          </a>
-          <div className="dropdown-menu custom-dropdown">
-            <div className="region">
-              <h1>Central Africa</h1>
-              <ul className="column">
-                <li>
-                  <a href="#">
-                    <span className="list-icon">
-                      <MdNavigateNext />
-                    </span>
-                    <span className="list-name">
+            <NavDropdown
+              className="dropdown"
+              title="Our Partners"
+              id="ourPartnersDropdown"
+              style={styles.width.full}
+            >
+              <Container
+                fluid
+                style={(styles.width.full, styles.width.twoThirds)}
+              >
+                <Row style={styles.flex.row}>
+                  <Col>
+                    <h6>Central Africa</h6>
+                    <NavDropdown.Item href="#" style={styles.padding.half}>
                       Rainforest Preservation Network
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <span className="list-icon">
-                      <MdNavigateNext />
-                    </span>
-                    <span className="list-name">Wildlife Rescue Alliance</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <span className="list-icon">
-                      <MdNavigateNext />
-                    </span>
-                    <span className="list-name">
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#" style={styles.padding.half}>
+                      Wildlife Rescue Alliance
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#" style={styles.padding.half}>
                       Central African Biodiversity Institute
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <span className="list-icon">
-                      <MdNavigateNext />
-                    </span>
-                    <span className="list-name">
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#" style={styles.padding.half}>
                       Community Conservation Coalition
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <span className="list-icon">
-                      <MdNavigateNext />
-                    </span>
-                    <span className="list-name">
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#" style={styles.padding.half}>
                       River Basin Protection Society
-                    </span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="region">
-              <h1>Eastern Africa</h1>
-              <ul className="column">
-                <li>
-                  <a href="#">
-                    <span className="list-icon">
-                      <MdNavigateNext />
-                    </span>
-                    <span className="list-name">Eastern Savannah Trust</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <span className="list-icon">
-                      <MdNavigateNext />
-                    </span>
-                    <span className="list-name">
+                    </NavDropdown.Item>
+                  </Col>
+
+                  {/* Eastern Africa column */}
+                  <Col>
+                    <h6>Eastern Africa</h6>
+                    <NavDropdown.Item href="#" style={styles.padding.half}>
+                      Eastern Savannah Trust
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#" style={styles.padding.half}>
                       Marine Conservation Foundation
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <span className="list-icon">
-                      <MdNavigateNext />
-                    </span>
-                    <span className="list-name">Forest Guardians</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <span className="list-icon">
-                      <MdNavigateNext />
-                    </span>
-                    <span className="list-name">
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#" style={styles.padding.half}>
+                      Forest Guardians
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#" style={styles.padding.half}>
                       Sustainable Agriculture Association
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <span className="list-icon">
-                      <MdNavigateNext />
-                    </span>
-                    <span className="list-name">
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#" style={styles.padding.half}>
                       Highland Ecosystem Network
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <span className="list-icon">
-                      <MdNavigateNext />
-                    </span>
-                    <span className="list-name">
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#" style={styles.padding.half}>
                       Wildlife Research Institute
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <span className="list-icon">
-                      <MdNavigateNext />
-                    </span>
-                    <span className="list-name">
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#" style={styles.padding.half}>
                       Eastern Africa Conservation Council
-                    </span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="region">
-              <h1>Southern Africa</h1>
-              <ul className="column">
-                <li>
-                  <a href="#">
-                    <span className="list-icon">
-                      <MdNavigateNext />
-                    </span>
-                    <span className="list-name">
+                    </NavDropdown.Item>
+                  </Col>
+
+                  {/* Southern Africa column */}
+                  <Col>
+                    <h6>Southern Africa</h6>
+                    <NavDropdown.Item href="#" style={styles.padding.half}>
                       Southern Plains Wildlife Society
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <span className="list-icon">
-                      <MdNavigateNext />
-                    </span>
-                    <span className="list-name">
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#" style={styles.padding.half}>
                       Wildlife Tracking Organization
-                    </span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="region">
-              <h1>Western Africa</h1>
-              <ul class="column">
-                <li>
-                  <a href="#">
-                    <span className="list-icon">
-                      <MdNavigateNext />
-                    </span>
-                    <span class="list-name">
+                    </NavDropdown.Item>
+                  </Col>
+
+                  {/* Western Africa column */}
+                  <Col>
+                    <h6>Western Africa</h6>
+                    <NavDropdown.Item href="#" style={styles.padding.half}>
                       West African Nature Conservancy
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <span class="list-icon">
-                      <MdNavigateNext />
-                    </span>
-                    <span class="list-name">
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#" style={styles.padding.half}>
                       Coastal Preservation Initiative
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <span class="list-icon">
-                      <MdNavigateNext />
-                    </span>
-                    <span class="list-name">Savanna Protection Network</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="region">
-              <h1>International</h1>
-              <ul class="column">
-                <li>
-                  <a href="#">
-                    <span class="list-icon">
-                      <MdNavigateNext />
-                    </span>
-                    <span class="list-name">Global Biodiversity Alliance</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </li>
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#" style={styles.padding.half}>
+                      Savanna Protection Network
+                    </NavDropdown.Item>
+                  </Col>
 
-        {/* Resources Dropdown */}
-        <li className="nav-item dropdown">
-          <a href="#" className="nav-link">
-            Resources
-          </a>
-          <ul className="dropdown-menu basic-dropdown">
-            <li>
-              <a href="#">
-                <span className="list-icon">
-                  <MdNavigateNext />
-                </span>{" "}
-                <span className="list-name">News</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span className="list-icon">
-                  <MdNavigateNext />
-                </span>{" "}
-                <span className="list-name">Guides</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span className="list-icon">
-                  <MdNavigateNext />
-                </span>{" "}
-                <span className="list-name">Interviews</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span className="list-icon">
-                  <MdNavigateNext />
-                </span>{" "}
-                <span className="list-name">Publications</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span className="list-icon">
-                  <MdNavigateNext />
-                </span>{" "}
-                <span className="list-name">Books</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span className="list-icon">
-                  <MdNavigateNext />
-                </span>{" "}
-                <span className="list-name">Podcasts</span>
-              </a>
-            </li>
-          </ul>
-        </li>
+                  {/* International column */}
+                  <Col>
+                    <h6>International</h6>
+                    <NavDropdown.Item href="#" style={styles.padding.half}>
+                      Global Biodiversity Alliance
+                    </NavDropdown.Item>
+                  </Col>
+                </Row>
+              </Container>
+            </NavDropdown>
 
-        <li className="nav-item">
-          <a href="#" className="nav-link">
-            Contact Us
-          </a>
-        </li>
-      </ul>
+            <NavDropdown
+              className="dropdown"
+              title="Resources"
+              id="resourcesDropdown"
+            >
+              <NavDropdown.Item href="#" style={styles.padding.half}>
+                News
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#" style={styles.padding.half}>
+                Guides
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#" style={styles.padding.half}>
+                Interviews
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#" style={styles.padding.half}>
+                Publications
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#" style={styles.padding.half}>
+                Books
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#" style={styles.padding.half}>
+                Podcasts
+              </NavDropdown.Item>
+            </NavDropdown>
 
-      {/* Join us button */}
-      <ul className="nav-links">
-        <li className="nav-item">
-          <button className="join-us">Be One of Us</button>
-        </li>
-      </ul>
-    </nav>
+            <Nav.Link href="#">Contact Us</Nav.Link>
+          </Nav>
+
+          <Form className="d-flex">
+            <Form.Control
+              type="search"
+              placeholder="Search"
+              className="me-2"
+              aria-label="Search"
+            />
+            <Button variant="outline-success">Search</Button>
+          </Form>
+
+          <Button className="join-us ms-3" variant="primary">
+            Join Us
+          </Button>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
+}
+
+const AppNavbar = () => {
+  return (
+    <div>
+      <AppNav />
+    </div>
   );
 };
 
-export default Navbar;
+export default AppNavbar;
