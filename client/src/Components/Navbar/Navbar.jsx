@@ -1,16 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Button,
+  Col,
   Container,
   Form,
+  Modal,
   Nav,
   Navbar,
   NavDropdown,
   Row,
-  Col,
 } from "react-bootstrap";
 import { MdOutlineSearch } from "react-icons/md";
 import logo from "../../assets/images/logo.svg";
+import SearchEngine from "../SearchEngine/Search";
 
 function BrandName() {
   return (
@@ -107,82 +109,74 @@ function OurPartners() {
       menuVariant="light"
       align="end"
     >
-      <Row>
+      <Row className="w-100">
+        {" "}
+        {/* Add w-100 class for full width */}
         {/* Central Africa column */}
         <Col md={6} lg={4}>
-          <h6 className="mb-2">Central Africa</h6>
-          <NavDropdown.Item href="#" className="py-2 px-3 my-1">
+          <h6>Central Africa</h6>
+          <NavDropdown.Item href="#">
             Rainforest Preservation Network
           </NavDropdown.Item>
-          <NavDropdown.Item href="#" className="py-2 px-3 my-1">
-            Wildlife Rescue Alliance
-          </NavDropdown.Item>
-          <NavDropdown.Item href="#" className="py-2 px-3 my-1">
+          <NavDropdown.Item href="#">Wildlife Rescue Alliance</NavDropdown.Item>
+          <NavDropdown.Item href="#">
             Central African Biodiversity Institute
           </NavDropdown.Item>
-          <NavDropdown.Item href="#" className="py-2 px-3 my-1">
+          <NavDropdown.Item href="#">
             Community Conservation Coalition
           </NavDropdown.Item>
-          <NavDropdown.Item href="#" className="py-2 px-3 my-1">
+          <NavDropdown.Item href="#">
             River Basin Protection Society
           </NavDropdown.Item>
         </Col>
-
         {/* Eastern Africa column */}
-        <Col md={6} lg={3}>
+        <Col md={6} lg={4}>
           <h6>Eastern Africa</h6>
-          <NavDropdown.Item href="#" className="py-2 px-3 my-1">
-            Eastern Savannah Trust
-          </NavDropdown.Item>
-          <NavDropdown.Item href="#" className="py-2 px-3 my-1">
+          <NavDropdown.Item href="#">Eastern Savannah Trust</NavDropdown.Item>
+          <NavDropdown.Item href="#">
             Marine Conservation Foundation
           </NavDropdown.Item>
-          <NavDropdown.Item href="#" className="py-2 px-3 my-1">
-            Forest Guardians
-          </NavDropdown.Item>
-          <NavDropdown.Item href="#" className="py-2 px-3 my-1">
+          <NavDropdown.Item href="#">Forest Guardians</NavDropdown.Item>
+          <NavDropdown.Item href="#">
             Sustainable Agriculture Association
           </NavDropdown.Item>
-          <NavDropdown.Item href="#" className="py-2 px-3 my-1">
+          <NavDropdown.Item href="#">
             Highland Ecosystem Network
           </NavDropdown.Item>
-          <NavDropdown.Item href="#" className="py-2 px-3 my-1">
+          <NavDropdown.Item href="#">
             Wildlife Research Institute
           </NavDropdown.Item>
-          <NavDropdown.Item href="#" className="py-2 px-3 my-1">
+          <NavDropdown.Item href="#">
             Eastern Africa Conservation Council
           </NavDropdown.Item>
         </Col>
-
         {/* Southern Africa column */}
-        <Col md={6} lg={3}>
+        <Col md={6} lg={4}>
           <h6>Southern Africa</h6>
-          <NavDropdown.Item href="#" className="py-2 px-3 my-1">
+          <NavDropdown.Item href="#">
             Southern Plains Wildlife Society
           </NavDropdown.Item>
-          <NavDropdown.Item href="#" className="py-2 px-3 my-1">
+          <NavDropdown.Item href="#">
             Wildlife Tracking Organization
           </NavDropdown.Item>
         </Col>
-
         {/* Western Africa column */}
-        <Col md={6} lg={3}>
+        <Col md={6} lg={4}>
           <h6>Western Africa</h6>
-          <NavDropdown.Item href="#" className="py-2 px-3 my-1">
+          <NavDropdown.Item href="#">
             West African Nature Conservancy
           </NavDropdown.Item>
-          <NavDropdown.Item href="#" className="py-2 px-3 my-1">
+          <NavDropdown.Item href="#">
             Coastal Preservation Initiative
           </NavDropdown.Item>
-          <NavDropdown.Item href="#" className="py-2 px-3 my-1">
+          <NavDropdown.Item href="#">
             Savanna Protection Network
           </NavDropdown.Item>
         </Col>
-
         {/* International column */}
-        <Col md={6} lg={3}>
+        <Col md={6} lg={4}>
           <h6>International</h6>
-          <NavDropdown.Item href="#" className="py-2 px-3 my-1">
+          <NavDropdown.Item href="#">
             Global Biodiversity Alliance
           </NavDropdown.Item>
         </Col>
@@ -230,24 +224,42 @@ function ContactUs() {
 }
 
 function SearchForm() {
+  const [showModal, setShowModal] = useState(false);
+  const handleModalShow = () => setShowModal(true);
+  const handleModalClose = () => setShowModal(false);
+
   return (
-    <Form className="d-flex ms-3">
-      <Form.Control
-        type="search"
-        placeholder="Search"
-        className="me-2"
-        aria-label="Search"
-      />
-      <Button variant="outline-primary">
+    <>
+      <Button
+        className="border-0"
+        variant="light"
+        color="light"
+        onClick={handleModalShow}
+      >
         <MdOutlineSearch />
       </Button>
-    </Form>
+
+      <Modal
+        show={showModal}
+        onHide={handleModalClose}
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+        <Modal.Header closeButton>
+          <Modal.Title>Search</Modal.Title>
+        </Modal.Header>
+
+        <Modal.Body>
+          <SearchEngine />
+        </Modal.Body>
+      </Modal>
+    </>
   );
 }
 
 function JoinUs() {
   return (
-    <Button variant="primary" className="ms-3">
+    <Button variant="outline-primary" className="ms-3">
       Join Us
     </Button>
   );

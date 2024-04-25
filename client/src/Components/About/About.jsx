@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container } from "react-bootstrap";
 import GeneralAbout from "./GeneralAbout";
 import OurStory from "./OurStory";
@@ -8,6 +8,10 @@ import Team from "./Team";
 import Testimonials from "./Testimonials";
 
 function About() {
+  useEffect(() => {
+    document.title = "About - ABA";
+  }, []);
+
   return (
     <Container fluid>
       <GeneralAbout />
