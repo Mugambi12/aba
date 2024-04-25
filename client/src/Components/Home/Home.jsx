@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { Container } from "react-bootstrap";
 import LandingPage from "./LandingPage";
+import WhatWeDo from "./WhatWeDo";
+
 import Holder from "./Holder";
 
 function Home() {
@@ -11,6 +13,7 @@ function Home() {
   return (
     <Container fluid>
       <LandingPage />
+      <WhatWeDo />
       <Holder />
     </Container>
   );

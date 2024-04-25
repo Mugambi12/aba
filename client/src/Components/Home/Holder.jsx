@@ -152,52 +152,6 @@ function Holder() {
           mollitia aspernatur accusantium voluptate!
         </Col>
       </Row>
-
-      <div>
-        <Button color="primary" href="/about" variant="outline-primary">
-          About Us
-        </Button>
-
-        <Button color="danger" href="/programs" variant="outline-danger">
-          Programs
-        </Button>
-
-        <Button
-          style={styles.color.success}
-          href="/contact"
-          variant="outline-danger"
-        >
-          Contact
-        </Button>
-
-        <Button style={styles.color.info} href="/donate">
-          Donate
-        </Button>
-
-        <Button style={styles.color.warning} href="/volunteer">
-          Volunteer
-        </Button>
-
-        <Button style={styles.color.danger} href="/resources">
-          Resources
-        </Button>
-
-        <Button style={styles.color.light} href="/events">
-          Events
-        </Button>
-
-        <Button style={styles.color.dark} href="/news">
-          News
-        </Button>
-
-        <Button style={styles.color.white} href="/gallery">
-          Gallery
-        </Button>
-
-        <Button style={styles.color.black} href="/shop">
-          Shop
-        </Button>
-      </div>
     </Container>
   );
 }

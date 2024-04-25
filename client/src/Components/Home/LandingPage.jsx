@@ -3,9 +3,9 @@ import { Container } from "react-bootstrap";
 import CustomSwiperSlider from "./Swipper";
 
 import backgroundImage from "../../assets/images/landing-page.jpg";
-import first from "../../assets/images/github.png";
-import second from "../../assets/images/linkedin.png";
-import third from "../../assets/images/twitter.png";
+import first from "../../assets/images/logo.png";
+import second from "../../assets/images/logo.png";
+import third from "../../assets/images/logo.png";
 
 const Background = () => {
   return (
