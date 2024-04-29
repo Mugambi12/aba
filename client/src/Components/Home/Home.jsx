@@ -1,9 +1,10 @@
+import Holder from "./Holder";
+
 import React, { useEffect } from "react";
 import { Container } from "react-bootstrap";
 import LandingPage from "./LandingPage";
 import WhatWeDo from "./WhatWeDo";
-
-import Holder from "./Holder";
+import LatestNews from "./LatestNews";
 
 function Home() {
   useEffect(() => {
@@ -14,6 +15,7 @@ function Home() {
     <Container fluid>
       <LandingPage />
       <WhatWeDo />
+      <LatestNews />
       <Holder />
     </Container>
   );
