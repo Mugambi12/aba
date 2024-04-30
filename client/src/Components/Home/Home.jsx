@@ -5,18 +5,20 @@ import { Container } from "react-bootstrap";
 import LandingPage from "./LandingPage";
 import WhatWeDo from "./WhatWeDo";
 import LatestNews from "./LatestNews";
+import Users from "../API/Users";
 
 function Home() {
   useEffect(() => {
-    document.title = "About - ABA";
+    document.title = "Home - ABA";
   }, []);
 
   return (
     <Container fluid>
       <LandingPage />
+      <Users />
       <WhatWeDo />
-      <LatestNews />
       <Holder />
+      <LatestNews />
     </Container>
   );
 }
