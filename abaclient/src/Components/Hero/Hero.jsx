@@ -9,9 +9,10 @@ const Hero = ({
   setHeroCount,
   setPlayStatus,
   playStatus,
+  fade,
 }) => (
   <div className="hero">
-    <div className="hero-text">
+    <div className={`hero-text ${fade ? "fade-in" : ""}`}>
       <p className="hero-title">{heroData.title}</p>
       <p className="hero-subtitle">{heroData.subtitle}</p>
     </div>

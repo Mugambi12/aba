@@ -4,7 +4,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import Hero from "./Components/Hero/Hero";
 
 const Header = () => {
-  let heroData = [
+  const heroData = [
     {
       title: "Welcome to ABA",
       subtitle: "Your trusted partner in innovative solutions",
@@ -21,18 +21,26 @@ const Header = () => {
 
   const [heroCount, setHeroCount] = useState(0);
   const [playStatus, setPlayStatus] = useState(false);
+  const [fade, setFade] = useState(false);
 
   useEffect(() => {
-    setInterval(() => {
-      setHeroCount((count) => {
-        return count === 2 ? 0 : count + 1;
-      });
-    }, 3000);
+    const interval = setInterval(() => {
+      setHeroCount((count) => (count === 2 ? 0 : count + 1));
+    }, 6000);
+
+    return () => clearInterval(interval);
   }, []);
+
+  useEffect(() => {
+    setFade(true);
+    const timer = setTimeout(() => setFade(false), 1000);
+
+    return () => clearTimeout(timer);
+  }, [heroCount]);
 
   return (
     <div>
-      <Background playStatus={playStatus} heroCount={heroCount} />
+      <Background playStatus={playStatus} heroCount={heroCount} fade={fade} />
       <Navbar />
       <Hero
         setHeroCount={setHeroCount}
@@ -40,6 +48,7 @@ const Header = () => {
         setPlayStatus={setPlayStatus}
         playStatus={playStatus}
         heroData={heroData[heroCount]}
+        fade={fade}
       />
     </div>
   );

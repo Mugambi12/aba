@@ -1,3 +1,14 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fade-in {
+  animation: fadeIn 500ms ease-in-out;
+}
 .hero {
   margin: 0 120px;
   margin-top: 200px;
@@ -11,6 +22,7 @@
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: 10px;
+  animation: fadeIn 500ms ease-in-out;
 }
 .hero-subtitle {
   font-size: 24px;
@@ -49,6 +61,7 @@
   list-style: none;
   gap: 23px;
   margin-left: 10%;
+  animation: fadeIn 500ms ease-in-out;
 }
 .hero-dot {
   width: 10px;
