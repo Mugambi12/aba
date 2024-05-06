@@ -1,0 +1,82 @@
+.hero {
+  margin: 0 120px;
+  margin-top: 200px;
+}
+.hero-text {
+  color: #fff;
+  margin-bottom: 40px;
+}
+.hero-title {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+.hero-subtitle {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+.hero-explore {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  width: fit-content;
+  margin-top: 70px;
+  padding: 5px 8px;
+  padding-left: 30px;
+  border-radius: 70px;
+  background: #fff;
+  cursor: pointer;
+}
+.hero-explore p {
+  color: #262626;
+  font-size: 20px;
+  font-weight: 500;
+}
+.hero-explore img {
+  width: 50px;
+  height: 50px;
+}
+.hero-dot-play {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.hero-dots {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 23px;
+  margin-left: 10%;
+}
+.hero-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+}
+.hero-dot.orange {
+  background: orangered;
+}
+.hero-play {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.hero-play img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.hero-play img:hover {
+  transform: scale(1.1);
+}
+.hero-play p {
+  color: #fff;
+  font-size: 18px;
+  margin-left: 10px;
+}
