@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import Background from "./Components/Background/Background";
-import Navbar from "./Components/Navbar/Navbar";
-import Hero from "./Components/Hero/Hero";
+import Background from "./Header/Background/Background";
+import Navbar from "./Header/Navbar/Navbar";
+import Hero from "./Header/Hero/Hero";
 
 const Header = () => {
   const heroData = [
@@ -26,7 +26,7 @@ const Header = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setHeroCount((count) => (count === 2 ? 0 : count + 1));
-    }, 6000);
+    }, 5500);
 
     return () => clearInterval(interval);
   }, []);
