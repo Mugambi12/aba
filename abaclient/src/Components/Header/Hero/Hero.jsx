@@ -18,7 +18,7 @@ const Hero = ({
     </div>
 
     <div
-      className="hero-explore"
+      className={`hero-explore ${fade ? "fade-in" : ""}`}
       onClick={() => setHeroCount((prevCount) => (prevCount + 1) % 3)}
     >
       <p>Explore the features</p>
@@ -26,7 +26,7 @@ const Hero = ({
     </div>
 
     <div className="hero-dot-play">
-      <ul className="hero-dots">
+      <ul className={`hero-dots ${fade ? "fade-in" : ""}`}>
         {Array.from({ length: 3 }, (_, index) => (
           <li
             key={index}

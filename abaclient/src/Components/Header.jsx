@@ -26,14 +26,14 @@ const Header = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setHeroCount((count) => (count === 2 ? 0 : count + 1));
-    }, 5500);
+    }, 8000);
 
     return () => clearInterval(interval);
   }, []);
 
   useEffect(() => {
     setFade(true);
-    const timer = setTimeout(() => setFade(false), 1000);
+    const timer = setTimeout(() => setFade(false), 600);
 
     return () => clearTimeout(timer);
   }, [heroCount]);

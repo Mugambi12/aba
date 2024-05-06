@@ -9,22 +9,22 @@ const Navbar = () => {
           <a href="">Home</a>
         </li>
         <li>
-          <a href="">Explore</a>
+          <a href="">Our Story</a>
         </li>
         <li>
-          <a href="">About</a>
+          <a href="">Programs</a>
         </li>
         <li>
-          <a href="">Services</a>
+          <a href="">Thematic Areas</a>
         </li>
         <li>
-          <a href="">Projects</a>
+          <a href="">Media & Resources</a>
         </li>
         <li>
-          <a href="">Blog</a>
+          <a href="">Contact</a>
         </li>
         <li className="nav-contact">
-          <a href="">Contact</a>
+          <a href="">Join Us</a>
         </li>
       </ul>
     </div>
