@@ -1,8 +1,7 @@
-import React from "react";
-import "./Media.css";
+import "./SocialMedia.css";
 import video1 from "../../assets/video1.mp4";
 
-const Media = () => {
+const SocialMedia = () => {
   const blogs = [
     {
       title: "Blog Title 1",
@@ -29,27 +28,23 @@ const Media = () => {
 
           <div className="latest-blog">
             <div className="blog-post">
-              <h2>Blog Title</h2>
+              <h2 className="blog-title">Blog Title</h2>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Molestiae ea asperiores ab quia aperiam...
               </p>
-              <a href="#" className="read-more">
-                Read More
-              </a>
+              <a href="">Read More</a>
             </div>
           </div>
 
           <div className="older-blogs">
-            <h2 className="blog-header">Previous Blogs</h2>
+            <h2 className="blog-title">Previous Blogs</h2>
             <div className="blog-list">
               {blogs.map((blog, index) => (
                 <article key={index} className="blog-post">
                   <h3>{blog.title}</h3>
                   <p>{blog.content}</p>
-                  <a href="#" className="read-more">
-                    Read More
-                  </a>
+                  <a href="">Read More</a>
                 </article>
               ))}
             </div>
@@ -59,6 +54,7 @@ const Media = () => {
         <div className="social-media-section">
           <div className="youtube-section">
             <h1 className="social-media-header">YouTube Feeds</h1>
+            <p>Watch our latest videos</p>
             <div className="youtube-video">
               <video src={video1} autoPlay loop muted />
             </div>
@@ -66,16 +62,18 @@ const Media = () => {
 
           <div className="twitter-section">
             <h1 className="social-media-header">Twitter Feeds</h1>
-            <a
-              className="twitter-timeline"
-              data-width="300"
-              data-height="400"
-              data-theme="light"
-              data-chrome="noheader nofooter"
-              href="https://twitter.com/ABA?ref_src=twsrc%5Etfw"
-            >
-              Latest 5 Tweets by ABA
-            </a>
+            <p>Latest Tweets by ABA</p>
+            <div className="tweets">
+              <a
+                className="twitter-timeline"
+                data-width="300"
+                data-height="400"
+                data-theme="light"
+                data-chrome="noheader nofooter"
+                href="https://twitter.com/ABA?ref_src=twsrc%5Etfw"
+              ></a>
+              <video src={video1}></video>
+            </div>
           </div>
         </div>
       </div>
@@ -83,4 +81,4 @@ const Media = () => {
   );
 };
 
-export default Media;
+export default SocialMedia;
