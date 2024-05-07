@@ -1,0 +1,62 @@
+/* Container for the programs */
+.programs-container {
+  margin: 80px auto;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.program-item img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  margin: 0;
+}
+.program-item {
+  position: relative;
+}
+.primary {
+  flex-basis: 48%;
+}
+.primary img {
+  max-height: 220px;
+}
+.secondary {
+  flex-basis: 23%;
+}
+.caption {
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(123, 63, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  cursor: pointer;
+  opacity: 0;
+  padding-top: 70%;
+  transition: all 0.4s ease;
+}
+.caption:hover {
+  opacity: 1;
+  padding-top: 0;
+}
+.caption img {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .programs-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .program-item {
+    margin-bottom: 20px;
+  }
+}
