@@ -9,6 +9,7 @@ import Testimonials from "./Components/Testimonials/Testimonials";
 import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
 import Media from "./Components/Media/Media";
+import VideoPlayer from "./Components/Testimonials/VideoPlayer";
 
 const App = () => {
   const heroData = [
@@ -29,6 +30,7 @@ const App = () => {
   const [heroCount, setHeroCount] = useState(0);
   const [playStatus, setPlayStatus] = useState(false);
   const [fade, setFade] = useState(false);
+  const [videoPlayerState, setVideoPlayerState] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -47,41 +49,46 @@ const App = () => {
 
   return (
     <div>
+      <Background playStatus={playStatus} heroCount={heroCount} fade={fade} />
+      <Navbar />
+      <Hero
+        setHeroCount={setHeroCount}
+        heroCount={heroCount}
+        setPlayStatus={setPlayStatus}
+        playStatus={playStatus}
+        heroData={heroData[heroCount]}
+        fade={fade}
+      />
+
       <div className="home-section">
-        <Background playStatus={playStatus} heroCount={heroCount} fade={fade} />
-        <Navbar />
-        <Hero
-          setHeroCount={setHeroCount}
-          heroCount={heroCount}
-          setPlayStatus={setPlayStatus}
-          playStatus={playStatus}
-          heroData={heroData[heroCount]}
-          fade={fade}
+        <Title title="Our Program" subtitle="What We Offer" />
+        <Programs />
+        <About setVideoPlayerState={setVideoPlayerState} />
+
+        <Title
+          title="Latest News & Insights"
+          subtitle="Stay updated with our latest stories and publications"
         />
+        <Media />
+
+        <Title title="Our Focus" subtitle="Thematic Areas" />
+
+        <Title
+          title="Testimonials"
+          subtitle="Voices from Our Conservation Efforts"
+        />
+        <Testimonials />
+
+        <Title title="Contact Us" subtitle="Get in Touch" />
+        <Contact />
+
+        <Footer />
       </div>
 
-      <Title title="Our Program" subtitle="What We Offer" />
-      <Programs />
-      <About />
-
-      <Title
-        title="Latest News & Insights"
-        subtitle="Stay updated with our latest stories and publications"
+      <VideoPlayer
+        videoPlayerState={videoPlayerState}
+        setVideoPlayerState={setVideoPlayerState}
       />
-      <Media />
-
-      <Title title="Our Focus" subtitle="Thematic Areas" />
-
-      <Title
-        title="Testimonials"
-        subtitle="Voices from Our Conservation Efforts"
-      />
-      <Testimonials />
-
-      <Title title="Contact Us" subtitle="Get in Touch" />
-      <Contact />
-
-      <Footer />
     </div>
   );
 };
