@@ -13,6 +13,7 @@ import VideoPlayer from "./Components/VideoPlayer/VideoPlayer";
 import BlogHeader from "./Components/BlogHeader/BlogHeader";
 import BlogSidebar from "./Components/BlogSidebar/BlogSidebar";
 import BlogPosts from "./Components/BlogPosts/BlogPosts";
+import BlogSinglePost from "./Components/BlogSinglePost/BlogSinglePost";
 
 const App = () => {
   const heroData = [
@@ -72,6 +73,11 @@ const App = () => {
         <div className="blog-body">
           <BlogPosts />
           <BlogSidebar />
+        </div>
+
+        <div className="read-article">
+          <BlogHeader />
+          <BlogSinglePost />
         </div>
 
         <Title
