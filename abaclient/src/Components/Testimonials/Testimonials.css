@@ -2,6 +2,7 @@
   margin: 80px auto;
   padding: 0 80px;
   position: relative;
+  width: 85%;
 }
 .next-btn,
 .prev-btn {
@@ -14,6 +15,7 @@
   border-radius: 50%;
   cursor: pointer;
   background: #212ea0;
+  opacity: 0.5;
 }
 .prev-btn {
   right: auto;
@@ -24,7 +26,7 @@
 }
 .slider ul {
   display: flex;
-  width: 175%;
+  width: 275%;
   overflow-x: hidden;
   transition: 0.5s;
   transform: translateX(0);

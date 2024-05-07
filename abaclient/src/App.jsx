@@ -72,11 +72,14 @@ const App = () => {
 
       <Title title="Our Focus" subtitle="Thematic Areas" />
 
+      <Title
+        title="Testimonials"
+        subtitle="Voices from Our Conservation Efforts"
+      />
+      <Testimonials />
+
       <Title title="Contact Us" subtitle="Get in Touch" />
       <Contact />
-
-      <Title title="Testimonials" subtitle="What Our Communities Say" />
-      <Testimonials />
 
       <Footer />
     </div>
