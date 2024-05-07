@@ -69,13 +69,15 @@ const App = () => {
         <Programs />
         <About setVideoPlayerState={setVideoPlayerState} />
 
-        <BlogHeader />
-        <div className="blog-body">
-          <BlogPosts />
-          <BlogSidebar />
+        <div className="landing-page">
+          <BlogHeader />
+          <div className="posts-summary">
+            <BlogPosts />
+            <BlogSidebar />
+          </div>
         </div>
 
-        <div className="read-article">
+        <div className="article-page">
           <BlogHeader />
           <BlogSinglePost />
         </div>
