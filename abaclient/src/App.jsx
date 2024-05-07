@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
-import Background from "./Components/Header/Background/Background";
-import Navbar from "./Components/Header/Navbar/Navbar";
-import Hero from "./Components/Header/Hero/Hero";
+import Background from "./Components/Background/Background";
+import Navbar from "./Components/Navbar/Navbar";
+import Hero from "./Components/Hero/Hero";
 import Title from "./Components/Title/Title";
 import Programs from "./Components/Programs/Programs";
 import About from "./Components/About/About";
 import Testimonials from "./Components/Testimonials/Testimonials";
+import Contact from "./Components/Contact/Contact";
 
 const App = () => {
   const heroData = [
@@ -70,6 +71,11 @@ const App = () => {
       <div className="testimonials-section">
         <Title title="Testimonials" subtitle="What Our Clients Say" />
         <Testimonials />
+      </div>
+
+      <div className="contact-us-section">
+        <Title title="Contact Us" subtitle="Get in Touch" />
+        <Contact />
       </div>
     </div>
   );
