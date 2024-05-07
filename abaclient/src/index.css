@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: Poppins;
+  font-family: "Poppins";
 }
 
 a {
@@ -21,4 +21,9 @@ a {
 }
 ::-webkit-scrollbar-track {
   background: #f5f5f5;
+}
+
+.blog-body {
+  display: flex;
+  justify-content: space-between;
 }
