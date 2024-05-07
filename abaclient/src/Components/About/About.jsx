@@ -3,13 +3,21 @@ import "./About.css";
 import about_img from "../../assets/images/about.png";
 import play_icon from "../../assets/images/play-icon.png";
 
-const About = () => {
+const About = ({ setVideoPlayerState }) => {
   return (
     <div className="about">
       <div className="about-left">
         <img src={about_img} className="about-img" alt="" />
-        <img src={play_icon} className="play-icon" alt="" />
+        <img
+          src={play_icon}
+          className="play-icon"
+          alt=""
+          onClick={() => {
+            setVideoPlayerState(true);
+          }}
+        />
       </div>
+
       <div className="about-right">
         <h3>About ABA</h3>
         <h2>Your trusted partner in innovative solutions</h2>
