@@ -8,6 +8,7 @@ import About from "./Components/About/About";
 import Testimonials from "./Components/Testimonials/Testimonials";
 import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
+import Media from "./Components/Media/Media";
 
 const App = () => {
   const heroData = [
@@ -63,15 +64,19 @@ const App = () => {
       <Programs />
       <About />
 
-      <div className="our-focus-section">
-        <Title title="Our Focus" subtitle="Thematic Areas" />
-      </div>
+      <Title
+        title="Latest News & Insights"
+        subtitle="Stay updated with our latest stories and publications"
+      />
+      <Media />
 
-      <Title title="Testimonials" subtitle="What Our Clients Say" />
-      <Testimonials />
+      <Title title="Our Focus" subtitle="Thematic Areas" />
 
       <Title title="Contact Us" subtitle="Get in Touch" />
       <Contact />
+
+      <Title title="Testimonials" subtitle="What Our Communities Say" />
+      <Testimonials />
 
       <Footer />
     </div>
