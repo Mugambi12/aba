@@ -7,6 +7,7 @@ import Programs from "./Components/Programs/Programs";
 import About from "./Components/About/About";
 import Testimonials from "./Components/Testimonials/Testimonials";
 import Contact from "./Components/Contact/Contact";
+import Footer from "./Components/Footer/Footer";
 
 const App = () => {
   const heroData = [
@@ -58,25 +59,21 @@ const App = () => {
         />
       </div>
 
-      <div className="program-section">
-        <Title title="Our Program" subtitle="What We Offer" />
-        <Programs />
-        <About />
-      </div>
+      <Title title="Our Program" subtitle="What We Offer" />
+      <Programs />
+      <About />
 
       <div className="our-focus-section">
         <Title title="Our Focus" subtitle="Thematic Areas" />
       </div>
 
-      <div className="testimonials-section">
-        <Title title="Testimonials" subtitle="What Our Clients Say" />
-        <Testimonials />
-      </div>
+      <Title title="Testimonials" subtitle="What Our Clients Say" />
+      <Testimonials />
 
-      <div className="contact-us-section">
-        <Title title="Contact Us" subtitle="Get in Touch" />
-        <Contact />
-      </div>
+      <Title title="Contact Us" subtitle="Get in Touch" />
+      <Contact />
+
+      <Footer />
     </div>
   );
 };
