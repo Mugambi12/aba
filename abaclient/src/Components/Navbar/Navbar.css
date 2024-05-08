@@ -4,7 +4,6 @@
   align-items: center;
   padding: 0.5rem 5%;
   background: salmon;
-  color: white;
 }
 .pre-nav ul {
   list-style: none;
@@ -18,20 +17,21 @@
 .pre-nav ul li a,
 .pre-nav ul li i {
   color: white;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 .pre-nav ul li a:hover,
 .pre-nav ul li i:hover {
   color: aquamarine;
+  transform: scale(1.2);
 }
 .pre-nav .join-us-button {
   padding: 0.5rem 1rem;
   border-radius: 50px;
   background: salmon;
-  color: white;
+  color: #000f38;
   border: none;
   cursor: pointer;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 .pre-nav .join-us-button:hover {
   background: white;
@@ -63,6 +63,7 @@
 .nav-menu a {
   padding: 0.5rem 0;
   color: #9c9c9c;
+  transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
 }
 .nav-menu a:hover {
   color: #666;
@@ -81,7 +82,7 @@
   left: 0;
   right: 0;
   margin: 0;
-  padding: 1rem 5%;
+  padding: 0.5rem 5%;
   background: #f5f5f5;
   border-bottom: 2px salmon solid;
   z-index: 1000;
@@ -89,4 +90,7 @@
 .nav.sticky .nav-contact {
   color: salmon;
   background: #000f38;
+}
+.nav.sticky .nav-logo {
+  color: salmon;
 }

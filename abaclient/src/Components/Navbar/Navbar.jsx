@@ -21,6 +21,11 @@ const Navbar = ({ videoPlayerState }) => {
       <div className="pre-nav">
         <ul>
           <li>
+            <a href="#" title="Location Address">
+              <i className="fas fa-map-marker-alt"></i>
+            </a>
+          </li>
+          <li>
             <a href="#" title="company@example.dev">
               <i className="fas fa-envelope"></i>
             </a>
@@ -64,31 +69,31 @@ const Navbar = ({ videoPlayerState }) => {
         ref={navRef}
       >
         <div className="nav-logo">
-          <a href="#">ABA</a>
+          <a href="#home">ABA</a>
         </div>
         <ul className="nav-menu">
           <li>
-            <a href="#">Our Story</a>
+            <a href="#our-story">Our Story</a>
           </li>
           <li>
-            <a href="#">Our Campaign</a>
+            <a href="#our-compaign">Our Campaign</a>
           </li>
           <li>
-            <a href="#">Thematic Areas</a>
+            <a href="#thematic-areas">Thematic Areas</a>
           </li>
           <li>
-            <a href="#">Our Impact</a>
+            <a href="#our-impact">Our Impact</a>
           </li>
           <li>
-            <a href="#">Research & Insights</a>
+            <a href="#research-insights">Research & Insights</a>
           </li>
           <li>
-            <a href="#">Media & Resources</a>
+            <a href="#media">Media & Resources</a>
           </li>
         </ul>
         <ul>
           <li className="nav-contact">
-            <a href="#">Contact Us</a>
+            <a href="#contact-us">Contact Us</a>
           </li>
         </ul>
       </nav>

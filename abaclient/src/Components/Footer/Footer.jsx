@@ -13,14 +13,17 @@ const Footer = () => {
         <div className="footer-row">
           <div className="footer-col logo-section">
             <h2 className="logo">ABA</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga,
+              unde!
+            </p>
           </div>
 
           <div className="footer-col office-section">
             <h3>Office</h3>
             <p>123 Main Street</p>
             <p>City, State 12345</p>
-            <p className="email">company@aba.org</p>
+            <p className="email">company@example.com</p>
             <p>Phone: +00 - 123-456-7890</p>
           </div>
 
@@ -60,23 +63,17 @@ const Footer = () => {
               <a href="#" title="LinkedIn">
                 <i className="fab fa-linkedin-in"></i>
               </a>
-              <a href="#" title="YouTube">
-                <i className="fab fa-youtube"></i>
+              <a href="#" title="Facebook">
+                <i className="fab fa-facebook-f"></i>
               </a>
               <a href="#" title="Twitter">
                 <i className="fab fa-twitter"></i>
               </a>
-              <a href="#" title="Facebook">
-                <i className="fab fa-facebook-f"></i>
-              </a>
               <a href="#" title="Instagram">
                 <i className="fab fa-instagram"></i>
               </a>
-              <a href="#" title="TikTok">
-                <i className="fab fa-tiktok"></i>
-              </a>
-              <a href="#" title="WhatsApp">
-                <i className="fab fa-whatsapp"></i>
+              <a href="#" title="YouTube">
+                <i className="fab fa-youtube"></i>
               </a>
             </div>
           </div>

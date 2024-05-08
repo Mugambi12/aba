@@ -69,24 +69,28 @@ const App = () => {
         <Programs />
         <About setVideoPlayerState={setVideoPlayerState} />
 
-        <div className="landing-page">
-          <BlogHeader />
-          <div className="posts-summary">
-            <BlogPosts />
-            <BlogSidebar />
+        <div id="research-insights">
+          <div className="landing-page">
+            <BlogHeader />
+            <div className="posts-summary">
+              <BlogPosts />
+              <BlogSidebar />
+            </div>
+          </div>
+
+          <div className="article-page">
+            <BlogHeader />
+            <BlogSinglePost />
           </div>
         </div>
 
-        <div className="article-page">
-          <BlogHeader />
-          <BlogSinglePost />
+        <div id="media">
+          <Title
+            title="Latest News & Insights"
+            subtitle="Stay updated with our latest stories and publications"
+          />
+          <SocialMedia />
         </div>
-
-        <Title
-          title="Latest News & Insights"
-          subtitle="Stay updated with our latest stories and publications"
-        />
-        <SocialMedia />
 
         <Title title="Our Focus" subtitle="Thematic Areas" />
 
@@ -96,8 +100,10 @@ const App = () => {
         />
         <Testimonials />
 
-        <Title title="Contact Us" subtitle="Get in Touch" />
-        <Contact />
+        <div id="contact-us">
+          <Title title="Contact Us" subtitle="Get in Touch" />
+          <Contact />
+        </div>
 
         <Footer />
       </div>

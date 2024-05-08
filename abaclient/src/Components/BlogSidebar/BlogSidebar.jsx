@@ -28,31 +28,11 @@ const BlogSidebar = () => {
       <div className="blog-sidebar-item">
         <span className="blog-sidebar-title">FOLLOW US</span>
         <div className="blog-sidebar-social">
-          <img
-            src="https://w7.pngwing.com/pngs/175/452/png-transparent-facebook-logo-facebook-icon-logo-facebook-icon-blue-text-rectangle-thumbnail.png"
-            alt="facebook logo"
-            className="blog-sidebar-icon"
-          />
-          <img
-            src="https://w7.pngwing.com/pngs/722/1011/png-transparent-logo-icon-instagram-logo-instagram-logo-purple-violet-text-thumbnail.png"
-            alt="Instagram logo"
-            className="blog-sidebar-icon"
-          />
-          <img
-            src="https://w7.pngwing.com/pngs/708/311/png-transparent-icon-logo-twitter-logo-twitter-logo-blue-social-media-area-thumbnail.png"
-            alt="Twitter logo"
-            className="blog-sidebar-icon"
-          />
-          <img
-            src="https://w7.pngwing.com/pngs/936/468/png-transparent-youtube-logo-youtube-logo-computer-icons-subscribe-angle-rectangle-airplane-thumbnail.png"
-            alt="YouTube logo"
-            className="blog-sidebar-icon"
-          />
-          <img
-            src="https://w7.pngwing.com/pngs/293/896/png-transparent-whats-app-logo-whatsapp-facebook-instant-messaging-icon-whatsapp-logo-text-logo-grass-thumbnail.png"
-            alt="whatsapp logo"
-            className="blog-sidebar-icon"
-          />
+          <i className="fab fa-linkedin-in blog-sidebar-icon"></i>
+          <i className="fab fa-facebook-f blog-sidebar-icon"></i>
+          <i className="fab fa-twitter blog-sidebar-icon"></i>
+          <i className="fab fa-instagram blog-sidebar-icon"></i>
+          <i className="fab fa-youtube blog-sidebar-icon"></i>
         </div>
       </div>
     </div>
