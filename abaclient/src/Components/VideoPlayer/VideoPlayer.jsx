@@ -16,7 +16,7 @@ const VideoPlayer = ({ videoPlayerState, setVideoPlayerState }) => {
       ref={player}
       onClick={closePlayer}
     >
-      <video src={about_video} autoPlay muted controls></video>
+      <video src={about_video} autoPlay loop muted controls></video>
     </div>
   );
 };

@@ -1,19 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Contact.css";
-import msg_icon from "../../assets/images/msg-icon.png";
-import mail_icon from "../../assets/images/mail-icon.png";
-import phone_icon from "../../assets/images/phone-icon.png";
-import location_icon from "../../assets/images/location-icon.png";
-import white_arrow from "../../assets/images/white-arrow.png";
+import msgIcon from "../../assets/images/msg-icon.png";
+import mailIcon from "../../assets/images/mail-icon.png";
+import phoneIcon from "../../assets/images/phone-icon.png";
+import locationIcon from "../../assets/images/location-icon.png";
+import whiteArrow from "../../assets/images/white-arrow.png";
 
 const Contact = () => {
-  const [result, setResult] = React.useState("");
+  // State to track form submission result
+  const [result, setResult] = useState("");
 
-  const onSubmit = async (event) => {
+  // Form submission handler
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    setResult("Sending....");
-    const formData = new FormData(event.target);
+    setResult("Sending...");
 
+    const formData = new FormData(event.target);
     formData.append("access_key", "fbcd06a9-a868-424d-853c-5244080c8887");
 
     const response = await fetch("https://api.web3forms.com/submit", {
@@ -23,71 +25,81 @@ const Contact = () => {
 
     const data = await response.json();
 
+    // Handle response and provide feedback to the user
     if (data.success) {
-      setResult("Form Submitted Successfully");
+      setResult("Form submitted successfully.");
       event.target.reset();
     } else {
-      console.log("Error", data);
-      setResult(data.message);
+      console.log("Error:", data);
+      setResult(`Error: ${data.message}`);
     }
   };
 
   return (
-    <div className="contact">
-      <div className="contact-col">
+    <div className="contact-section">
+      {/* Contact information */}
+      <div className="contact-info">
         <h3>
-          Send us a message
-          <img src={msg_icon} alt="message icon" />
+          Send Us a Message
+          <img src={msgIcon} alt="Message icon" className="icon" />
         </h3>
         <p>
           Feel free to reach out to us with any questions or concerns you may
-          have. We are here to help. Your feedback, comments, suggestions, and
-          inquiries are important to us. We will respond to your message as soon
-          as possible.
+          have. We are here to help and will respond to your message as soon as
+          possible.
         </p>
-        <ul>
+        <ul className="contact-details">
           <li>
-            <img src={mail_icon} alt="" />
-            Contact@aba.dev
+            <img src={mailIcon} alt="Mail icon" />
+            <span>Contact@aba.dev</span>
           </li>
           <li>
-            <img src={phone_icon} alt="" /> 123-456-7890
+            <img src={phoneIcon} alt="Phone icon" />
+            <span>123-456-7890</span>
           </li>
           <li>
-            <img src={location_icon} alt="" /> 77 8th Ave, New York, NY 10011
+            <img src={locationIcon} alt="Location icon" />
+            <span>77 8th Ave, New York, NY 10011</span>
           </li>
         </ul>
       </div>
 
-      <div className="contact-col">
-        <form onSubmit={onSubmit}>
-          <label>Your name</label>
+      {/* Contact form */}
+      <div className="contact-form">
+        <form onSubmit={handleSubmit}>
+          <label htmlFor="name">Your Name</label>
           <input
             type="text"
+            id="name"
             name="name"
             placeholder="Enter your name"
             required
           />
-          <label>Phone number</label>
+
+          <label htmlFor="phone">Phone Number</label>
           <input
             type="text"
+            id="phone"
             name="phone"
             placeholder="Enter your phone number"
             required
           />
-          <label>Write your message here</label>
+
+          <label htmlFor="message">Your Message</label>
           <textarea
+            id="message"
             name="message"
             rows="6"
             placeholder="Enter your message"
             required
           ></textarea>
-          <button type="submit" className="btn">
+
+          <button type="submit" className="submit-button">
             Send Message
-            <img src={white_arrow} alt="white arrow" />
+            <img src={whiteArrow} alt="Arrow icon" className="icon" />
           </button>
         </form>
-        <span>{result}</span>
+        <span className="form-result">{result}</span>
       </div>
     </div>
   );

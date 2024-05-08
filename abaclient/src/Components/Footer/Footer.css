@@ -1,13 +1,233 @@
-.footer {
-  margin: 10px auto;
+.footer-container {
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  background: linear-gradient(to right, #00093c, #2d0b00);
+  color: white;
+  padding: 100px 0 30px;
+  border-top-left-radius: 125px;
+  line-height: 1.5;
+}
+.footer-content {
+  width: 90%;
+  margin: auto;
+}
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.footer-col {
+  flex-basis: 21%;
+  padding: 10px;
+  color: #999;
+}
+.logo-section h2 {
+  font-size: 45px;
+  color: #ccc;
+  margin-bottom: 30px;
+}
+.office-section h3,
+.links-section h3,
+.newsletter-section h3 {
+  font-size: 18px;
+  color: white;
+  margin-bottom: 20px;
+}
+.office-section .email {
+  border: 1px solid #999;
+  padding: 5px;
+  margin: 10px 0;
+}
+.links-section ul {
+  list-style: none;
+}
+.links-section ul li a {
+  text-decoration: none;
+  color: #999;
+  display: block;
+  margin-bottom: 10px;
+}
+.links-section ul li a:hover {
+  color: white;
+}
+
+.newsletter-section form {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px solid #797979;
-  padding: 15px 0;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 8px;
+  margin-bottom: 50px;
 }
-.footer ul li {
+.newsletter-section form .mail-icon,
+.newsletter-section form .arrow-button {
+  font-size: 28px;
+}
+.newsletter-section form .mail-icon {
+  color: #ccc;
+}
+.newsletter-section form .arrow-button {
+  color: white;
+}
+.newsletter-section form button {
+  border: none;
+  outline: none;
+  background: #00093c;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.newsletter-section form input {
+  width: 100%;
+  background: transparent;
+  padding: 16px;
+  border: none;
+  color: #ccc;
+  outline: none;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: space-between;
+}
+.social-icons > a {
+  font-size: 18px;
+  padding: 5px;
+  cursor: pointer;
+}
+.social-icons > a .fa-linkedin-in {
+  color: #0e76a8;
+}
+.social-icons > a .fa-youtube {
+  color: #c4302b;
+}
+.social-icons > a .fa-twitter {
+  color: #00acee;
+}
+.social-icons > a .fa-facebook-f {
+  color: #3b5998;
+}
+.social-icons > a .fa-instagram {
+  color: #e4405f;
+}
+.social-icons > a .fa-tiktok {
+  color: #000000;
+}
+.social-icons > a .fa-whatsapp {
+  color: #25d366;
+}
+
+.sub-footer {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-top: 1px solid #797979;
+}
+
+.sub-footer ul {
+  display: flex;
+  gap: 20px;
+}
+
+.sub-footer ul li {
   list-style: none;
-  display: inline-block;
-  margin-left: 20px;
+}
+
+.sub-footer ul li a {
+  color: #999;
+  text-decoration: none;
+}
+
+.sub-footer ul li a:hover {
+  color: white;
+}
+
+/* Media query for mobile screens (max-width: 768px) */
+@media (max-width: 768px) {
+  /* Footer container */
+  .footer-container {
+    padding: 50px 20px;
+    border-top-left-radius: 0;
+  }
+
+  /* Footer content */
+  .footer-content {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  /* Footer row: stack columns vertically */
+  .footer-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Footer columns: Full width on mobile */
+  .footer-col {
+    flex-basis: 100%;
+    margin-bottom: 30px;
+  }
+
+  /* Logo section */
+  .logo-section h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  /* Office section */
+  .office-section h3,
+  .links-section h3,
+  .newsletter-section h3 {
+    margin-bottom: 10px;
+  }
+
+  /* Links section */
+  .links-section ul {
+    margin: 0;
+  }
+
+  /* Newsletter section */
+  .newsletter-section form {
+    flex-direction: row;
+  }
+
+  .newsletter-section form input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .newsletter-section form button {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  /* Social icons */
+  .social-icons {
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  /* Sub-footer */
+  .sub-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  .sub-footer p {
+    margin-bottom: 10px;
+  }
+
+  .sub-footer ul {
+    margin: 0;
+    flex-direction: row;
+  }
+
+  .sub-footer ul li {
+    margin-bottom: 10px;
+  }
 }

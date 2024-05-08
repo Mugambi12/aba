@@ -147,3 +147,91 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
+
+/*
+import React, { useRef } from "react";
+import "./Testimonials.css";
+import nextIcon from "../../assets/images/next-icon.png";
+import prevIcon from "../../assets/images/prev-icon.png";
+import user1 from "../../assets/images/user-1.png";
+import user2 from "../../assets/images/user-2.png";
+import user3 from "../../assets/images/user-3.png";
+import user4 from "../../assets/images/user-4.png";
+import user5 from "../../assets/images/user-5.png";
+import user6 from "../../assets/images/user-6.png";
+
+const Testimonials = () => {
+  const sliderRef = useRef(null);
+  const slideForward = () => {
+    const slider = document.querySelector(".slider ul");
+    const firstSlide = document.querySelector(".slider ul li");
+    const slideWidth = firstSlide.clientWidth;
+    slider.style.transition = "transform 0.5s ease-in-out";
+    slider.style.transform = `translateX(-${slideWidth}px)`;
+    slider.appendChild(firstSlide);
+  };
+
+  const slideBackward = () => {
+    const slider = document.querySelector(".slider ul");
+    const lastSlide = document.querySelector(".slider ul li:last-child");
+    const slideWidth = lastSlide.clientWidth;
+    slider.style.transition = "transform 0.5s ease-in-out";
+    slider.style.transform = `translateX(-${slideWidth}px)`;
+    slider.insertBefore(lastSlide, slider.firstChild);
+  };
+
+  const testimonials = [
+    {
+      name: "Mary Wambui",
+      role: "Community Leader, Kenya",
+      text: "Thanks to the NGO's efforts, our village now enjoys clean water and thriving wildlife. Our children are learning the value of conservation.",
+      imgSrc: user1,
+    },
+    {
+      name: "James Kamau",
+      role: "Farmer, Tanzania",
+      text: "The NGO's training has taught us sustainable farming practices that have improved our yields and protected local biodiversity.",
+      imgSrc: user2,
+    },
+    // ...additional testimonials go here
+  ];
+
+  return (
+    <div className="testimonials">
+      <img
+        src={nextIcon}
+        alt="next"
+        className="next-btn"
+        onClick={slideForward}
+      />
+      <img
+        src={prevIcon}
+        alt="previous"
+        className="prev-btn"
+        onClick={slideBackward}
+      />
+
+      <div className="slider">
+        <ul ref={sliderRef}>
+          {testimonials.map((testimonial, index) => (
+            <li key={index}>
+              <div className="slide">
+                <div className="user-info">
+                  <img src={testimonial.imgSrc} alt={testimonial.name} />
+                  <div>
+                    <h3>{testimonial.name}</h3>
+                    <p>{testimonial.role}</p>
+                  </div>
+                </div>
+                <p>{testimonial.text}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+export default Testimonials;
+*/

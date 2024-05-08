@@ -54,7 +54,7 @@ const App = () => {
   return (
     <>
       <Background playStatus={playStatus} heroCount={heroCount} fade={fade} />
-      <Navbar />
+      <Navbar videoPlayerState={videoPlayerState} />
       <Hero
         setHeroCount={setHeroCount}
         heroCount={heroCount}
@@ -65,7 +65,7 @@ const App = () => {
       />
 
       <div className="home-section">
-        <Title title="Our Program" subtitle="What We Offer" />
+        <Title title="Our Compaign" subtitle="What We Offer" />
         <Programs />
         <About setVideoPlayerState={setVideoPlayerState} />
 
