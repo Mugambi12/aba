@@ -10,10 +10,10 @@ import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
 import SocialMedia from "./Components/SocialMedia/SocialMedia";
 import VideoPlayer from "./Components/VideoPlayer/VideoPlayer";
-import BlogHeader from "./Components/BlogHeader/BlogHeader";
-import BlogSidebar from "./Components/BlogSidebar/BlogSidebar";
-import BlogPosts from "./Components/BlogPosts/BlogPosts";
-import BlogSinglePost from "./Components/BlogSinglePost/BlogSinglePost";
+import BlogHeader from "./Components/Blog/BlogHeader/BlogHeader";
+import BlogSidebar from "./Components/Blog/BlogSidebar/BlogSidebar";
+import BlogPosts from "./Components/Blog/BlogPosts/BlogPosts";
+import BlogSinglePost from "./Components/Blog/BlogSinglePost/BlogSinglePost";
 
 const App = () => {
   const heroData = [

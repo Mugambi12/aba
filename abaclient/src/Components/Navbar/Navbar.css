@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 5%;
-  background: salmon;
+  background: #fa8072cc;
 }
 .pre-nav ul {
   list-style: none;
@@ -27,7 +27,7 @@
 .pre-nav .join-us-button {
   padding: 0.5rem 1rem;
   border-radius: 50px;
-  background: salmon;
+  background: transparent;
   color: #000f38;
   border: none;
   cursor: pointer;
