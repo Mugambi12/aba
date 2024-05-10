@@ -62,11 +62,12 @@
 }
 .nav-menu a {
   padding: 0.5rem 0;
-  color: #9c9c9c;
-  transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+  color: #f5f5f5;
+  font-weight: 400;
+  transition: color 0.175s ease-in-out, border-bottom 0.175s ease-in-out;
 }
 .nav-menu a:hover {
-  color: #666;
+  color: salmon;
   border-bottom: 0.1875rem solid salmon;
 }
 .nav-contact {
@@ -91,8 +92,14 @@
   border-bottom: 2px salmon solid;
   z-index: 1000;
 }
+.nav.sticky .nav-menu a {
+  color: #000f38;
+}
+.nav.sticky .nav-menu a:hover {
+  border-color: rgb(0, 15, 56, 0.8);
+}
 .nav.sticky .nav-contact {
-  color: salmon;
+  color: #f5f5f5;
   background: #000f38;
 }
 .nav.sticky .nav-contact:hover {

@@ -18,6 +18,11 @@
   font-size: 20px;
   margin-bottom: 10px;
 }
+.blog-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
 .blog-post {
   margin-bottom: 20px;
 }

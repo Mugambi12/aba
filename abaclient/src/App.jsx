@@ -54,8 +54,6 @@ const App = () => {
 
   return (
     <>
-      <Auth />
-
       <Background playStatus={playStatus} heroCount={heroCount} fade={fade} />
       <Navbar videoPlayerState={videoPlayerState} />
       <Hero
@@ -67,49 +65,41 @@ const App = () => {
         fade={fade}
       />
 
-      <div className="home-section">
-        <Title title="Our Compaign" subtitle="What We Offer" />
-        <Programs />
-        <About setVideoPlayerState={setVideoPlayerState} />
+      <Title title="Our Compaign" subtitle="What We Offer" />
+      <Programs />
+      <About setVideoPlayerState={setVideoPlayerState} />
 
-        <div id="research-insights">
-          <div className="landing-page">
-            <BlogHeader />
-            <div className="posts-summary">
-              <BlogPosts />
-              <BlogSidebar />
-            </div>
-          </div>
-
-          <div className="article-page">
-            <BlogHeader />
-            <BlogSinglePost />
-          </div>
+      <div className="landing-page">
+        <BlogHeader />
+        <div className="posts-summary">
+          <BlogPosts />
+          <BlogSidebar />
         </div>
-
-        <div id="media">
-          <Title
-            title="Latest News & Insights"
-            subtitle="Stay updated with our latest stories and publications"
-          />
-          <SocialMedia />
-        </div>
-
-        <Title title="Our Focus" subtitle="Thematic Areas" />
-
-        <Title
-          title="Testimonials"
-          subtitle="Voices from Our Conservation Efforts"
-        />
-        <Testimonials />
-
-        <div id="contact-us">
-          <Title title="Contact Us" subtitle="Get in Touch" />
-          <Contact />
-        </div>
-
-        <Footer />
       </div>
+
+      <div className="article-page">
+        <BlogHeader />
+        <BlogSinglePost />
+      </div>
+
+      <Title
+        title="Latest News & Insights"
+        subtitle="Stay updated with our latest stories and publications"
+      />
+      <SocialMedia />
+
+      <Title title="Our Focus" subtitle="Thematic Areas" />
+
+      <Title
+        title="Testimonials"
+        subtitle="Voices from Our Conservation Efforts"
+      />
+      <Testimonials />
+
+      <Title title="Contact Us" subtitle="Get in Touch" />
+      <Contact />
+
+      <Footer />
 
       <VideoPlayer
         videoPlayerState={videoPlayerState}

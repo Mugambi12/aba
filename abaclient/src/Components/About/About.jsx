@@ -7,7 +7,11 @@ const About = ({ setVideoPlayerState }) => {
   return (
     <div className="about">
       <div className="about-left">
-        <img src={about_img} className="about-img" alt="" />
+        <img
+          src="https://media.istockphoto.com/id/1389848477/photo/shot-of-a-farmer-standing-on-a-field.jpg?b=1&s=612x612&w=0&k=20&c=QZK6m1xEG88wewiWffgnFqlf9H_dD4rC1NmRJ-TysiA="
+          className="about-img"
+          alt="About us image"
+        />
         <img
           src={play_icon}
           className="play-icon"
