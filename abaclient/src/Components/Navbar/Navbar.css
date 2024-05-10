@@ -71,9 +71,13 @@
 }
 .nav-contact {
   border-radius: 50px;
-  padding: 0.625rem 2.375rem;
+  padding: 0.525rem 1.75rem;
   background: #fff;
   color: #262626;
+}
+.nav-contact:hover {
+  background: salmon;
+  color: white;
 }
 
 .nav.sticky {
@@ -90,6 +94,10 @@
 .nav.sticky .nav-contact {
   color: salmon;
   background: #000f38;
+}
+.nav.sticky .nav-contact:hover {
+  color: #000f38;
+  background: salmon;
 }
 .nav.sticky .nav-logo {
   color: salmon;

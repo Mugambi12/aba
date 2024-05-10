@@ -1,10 +1,5 @@
 import React, { useState } from "react";
 import "./Contact.css";
-import msgIcon from "../../assets/images/msg-icon.png";
-import mailIcon from "../../assets/images/mail-icon.png";
-import phoneIcon from "../../assets/images/phone-icon.png";
-import locationIcon from "../../assets/images/location-icon.png";
-import whiteArrow from "../../assets/images/white-arrow.png";
 
 const Contact = () => {
   // State to track form submission result
@@ -41,7 +36,7 @@ const Contact = () => {
       <div className="contact-info">
         <h3>
           Send Us a Message
-          <img src={msgIcon} alt="Message icon" className="icon" />
+          <i className="fas fa-envelope icon"></i>
         </h3>
         <p>
           Feel free to reach out to us with any questions or concerns you may
@@ -50,15 +45,15 @@ const Contact = () => {
         </p>
         <ul className="contact-details">
           <li>
-            <img src={mailIcon} alt="Mail icon" />
+            <i className="fas fa-envelope"></i>
             <span>Contact@aba.dev</span>
           </li>
           <li>
-            <img src={phoneIcon} alt="Phone icon" />
-            <span>123-456-7890</span>
+            <i className="fas fa-phone"></i>
+            <span>+123-456-7890</span>
           </li>
           <li>
-            <img src={locationIcon} alt="Location icon" />
+            <i className="fas fa-map-marker-alt"></i>
             <span>77 8th Ave, New York, NY 10011</span>
           </li>
         </ul>
@@ -96,7 +91,7 @@ const Contact = () => {
 
           <button type="submit" className="submit-button">
             Send Message
-            <img src={whiteArrow} alt="Arrow icon" className="icon" />
+            <i className="fas fa-paper-plane icon"></i>
           </button>
         </form>
         <span className="form-result">{result}</span>

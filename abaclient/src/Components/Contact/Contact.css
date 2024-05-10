@@ -23,6 +23,7 @@
 .contact-info .icon {
   width: 35px;
   margin-left: 10px;
+  color: orange;
 }
 
 .contact-info p {
@@ -36,8 +37,9 @@
   margin: 20px 0;
 }
 
-.contact-info .contact-details li img {
-  width: 25px;
+.contact-info .contact-details li i {
+  color: #000f38cc;
+  font-size: 25px;
   margin-right: 10px;
 }
 
@@ -67,7 +69,7 @@
   border-radius: 25px;
   cursor: pointer;
 }
-.contact-form form button img {
+.contact-form form button i {
   width: 20px;
   margin-left: 10px;
 }
