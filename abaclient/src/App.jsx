@@ -14,6 +14,7 @@ import BlogHeader from "./Components/Blog/BlogHeader/BlogHeader";
 import BlogSidebar from "./Components/Blog/BlogSidebar/BlogSidebar";
 import BlogPosts from "./Components/Blog/BlogPosts/BlogPosts";
 import BlogSinglePost from "./Components/Blog/BlogSinglePost/BlogSinglePost";
+import Auth from "./Components/Auth/Auth";
 
 const App = () => {
   const heroData = [
@@ -53,6 +54,8 @@ const App = () => {
 
   return (
     <>
+      <Auth />
+
       <Background playStatus={playStatus} heroCount={heroCount} fade={fade} />
       <Navbar videoPlayerState={videoPlayerState} />
       <Hero
