@@ -4,8 +4,8 @@ const Header = () => {
   return (
     <div className="blog-header">
       <div className="blog-header-titles">
-        <span className="blog-header-subtitle">Recent Posts</span>
-        <span className="blog-header-title">BLOG</span>
+        <span className="blog-header-subtitle">Latest News Published</span>
+        <span className="blog-header-title">NewsRoom</span>
       </div>
       <img
         className="blog-header-image"

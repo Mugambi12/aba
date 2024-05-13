@@ -73,3 +73,9 @@
 .blog-sidebar-social .fa-youtube {
   color: #ff0000;
 }
+
+@media screen and (max-width: 768px) {
+  .blog-sidebar {
+    display: none;
+  }
+}

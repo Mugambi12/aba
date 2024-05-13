@@ -9,6 +9,7 @@ const Navbar = ({ videoPlayerState }) => {
     const scrollPosition = window.scrollY;
     setIsSticky(scrollPosition > 450);
   };
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -18,89 +19,109 @@ const Navbar = ({ videoPlayerState }) => {
 
   return (
     <>
-      <div className="pre-nav">
-        <ul>
+      <div className="header-top">
+        <ul className="header-top__contact-info">
           <li>
-            <a href="#" title="Location Address">
-              <i className="fas fa-map-marker-alt"></i>
-            </a>
-          </li>
-          <li>
-            <a href="#" title="company@example.dev">
+            <a href="#!" title="company@example.dev">
               <i className="fas fa-envelope"></i>
+              <span> &nbsp; info@company.com</span>
             </a>
           </li>
           <li>
-            <a href="#" title="+1234567890">
+            <a href="#!" title="+1234567890">
               <i className="fas fa-phone"></i>
+              <span> &nbsp; +123-456-7890</span>
+            </a>
+          </li>
+          <li>
+            <a href="#!" title="Location Address">
+              <i className="fas fa-map-marker-alt"></i>
+              <span> &nbsp; 77 8th Ave, New York, NY 10011</span>
             </a>
           </li>
         </ul>
 
-        <ul>
+        <ul className="header-top__social-links">
           <li>
-            <a href="#" title="LinkedIn">
+            <a href="#!" title="LinkedIn">
               <i className="fab fa-linkedin-in"></i>
             </a>
           </li>
           <li>
-            <a href="#" title="Facebook">
+            <a href="#!" title="Facebook">
               <i className="fab fa-facebook-f"></i>
             </a>
           </li>
           <li>
-            <a href="#" title="Twitter">
+            <a href="#!" title="Twitter">
               <i className="fab fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a href="#" title="Instagram">
+            <a href="#!" title="Instagram">
               <i className="fab fa-instagram"></i>
             </a>
           </li>
           <li>
-            <button className="join-us-button">Join Us</button>
+            <button className="header-top__join-button">Join Us</button>
           </li>
         </ul>
       </div>
 
       <nav
-        className={`nav ${isSticky && !videoPlayerState ? "sticky" : ""}`}
+        className={`main-nav ${isSticky && !videoPlayerState ? "sticky" : ""}`}
         ref={navRef}
       >
-        <div className="nav-logo">
+        <div className="main-nav__logo">
           <a href="#home">ABA</a>
         </div>
-        <ul className="nav-menu">
+        <ul className="main-nav__menu">
           <li>
             <a href="#our-story">Our Story</a>
           </li>
           <li>
-            <a href="#our-compaign">Our Campaign</a>
+            <a href="#our-campaign">Our Campaign</a>
           </li>
           <li>
             <a href="#thematic-areas">Thematic Areas</a>
+            <ul className="dropdown-menu">
+              <li className="dropdown-menu__item">
+                <a href="#!">Biodiversity Conservation</a>
+              </li>
+              <li className="dropdown-menu__item">
+                <a href="#!">Climate Change</a>
+              </li>
+              <li className="dropdown-menu__item">
+                <a href="#!">Ecosystem Restoration</a>
+              </li>
+              <li className="dropdown-menu__item">
+                <a href="#!">Sustainable Development</a>
+              </li>
+              <li className="dropdown-menu__item">
+                <a href="#!">Wildlife Protection</a>
+              </li>
+            </ul>
           </li>
           <li>
             <a href="#our-impact">Our Impact</a>
           </li>
           <li>
             <a href="#research-insights">Research & Media</a>
-            <ul className="dropdown">
-              <li className="dropdown-item">
-                <a href="#research">Research</a>
+            <ul className="dropdown-menu">
+              <li className="dropdown-menu__item">
+                <a href="#!">Research</a>
               </li>
-              <li className="dropdown-item">
+              <li className="dropdown-menu__item">
                 <a href="#!">Newsroom</a>
               </li>
-              <li className="dropdown-item">
+              <li className="dropdown-menu__item">
                 <a href="#!">Single News</a>
               </li>
             </ul>
           </li>
         </ul>
         <ul>
-          <li className="nav-contact">
+          <li className="main-nav__contact">
             <a href="#contact-us">Contact Us</a>
           </li>
         </ul>

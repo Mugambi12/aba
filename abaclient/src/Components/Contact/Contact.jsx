@@ -2,10 +2,8 @@ import React, { useState } from "react";
 import "./Contact.css";
 
 const Contact = () => {
-  // State to track form submission result
   const [result, setResult] = useState("");
 
-  // Form submission handler
   const handleSubmit = async (event) => {
     event.preventDefault();
     setResult("Sending...");
@@ -20,7 +18,6 @@ const Contact = () => {
 
     const data = await response.json();
 
-    // Handle response and provide feedback to the user
     if (data.success) {
       setResult("Form submitted successfully.");
       event.target.reset();
@@ -31,35 +28,28 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact-section">
-      {/* Contact information */}
+    <div className="contact-container">
       <div className="contact-info">
         <h3>
           Send Us a Message
           <i className="fas fa-envelope icon"></i>
         </h3>
         <p>
-          Feel free to reach out to us with any questions or concerns you may
-          have. We are here to help and will respond to your message as soon as
-          possible.
+          Have any questions or concerns? Feel free to reach out! We're here to
+          assist you and will get back to you promptly.
         </p>
-        <ul className="contact-details">
-          <li>
-            <i className="fas fa-envelope"></i>
-            <span>Contact@aba.dev</span>
-          </li>
-          <li>
-            <i className="fas fa-phone"></i>
-            <span>+123-456-7890</span>
-          </li>
-          <li>
-            <i className="fas fa-map-marker-alt"></i>
-            <span>77 8th Ave, New York, NY 10011</span>
-          </li>
-        </ul>
+        <div className="map-container">
+          <iframe
+            title="Google Maps"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3520.7326080184637!2d28.033935314534276!3d-26.2041022042959!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9509e47c5f9d8f%3A0x2b0c1ea59a7f9b3!2sJohannesburg%2C%20South%20Africa!5e0!3m2!1sen!2sus!4v1620978666128!5m2!1sen!2sus"
+            width="100%"
+            height="300"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
       </div>
-
-      {/* Contact form */}
       <div className="contact-form">
         <form onSubmit={handleSubmit}>
           <label htmlFor="name">Your Name</label>

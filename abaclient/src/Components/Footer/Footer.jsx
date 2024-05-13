@@ -82,7 +82,7 @@ const Footer = () => {
 
       <div className="sub-footer">
         <p>
-          © {year} {month} ABA. All rights reserved.
+          &copy; {year} {month} ABA. All rights reserved.
         </p>
         <ul>
           <li>
