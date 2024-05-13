@@ -1,7 +1,7 @@
 import React from "react";
-import "./BlogSinglePost.css";
+import "./SinglePost.css";
 
-const BlogSinglePost = () => {
+const SinglePost = () => {
   return (
     <div className="blog-single-post">
       <div className="blog-single-post-wrapper">
@@ -61,4 +61,4 @@ const BlogSinglePost = () => {
   );
 };
 
-export default BlogSinglePost;
+export default SinglePost;

@@ -85,10 +85,18 @@ const Navbar = ({ videoPlayerState }) => {
             <a href="#our-impact">Our Impact</a>
           </li>
           <li>
-            <a href="#research-insights">Research & Insights</a>
-          </li>
-          <li>
-            <a href="#media">Media & Resources</a>
+            <a href="#research-insights">Research & Media</a>
+            <ul className="dropdown">
+              <li className="dropdown-item">
+                <a href="#research">Research</a>
+              </li>
+              <li className="dropdown-item">
+                <a href="#!">Newsroom</a>
+              </li>
+              <li className="dropdown-item">
+                <a href="#!">Single News</a>
+              </li>
+            </ul>
           </li>
         </ul>
         <ul>

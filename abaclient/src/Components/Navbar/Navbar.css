@@ -58,7 +58,7 @@
   align-items: center;
   list-style: none;
   font-size: 1rem;
-  gap: 1.25rem;
+  gap: 1.75rem;
 }
 .nav-menu a {
   padding: 0.5rem 0;
@@ -108,4 +108,84 @@
 }
 .nav.sticky .nav-logo {
   color: salmon;
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 0.8rem);
+  left: 0;
+  display: none;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+.nav-menu li {
+  position: relative;
+}
+.nav-menu li:hover .dropdown {
+  display: block;
+}
+.dropdown-item {
+  padding: 0.5rem 1rem;
+}
+.dropdown-item a {
+  width: 100%;
+  color: #000f38;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+.dropdown-item a:hover {
+  color: salmon;
+  border-bottom: none;
+}
+
+@media screen and (max-width: 768px) {
+  .nav {
+    margin: 1rem 0;
+  }
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #f5f5f5;
+    border-bottom: 2px salmon solid;
+    padding: 1rem 0;
+    z-index: 1000;
+  }
+  .nav-menu a {
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #f5f5f5;
+  }
+  .nav-menu a:hover {
+    border-color: salmon;
+  }
+  .nav-contact {
+    display: none;
+  }
+  .nav.sticky {
+    padding: 0.7rem 0;
+  }
+  .nav.sticky .nav-menu {
+    display: none;
+  }
+  .nav.sticky .nav-contact {
+    display: block;
+  }
+  .nav.sticky .nav-contact:hover {
+    background: salmon;
+    color: white;
+  }
+  .nav.sticky .nav-logo {
+    color: salmon;
+  }
+  .dropdown {
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
 }

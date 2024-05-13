@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import "./VideoPlayer.css";
-import about_video from "../../assets/video1.mp4";
 
 const VideoPlayer = ({ videoPlayerState, setVideoPlayerState }) => {
   const player = useRef(null);
@@ -16,7 +15,15 @@ const VideoPlayer = ({ videoPlayerState, setVideoPlayerState }) => {
       ref={player}
       onClick={closePlayer}
     >
-      <video src={about_video} autoPlay loop muted controls></video>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/b6Ua_zWDH6U?autoplay=1&loop=1&playlist=b6Ua_zWDH6U&mute=0"
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      ></iframe>
     </div>
   );
 };

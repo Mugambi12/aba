@@ -65,49 +65,16 @@
 
 @media screen and (max-width: 768px) {
   .testimonials {
-    padding: 0 1.25rem;
+    padding: 0 20px;
   }
-
   .next-btn,
   .prev-btn {
-    padding: 0.625rem;
-    width: 1rem;
-    z-index: 2;
+    padding: 10px;
   }
-
-  .prev-btn {
-    left: 0.3rem;
-  }
-
-  .next-btn {
-    right: 0.3rem;
-  }
-
-  .slider ul {
-    width: 100%;
-  }
-
-  .slider ul li {
-    width: 100%;
-  }
-
   .slide {
-    padding: 1.25rem;
+    padding: 20px;
   }
-
-  .slide img {
-    width: 3.125rem;
-  }
-
   .user-info {
-    margin-bottom: 0.625rem;
-  }
-
-  .user-info h3 {
-    font-size: 0.875rem;
-  }
-
-  .user-info p {
-    font-size: 0.75rem;
+    font-size: 13px;
   }
 }

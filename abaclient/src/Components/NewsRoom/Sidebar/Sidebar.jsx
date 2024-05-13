@@ -1,6 +1,6 @@
-import "./BlogSidebar.css";
+import "./Sidebar.css";
 
-const BlogSidebar = () => {
+const Sidebar = () => {
   return (
     <div className="blog-sidebar">
       <div className="blog-sidebar-item">
@@ -39,4 +39,4 @@ const BlogSidebar = () => {
   );
 };
 
-export default BlogSidebar;
+export default Sidebar;

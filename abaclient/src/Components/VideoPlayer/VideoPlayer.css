@@ -1,9 +1,17 @@
-@keyframes fadeIn {
+@keyframes zoomIn {
   from {
-    opacity: 0.9;
+    transform: scale(0);
   }
   to {
-    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes zoomOut {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
   }
 }
 .video-player {
@@ -12,18 +20,17 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgb(0, 0, 0, 0.9);
+  background: rgb(0, 0, 0, 0.4);
   z-index: 100;
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: fadeIn 0.8s ease-in-out;
+  animation: zoomIn 0.8s ease-in-out, fadeIn 0.8s ease-in-out;
 }
-.video-player video {
-  width: 90%;
-  max-height: 90%;
-  height: auto;
-  border: 4px solid #fff;
+.video-player iframe {
+  width: 80%;
+  height: 80%;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
 }
 .video-player.hide {
   display: none;

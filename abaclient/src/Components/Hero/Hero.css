@@ -96,3 +96,44 @@
   font-size: 18px;
   margin-left: 10px;
 }
+
+@media screen and (max-width: 768px) {
+  .hero {
+    margin: 0 20px;
+    margin-top: 100px;
+  }
+  .hero-title {
+    font-size: 32px;
+  }
+  .hero-subtitle {
+    font-size: 18px;
+  }
+  .hero-explore {
+    margin-top: 80px;
+  }
+  .hero-explore p {
+    font-size: 16px;
+  }
+  .hero-explore img {
+    width: 40px;
+    height: 40px;
+  }
+  .hero-dot-play {
+    margin-bottom: 30px;
+  }
+  .hero-dots {
+    gap: 15px;
+    margin-left: 5%;
+  }
+  .hero-dot {
+    width: 8px;
+    height: 8px;
+  }
+  .hero-play img {
+    width: 30px;
+    height: 30px;
+  }
+  .hero-play p {
+    font-size: 16px;
+  }
+}

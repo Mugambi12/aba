@@ -1,7 +1,6 @@
-import React from "react";
-import "./BlogPost.css";
+import "./NewsPost.css";
 
-const BlogPost = ({ img }) => {
+const NewsPost = ({ img }) => {
   return (
     <div className="blog-post">
       <img className="blog-post-img" src={img} alt="Blog post image" />
@@ -36,4 +35,4 @@ const BlogPost = ({ img }) => {
   );
 };
 
-export default BlogPost;
+export default NewsPost;

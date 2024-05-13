@@ -21,7 +21,7 @@ const SocialMedia = () => {
   ];
 
   return (
-    <div>
+    <>
       <div className="media-container">
         <div className="blog-section">
           <h1 className="blog-header">Latest News</h1>
@@ -77,7 +77,7 @@ const SocialMedia = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

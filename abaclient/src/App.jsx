@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Background from "./Components/Background/Background";
 import Navbar from "./Components/Navbar/Navbar";
 import Hero from "./Components/Hero/Hero";
@@ -10,10 +10,11 @@ import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
 import SocialMedia from "./Components/SocialMedia/SocialMedia";
 import VideoPlayer from "./Components/VideoPlayer/VideoPlayer";
-import BlogHeader from "./Components/Blog/BlogHeader/BlogHeader";
-import BlogSidebar from "./Components/Blog/BlogSidebar/BlogSidebar";
-import BlogPosts from "./Components/Blog/BlogPosts/BlogPosts";
-import BlogSinglePost from "./Components/Blog/BlogSinglePost/BlogSinglePost";
+
+import Header from "./Components/NewsRoom/Header/Header";
+import News from "./Components/NewsRoom/News/News";
+import Sidebar from "./Components/NewsRoom/Sidebar/Sidebar";
+import SinglePost from "./Components/NewsRoom/SinglePost/SinglePost";
 import Auth from "./Components/Auth/Auth";
 
 const App = () => {
@@ -70,16 +71,16 @@ const App = () => {
       <About setVideoPlayerState={setVideoPlayerState} />
 
       <div className="landing-page">
-        <BlogHeader />
+        <Header />
         <div className="posts-summary">
-          <BlogPosts />
-          <BlogSidebar />
+          <News />
+          <Sidebar />
         </div>
       </div>
 
       <div className="article-page">
-        <BlogHeader />
-        <BlogSinglePost />
+        <Header />
+        <SinglePost />
       </div>
 
       <Title
