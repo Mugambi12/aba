@@ -3,9 +3,9 @@ import Navbar from "../Components/Navbar/Navbar";
 import Footer from "../Components/Footer/Footer";
 import InlineContact from "../Components/Contact/InlineContact";
 import PageHeader from "../Components/PageHeader/PageHeader";
-import About from "../Components/About/About";
 import CEOMessage from "../Components/About/CEOMessage";
 import Contribution from "../Components/About/Contribution";
+import Leadership from "../Components/About/Leadership";
 
 const OurStory = () => {
   return (
@@ -18,7 +18,7 @@ const OurStory = () => {
       />
       <CEOMessage />
       <Contribution />
-      <About />
+      <Leadership />
       <InlineContact />
       <Footer />
     </>

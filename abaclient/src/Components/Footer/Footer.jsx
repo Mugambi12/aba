@@ -55,7 +55,7 @@ const Footer = () => {
               <i className="fas fa-envelope mail-icon"></i>
               <input type="email" placeholder="Enter your email" required />
               <button type="submit">
-                <i class="fas fa-paper-plane arrow-button"></i>
+                <i className="fas fa-paper-plane arrow-button"></i>
               </button>
             </form>
 
