@@ -1,0 +1,84 @@
+.contribution-container {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: fit-content;
+  margin: 60px 0;
+  position: relative; /* Added */
+}
+
+.background-overlay {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  background: #000;
+  z-index: -1;
+}
+
+.background-image {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.contribution-details {
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10% 0 5% 50px;
+}
+
+.contribution-details .text-container {
+  display: flex;
+  align-items: center;
+}
+
+.contribution-details .text-container .checkmark {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+  align-self: start;
+  margin-top: 20px;
+}
+
+.contribution-details .text-container .title {
+  color: gold;
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.contribution-details .text-container .subtitle {
+  color: #f5f5f5;
+  font-size: 40px;
+}
+
+.contribution-details .contribution-stats {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.contribution-details .contribution-stats .stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.contribution-details .contribution-stats .stat .number {
+  font-size: 50px;
+  font-weight: bold;
+  color: gold;
+}
+
+.contribution-details .contribution-stats .stat .label {
+  font-size: 20px;
+  color: whitesmoke;
+}

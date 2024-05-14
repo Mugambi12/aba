@@ -26,7 +26,7 @@
 }
 
 .auth-container {
-  background-color: whitesmoke;
+  background: whitesmoke;
   border-radius: 30px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
   position: relative;
@@ -55,7 +55,7 @@
 }
 
 .auth-container button {
-  background-color: #000f38;
+  background: #000f38;
   color: whitesmoke;
   font-size: 12px;
   padding: 10px 45px;
@@ -69,12 +69,12 @@
 }
 
 .auth-container button.hidden {
-  background-color: transparent;
+  background: transparent;
   border-color: whitesmoke;
 }
 
 .auth-container form {
-  background-color: whitesmoke;
+  background: whitesmoke;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -84,7 +84,7 @@
 }
 
 .auth-container input {
-  background-color: #eee;
+  background: #eee;
   border: none;
   margin: 8px 0;
   padding: 10px 15px;

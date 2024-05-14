@@ -1,0 +1,121 @@
+.our-story {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  padding: 0 8%;
+}
+
+.message-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 80px 0;
+}
+
+.ceo-image {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.ceo-message {
+  flex: 1;
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-align: justify;
+}
+
+.ceo-message .title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.ceo-message .message {
+  margin-bottom: 20px;
+}
+
+.ceo-message .signature {
+  width: 100px;
+  margin-top: 20px;
+}
+
+.ceo-message .ceo-name {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.ceo-message .ceo-subname {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.company-overview {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.overview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.overview .title {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* I want the underline to be short and below the above overview title and not alongside the title */
+.underline-short {
+  width: 100px;
+  height: 4px;
+  background: #f7c08a;
+  margin-top: 60px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  border: none;
+  border-radius: 20px;
+}
+
+.overview-details {
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-align: justify;
+}
+
+.overview-details .overview-details-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.overview-details .overview-summery {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.overview-details .blockquote {
+  width: 60%;
+  margin: 40px auto;
+}
+
+.overview-details .blockquote-text {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #000f37;
+}
+
+.overview-details .column-lg-2 {
+  column-count: 2;
+  column-gap: 40px;
+}
