@@ -78,7 +78,7 @@
 .main-nav__menu a,
 .main-nav__menu Link {
   padding: 0.5rem 0;
-  color: #f5f5f5;
+  color: whitesmoke;
   font-weight: 400;
   transition: color 0.175s ease-in-out, border-bottom 0.175s ease-in-out;
 }
@@ -92,7 +92,7 @@
 .main-nav__contact {
   border-radius: 50px;
   padding: 0.525rem 1.75rem;
-  background: #fff;
+  background: whitesmoke;
   color: #262626;
 }
 
@@ -112,7 +112,7 @@
   right: 0;
   margin: 0;
   padding: 0.7rem 5%;
-  background: #f5f5f5;
+  background: whitesmoke;
   border-bottom: 2px salmon solid;
   z-index: 1000;
 }
@@ -129,7 +129,7 @@
 }
 
 .main-nav.sticky .main-nav__contact {
-  color: #f5f5f5;
+  color: whitesmoke;
   background: #000f38;
 }
 
@@ -147,7 +147,7 @@
   top: calc(100% + 0.8rem);
   left: 0;
   display: none;
-  background-color: #fff;
+  background-color: whitesmoke;
   border-radius: 8px;
   box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
   z-index: 10;

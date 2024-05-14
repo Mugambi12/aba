@@ -17,7 +17,7 @@ const ContactPage = () => {
       <PageHeader
         backgroundImage={BackgroundImage}
         title="Contact"
-        subtitle=" > Contact"
+        subtitle="Contact Us"
       />
 
       <InlineContact />

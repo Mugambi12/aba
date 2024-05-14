@@ -13,8 +13,9 @@ const PageHeader = ({ backgroundImage, title, subtitle }) => {
         <div className="page-header-subtitle">
           <Link to="/">
             <span>Home</span>
+            <i className="fas fa-chevron-right"></i>
           </Link>
-          {subtitle}
+          <span className="subtitle-text">{subtitle}</span>
         </div>
       </div>
     </div>

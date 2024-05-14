@@ -90,7 +90,7 @@ const Navbar = ({ videoPlayerState }) => {
             <a href="/our-campaign">Our Campaign</a>
           </li>
           <li>
-            <a href="#thematic-areas">Thematic Areas</a>
+            <a href="/thematic-areas">Thematic Areas</a>
             <ul className="dropdown-menu">
               <li className="dropdown-menu__item">
                 <a href="#!">Biodiversity Conservation</a>

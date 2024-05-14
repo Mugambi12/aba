@@ -25,7 +25,7 @@
   z-index: -1;
 }
 .page-header-titles {
-  color: #ffffff;
+  color: whitesmoke;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -41,4 +41,13 @@
 }
 .page-header-subtitle span {
   color: #4f8dca;
+  margin-right: 12px;
+}
+.page-header-subtitle .subtitle-text {
+  font-size: 16px;
+  color: whitesmoke;
+}
+.page-header-subtitle i {
+  color: orangered;
+  margin-right: 12px;
 }

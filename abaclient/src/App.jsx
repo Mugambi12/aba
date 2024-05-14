@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import {
   BrowserRouter as Router,
   Route,
@@ -6,37 +6,38 @@ import {
   Navigate,
 } from "react-router-dom";
 import Preloader from "./Components/Preloader/Preloader";
-import AuthPage from "./pages/Auth";
-import HomePage from "./pages/Home";
-import NewsRoomPage from "./pages/NewsRoom";
-import ContactPage from "./pages/Contact";
+
+// Lazy load components
+const LazyHomePage = React.lazy(() => import("./pages/Home"));
+const LazyAuthPage = React.lazy(() => import("./pages/Auth"));
+const LazyOurStory = React.lazy(() => import("./pages/OurStory"));
+const LazyThematicAreas = React.lazy(() => import("./pages/ThematicAreas"));
+const LazyNewsRoomPage = React.lazy(() => import("./pages/NewsRoom"));
+const LazyContactPage = React.lazy(() => import("./pages/Contact"));
 
 const App = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isRoutesLoaded, setIsRoutesLoaded] = useState(false);
 
   useEffect(() => {
-    // Simulate loading delay
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 800);
-
-    return () => clearTimeout(timer);
+    setIsRoutesLoaded(true);
   }, []);
 
   return (
     <Router>
-      {isLoading ? (
-        <Preloader />
-      ) : (
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/auth" element={<AuthPage />} />
-          <Route path="/newsroom" element={<NewsRoomPage />} />
-          <Route path="/contact-us" element={<ContactPage />} />
+      <Suspense fallback={<Preloader />}>
+        {isRoutesLoaded && (
+          <Routes>
+            <Route path="/" element={<LazyHomePage />} />
+            <Route path="/auth" element={<LazyAuthPage />} />
+            <Route path="/our-story" element={<LazyOurStory />} />
+            <Route path="/thematic-areas" element={<LazyThematicAreas />} />
+            <Route path="/newsroom" element={<LazyNewsRoomPage />} />
+            <Route path="/contact-us" element={<LazyContactPage />} />
 
-          <Route path="*" element={<Navigate to="/" />} />
-        </Routes>
-      )}
+            <Route path="*" element={<Navigate to="/" />} />
+          </Routes>
+        )}
+      </Suspense>
     </Router>
   );
 };
