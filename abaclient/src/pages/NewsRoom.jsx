@@ -1,25 +1,29 @@
-import { useState } from "react";
-
+import BackgroundImage from "../assets/image1.png";
 import Navbar from "../Components/Navbar/Navbar";
 import Footer from "../Components/Footer/Footer";
-
-import Header from "../Components/NewsRoom/Header/Header";
 import News from "../Components/NewsRoom/News/News";
 import Sidebar from "../Components/NewsRoom/Sidebar/Sidebar";
+import PageHeader from "../Components/PageHeader/PageHeader";
+import Media from "../Components/NewsRoom/Media/Media";
 
 const NewsRoomPage = () => {
-  const [videoPlayerState, setVideoPlayerState] = useState(false);
-
   return (
     <>
-      <Navbar videoPlayerState={videoPlayerState} />
+      <Navbar />
+      <PageHeader
+        backgroundImage={BackgroundImage}
+        title="News Room"
+        subtitle="Latest News"
+      />
+
       <div className="landing-page">
-        <Header />
         <div className="posts-summary">
           <News />
           <Sidebar />
         </div>
       </div>
+
+      <Media />
 
       <Footer />
     </>

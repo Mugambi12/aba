@@ -55,7 +55,7 @@
   align-items: center;
   color: white;
   background: rgba(255, 255, 255, 0.25);
-  padding: 0.5rem 5% 01rem;
+  padding: 0rem 5%;
   position: relative;
   transition: background 0.3s ease;
 }
@@ -111,7 +111,7 @@
   left: 0;
   right: 0;
   margin: 0;
-  padding: 0.7rem 5%;
+  padding: 0rem 5%;
   background: whitesmoke;
   border-bottom: 2px salmon solid;
   z-index: 1000;
