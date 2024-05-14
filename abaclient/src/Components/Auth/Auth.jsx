@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import backgroundImage from "../../assets/image3.png";
 import "./Auth.css";
 
 const Auth = () => {
@@ -13,26 +15,33 @@ const Auth = () => {
   };
 
   return (
-    <div className="body-container">
-      <div className={`auth-container ${isSignIn ? "" : "active"}`}>
-        <div className="form-container sign-up">
+    <div className="auth-container-fluid">
+      <img
+        src={backgroundImage}
+        alt="Background"
+        className="background-image"
+      />
+      <div
+        className={`auth-container zoomin-element ${isSignIn ? "" : "active"}`}
+      >
+        <div className="form-container form-sign-up">
           <form>
             <h1>Create Account</h1>
-            <div class="social-icons">
-              <a href="#" class="icon">
-                <i class="fab fa-facebook-f"></i>
+            <div className="social-icons">
+              <a href="#" className="icon">
+                <i className="fab fa-facebook-f"></i>
               </a>
-              <a href="#" class="icon">
-                <i class="fab fa-linkedin-in"></i>
+              <a href="#" className="icon">
+                <i className="fab fa-linkedin-in"></i>
               </a>
-              <a href="#" class="icon">
-                <i class="fab fa-twitter"></i>
+              <a href="#" className="icon">
+                <i className="fab fa-twitter"></i>
               </a>
-              <a href="#" class="icon">
-                <i class="fab fa-google-plus-g"></i>
+              <a href="#" className="icon">
+                <i className="fab fa-google-plus-g"></i>
               </a>
             </div>
-            <span>or use your email for registeration</span>
+            <span>or use your email for registration</span>
             <input type="text" placeholder="Name" required />
             <input type="email" placeholder="Email" required />
             <input type="password" placeholder="Password" required />
@@ -40,21 +49,21 @@ const Auth = () => {
           </form>
         </div>
 
-        <div className="form-container sign-in">
+        <div className="form-container form-sign-in">
           <form>
             <h1>Sign In</h1>
-            <div class="social-icons">
-              <a href="#" class="icon">
-                <i class="fab fa-facebook-f"></i>
+            <div className="social-icons">
+              <a href="#" className="icon">
+                <i className="fab fa-facebook-f"></i>
               </a>
-              <a href="#" class="icon">
-                <i class="fab fa-linkedin-in"></i>
+              <a href="#" className="icon">
+                <i className="fab fa-linkedin-in"></i>
               </a>
-              <a href="#" class="icon">
-                <i class="fab fa-twitter"></i>
+              <a href="#" className="icon">
+                <i className="fab fa-twitter"></i>
               </a>
-              <a href="#" class="icon">
-                <i class="fab fa-google-plus-g"></i>
+              <a href="#" className="icon">
+                <i className="fab fa-google-plus-g"></i>
               </a>
             </div>
 
@@ -74,6 +83,10 @@ const Auth = () => {
               <button className="hidden" onClick={handleSignInClick}>
                 Sign In
               </button>
+
+              <button className="hidden">
+                <Link to="/" className="nav-link"></Link>
+              </button>
             </div>
             <div className="toggle-panel toggle-right">
               <h1>Hello, Friend!</h1>
@@ -82,6 +95,10 @@ const Auth = () => {
               </p>
               <button className="hidden" onClick={handleSignUpClick}>
                 Sign Up
+              </button>
+
+              <button className="hidden">
+                <Link to="/" className="nav-link"></Link>
               </button>
             </div>
           </div>

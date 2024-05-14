@@ -27,6 +27,9 @@ const Contact = () => {
     }
   };
 
+  const googleMapsEmbedURL =
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3520.7326080184637!2d28.033935314534276!3d-26.2041022042959!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9509e47c5f9d8f%3A0x2b0c1ea59a7f9b3!2sJohannesburg%2C%20South%20Africa!5e0!3m2!1sen!2sus!4v1620978666128!5m2!1sen!2sus";
+
   return (
     <div className="contact-container">
       <div className="contact-info">
@@ -41,7 +44,7 @@ const Contact = () => {
         <div className="map-container">
           <iframe
             title="Google Maps"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3520.7326080184637!2d28.033935314534276!3d-26.2041022042959!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9509e47c5f9d8f%3A0x2b0c1ea59a7f9b3!2sJohannesburg%2C%20South%20Africa!5e0!3m2!1sen!2sus!4v1620978666128!5m2!1sen!2sus"
+            src={googleMapsEmbedURL}
             width="100%"
             height="300"
             style={{ border: 0 }}
@@ -50,7 +53,12 @@ const Contact = () => {
           ></iframe>
         </div>
       </div>
+
       <div className="contact-form">
+        <h3>
+          Write to us
+          <i className="fas fa-pencil-alt icon"></i>
+        </h3>
         <form onSubmit={handleSubmit}>
           <label htmlFor="name">Your Name</label>
           <input

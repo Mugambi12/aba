@@ -2,8 +2,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 5%;
+  padding: 0.5rem 2.5%;
   background: rgba(250, 128, 114, 0.8);
+  font-size: 14px;
 }
 
 .header-top__contact-info {
@@ -28,12 +29,13 @@
 
 .header-top__social-links li a:hover,
 .header-top__social-links li i:hover {
-  color: aquamarine;
+  color: #000f38;
   transform: scale(1.2);
 }
 
-.header-top__join-button {
-  padding: 0.5rem 1rem;
+.header-top__social-links li > .header-top__join-button {
+  padding: 0.3rem 1rem;
+  margin-inline-start: 1rem;
   border-radius: 50px;
   background: transparent;
   color: #000f38;
@@ -42,16 +44,18 @@
   transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-.header-top__join-button:hover {
-  background: white;
+.header-top__social-links li > .header-top__join-button:hover {
+  background: #000f38;
   color: salmon;
 }
+
 .main-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 1rem 5%;
   color: white;
+  background: rgba(255, 255, 255, 0.25);
+  padding: 0.5rem 5% 01rem;
   position: relative;
   transition: background-color 0.3s ease;
 }
@@ -71,14 +75,16 @@
   gap: 1.75rem;
 }
 
-.main-nav__menu a {
+.main-nav__menu a,
+.main-nav__menu Link {
   padding: 0.5rem 0;
   color: #f5f5f5;
   font-weight: 400;
   transition: color 0.175s ease-in-out, border-bottom 0.175s ease-in-out;
 }
 
-.main-nav__menu a:hover {
+.main-nav__menu a:hover,
+.main-nav__menu Link:hover {
   color: salmon;
   border-bottom: 0.1875rem solid salmon;
 }
@@ -95,6 +101,10 @@
   color: white;
 }
 
+.header-top.add-margin-for-sticky {
+  margin-bottom: 5.5rem;
+}
+
 .main-nav.sticky {
   position: fixed;
   top: 0;
@@ -107,11 +117,13 @@
   z-index: 1000;
 }
 
-.main-nav.sticky .main-nav__menu a {
+.main-nav.sticky .main-nav__menu a,
+.main-nav.sticky .main-nav__menu Link {
   color: #000f38;
 }
 
-.main-nav.sticky .main-nav__menu a:hover {
+.main-nav.sticky .main-nav__menu a:hover,
+.main-nav.sticky .main-nav__menu Link:hover {
   color: salmon;
   border-color: rgba(0, 15, 56, 0.8);
 }
@@ -169,52 +181,6 @@
 
 /*
 @media screen and (max-width: 768px) {
-  .nav {
-    margin: 1rem 0;
-  }
-  .nav-menu {
-    display: none;
-    flex-direction: column;
-    gap: 1rem;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: #f5f5f5;
-    border-bottom: 2px salmon solid;
-    padding: 1rem 0;
-    z-index: 1000;
-  }
-  .nav-menu a {
-    padding: 0.5rem 1rem;
-    border-bottom: 1px solid #f5f5f5;
-  }
-  .nav-menu a:hover {
-    border-color: salmon;
-  }
-  .nav-contact {
-    display: none;
-  }
-  .nav.sticky {
-    padding: 0.7rem 0;
-  }
-  .nav.sticky .nav-menu {
-    display: none;
-  }
-  .nav.sticky .nav-contact {
-    display: block;
-  }
-  .nav.sticky .nav-contact:hover {
-    background: salmon;
-    color: white;
-  }
-  .nav.sticky .nav-logo {
-    color: salmon;
-  }
-  .dropdown {
-    top: 100%;
-    left: 0;
-    width: 100%;
-  }
+
 }
 */

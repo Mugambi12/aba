@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = ({ videoPlayerState }) => {
@@ -7,7 +8,7 @@ const Navbar = ({ videoPlayerState }) => {
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
-    setIsSticky(scrollPosition > 450);
+    setIsSticky(scrollPosition > 100);
   };
 
   useEffect(() => {
@@ -19,7 +20,11 @@ const Navbar = ({ videoPlayerState }) => {
 
   return (
     <>
-      <div className="header-top">
+      <div
+        className={`header-top ${
+          isSticky && !videoPlayerState ? "add-margin-for-sticky" : ""
+        }`}
+      >
         <ul className="header-top__contact-info">
           <li>
             <a href="#!" title="company@example.dev">
@@ -63,7 +68,9 @@ const Navbar = ({ videoPlayerState }) => {
             </a>
           </li>
           <li>
-            <button className="header-top__join-button">Join Us</button>
+            <Link to="/auth" className="header-top__join-button">
+              Join Us
+            </Link>
           </li>
         </ul>
       </div>
@@ -73,14 +80,14 @@ const Navbar = ({ videoPlayerState }) => {
         ref={navRef}
       >
         <div className="main-nav__logo">
-          <a href="#home">ABA</a>
+          <a href="/">ABA</a>
         </div>
         <ul className="main-nav__menu">
           <li>
-            <a href="#our-story">Our Story</a>
+            <a href="/our-story">Our Story</a>
           </li>
           <li>
-            <a href="#our-campaign">Our Campaign</a>
+            <a href="/our-campaign">Our Campaign</a>
           </li>
           <li>
             <a href="#thematic-areas">Thematic Areas</a>
@@ -103,10 +110,10 @@ const Navbar = ({ videoPlayerState }) => {
             </ul>
           </li>
           <li>
-            <a href="#our-impact">Our Impact</a>
+            <a href="/our-impact">Our Impact</a>
           </li>
           <li>
-            <a href="#research-insights">Research & Media</a>
+            <a href="/newsroom">Research & Media</a>
             <ul className="dropdown-menu">
               <li className="dropdown-menu__item">
                 <a href="#!">Research</a>
@@ -122,7 +129,7 @@ const Navbar = ({ videoPlayerState }) => {
         </ul>
         <ul>
           <li className="main-nav__contact">
-            <a href="#contact-us">Contact Us</a>
+            <a href="/contact-us">Contact Us</a>
           </li>
         </ul>
       </nav>

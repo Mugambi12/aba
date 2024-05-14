@@ -1,0 +1,44 @@
+.page-header {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 90%;
+  padding: 20px;
+  background-color: #00000056;
+}
+.page-header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  background-color: #000;
+  z-index: -1;
+}
+.page-header-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  z-index: -1;
+}
+.page-header-titles {
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10% 0 5% 50px;
+}
+.page-header-title {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.page-header-subtitle {
+  font-size: 20px;
+}
+.page-header-subtitle span {
+  color: #4f8dca;
+}
