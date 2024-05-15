@@ -73,6 +73,13 @@
   border-color: whitesmoke;
 }
 
+.auth-container .back-home-link {
+  color: whitesmoke;
+  font-size: 12px;
+  text-decoration: none;
+  margin: 15px 0 10px;
+}
+
 .auth-container form {
   background: whitesmoke;
   display: flex;

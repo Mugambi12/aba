@@ -13,6 +13,7 @@ const ThematicAreas = () => {
         title="Thematic Areas"
         subtitle="Our Focus"
       />
+
       <InlineContact />
       <Footer />
     </>

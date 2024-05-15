@@ -1,5 +1,5 @@
 import "./SocialMedia.css";
-import video1 from "../../assets/video1.mp4";
+import video1 from "../../assets/video/video1.mp4";
 
 const SocialMedia = () => {
   const blogs = [

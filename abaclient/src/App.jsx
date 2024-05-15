@@ -14,6 +14,7 @@ const LazyOurStory = React.lazy(() => import("./pages/OurStory"));
 const LazyThematicAreas = React.lazy(() => import("./pages/ThematicAreas"));
 const LazyNewsRoomPage = React.lazy(() => import("./pages/NewsRoom"));
 const LazyContactPage = React.lazy(() => import("./pages/Contact"));
+const LazyAllData = React.lazy(() => import("./pages/AllData"));
 
 const App = () => {
   const [isRoutesLoaded, setIsRoutesLoaded] = useState(false);
@@ -33,6 +34,8 @@ const App = () => {
             <Route path="/thematic-areas" element={<LazyThematicAreas />} />
             <Route path="/newsroom" element={<LazyNewsRoomPage />} />
             <Route path="/contact-us" element={<LazyContactPage />} />
+
+            <Route path="/all-data" element={<LazyAllData />} />
 
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>

@@ -30,7 +30,7 @@
 .header-top__social-links li a:hover,
 .header-top__social-links li i:hover {
   color: #000f38;
-  transform: scale(1.2);
+  transform: rotate(360deg);
 }
 
 .header-top__social-links li > .header-top__join-button {
@@ -91,9 +91,10 @@
 
 .main-nav__contact {
   border-radius: 50px;
-  padding: 0.525rem 1.75rem;
+  padding: 0.375rem 1.5rem;
   background: whitesmoke;
   color: #262626;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .main-nav__contact:hover {

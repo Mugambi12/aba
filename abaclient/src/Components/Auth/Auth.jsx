@@ -84,9 +84,9 @@ const Auth = () => {
                 Sign In
               </button>
 
-              <button className="hidden">
-                <Link to="/" className="nav-link"></Link>
-              </button>
+              <Link to="/" className="back-home-link">
+                Go back Home
+              </Link>
             </div>
             <div className="toggle-panel toggle-right">
               <h1>Hello, Friend!</h1>
@@ -97,9 +97,9 @@ const Auth = () => {
                 Sign Up
               </button>
 
-              <button className="hidden">
-                <Link to="/" className="nav-link"></Link>
-              </button>
+              <Link to="/" className="back-home-link">
+                Go back Home
+              </Link>
             </div>
           </div>
         </div>

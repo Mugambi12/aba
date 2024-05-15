@@ -4,6 +4,7 @@ const Media = () => {
   return (
     <>
       <div class="youtube-area">
+        <h2 className="youtube-area-title">Trending Events</h2>
         <div class="youtube-container">
           <div class="video-items-active">
             <div class="video-items active">

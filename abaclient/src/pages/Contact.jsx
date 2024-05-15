@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-
 import BackgroundImage from "../assets/image3.png";
 import Contact from "../Components/Contact/Contact";
 import Footer from "../Components/Footer/Footer";
@@ -7,18 +5,19 @@ import Navbar from "../Components/Navbar/Navbar";
 import PageHeader from "../Components/PageHeader/PageHeader";
 import Title from "../Components/Title/Title";
 import InlineContact from "../Components/Contact/InlineContact";
+import ContactInfo from "../Components/Contact/ContactInfo";
 
 const ContactPage = () => {
-  const [videoPlayerState, setVideoPlayerState] = useState(false);
-
   return (
     <>
-      <Navbar videoPlayerState={videoPlayerState} />
+      <Navbar />
       <PageHeader
         backgroundImage={BackgroundImage}
         title="Contact"
         subtitle="Contact Us"
       />
+
+      <ContactInfo />
 
       <InlineContact />
 

@@ -1,8 +1,8 @@
 import "./Background.css";
-import video1 from "../../assets/video1.mp4";
+import video1 from "../../assets/video/video1.mp4";
 import image1 from "../../assets/image1.png";
 import image2 from "../../assets/image2.png";
-import image3 from "../../assets/video/image3.png";
+import image3 from "../../assets/image3.png";
 
 const Background = ({ playStatus, heroCount, fade }) => {
   const fadeClass = fade ? "fade-in" : "";

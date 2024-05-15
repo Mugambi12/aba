@@ -3,6 +3,13 @@
   padding: 50px 4.5%;
 }
 
+.youtube-area-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #000f37;
+  margin-bottom: 20px;
+}
+
 .youtube-container {
   display: flex;
   flex-direction: column;
