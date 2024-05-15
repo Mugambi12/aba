@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { fetchDocsData } from "../api/docsApi";
+import { fetchDocsData } from "../api/apiDocs";
 import { fetchUsersData } from "../api/usersApi";
 import { fetchBlogsData } from "../api/blogsApi";
 

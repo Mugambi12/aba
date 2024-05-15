@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const { getDocsApi } = require("./src/api/docsApi");
+const { getapiDocs } = require("./src/api/apiDocs");
 const { registerUser, loginUser, logoutUser } = require("./src/api/authApi");
 const {
   getAllUsers,
@@ -26,7 +26,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // Register route handlers
-app.get("/docs/api", getDocsApi);
+app.get("/docs/api", getapiDocs);
 
 app.post("/users/register", registerUser);
 app.post("/users/login", loginUser);
