@@ -1,0 +1,20 @@
+// usersApi.js
+const { loadData, saveData } = require("../dataHandler/dataHandler");
+
+exports.registerUser = (req, res) => {
+  const userData = req.body;
+  const usersData = loadData();
+  // Add logic for user registration
+  saveData(usersData);
+  res.status(200).send("User registered successfully");
+};
+
+exports.loginUser = (req, res) => {
+  // Add logic for user login
+  res.status(200).send("User logged in successfully");
+};
+
+exports.logoutUser = (req, res) => {
+  // Add logic for user logout
+  res.status(200).send("User logged out successfully");
+};

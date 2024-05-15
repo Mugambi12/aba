@@ -1,0 +1,48 @@
+{
+    "documentation": [
+        {
+            "title": "API Overview",
+            "description": "This API provides access to user and blog data."
+        },
+        {
+            "title": "Get Users",
+            "description": "Returns a list of all users."
+        },
+        {
+            "title": "Get User by ID",
+            "description": "Returns a single user by ID."
+        },
+        {
+            "title": "Update User by ID",
+            "description": "Updates a user's information by ID."
+        },
+        {
+            "title": "Delete User by ID",
+            "description": "Deletes a user by ID."
+        },
+
+        {
+            "title": "Get Blogs",
+            "description": "Returns a list of all blogs."
+        },
+        {
+            "title": "Create Blog",
+            "description": "Creates a new blog."
+        },
+        {
+            "title": "Get Blog by ID",
+            "description": "Returns a single blog by ID."
+        },
+        {
+            "title": "Get Blogs by User ID",
+            "description": "Returns a list of blogs by a specific user."
+        },
+        {
+            "title": "Update Blog by ID",
+            "description": "Updates a blog by ID."
+        },
+        {
+            "title": "Delete Blog by ID",
+            "description": "Deletes a blog by ID."
+        }]
+}
