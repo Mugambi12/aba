@@ -1,4 +1,4 @@
-import { BASE_URL } from "./apiConfig";
+import { BASE_URL } from "../Config/Config";
 
 export async function fetchUsersData() {
   try {

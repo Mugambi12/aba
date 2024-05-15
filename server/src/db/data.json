@@ -123,6 +123,13 @@
             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
             "createdAt": "2024-05-13T11:30:00Z",
             "updatedAt": "2024-05-13T12:30:00Z"
-        }
+        },
+        {
+            "id": 4,
+            "title": "Traveling the World",
+            "authorId": 2,
+            "content": "Lorem200 Praesent libero. Sed cursus ante dapibus diam.",
+            "createdAt": "2024-05-12T09:45:00Z",
+            "updatedAt": "2024-05-12T10:30:00Z"}
     ]
 }
