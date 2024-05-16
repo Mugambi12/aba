@@ -1,14 +1,12 @@
-// authApi.js
+// authController.js
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const { loadData, saveData } = require("../dataHandler/dataHandler");
 
-// Function to generate JWT token
 const generateToken = (userData) => {
   return jwt.sign(userData, "your_secret_key", { expiresIn: "1h" });
 };
 
-// Function to handle user registration
 const registerUser = (req, res) => {
   const userData = req.body;
 
@@ -24,7 +22,6 @@ const registerUser = (req, res) => {
   hashPasswordAndRegisterUser(userData, usersData, res);
 };
 
-// Function to check if username or email already exists
 const checkExistingUser = (usersData, userData) => {
   return usersData.users.find(
     (user) =>
@@ -32,7 +29,6 @@ const checkExistingUser = (usersData, userData) => {
   );
 };
 
-// Function to hash password and register user
 const hashPasswordAndRegisterUser = (userData, usersData, res) => {
   bcrypt.hash(userData.password, 10, (err, hashedPassword) => {
     if (err) {
@@ -56,7 +52,6 @@ const hashPasswordAndRegisterUser = (userData, usersData, res) => {
   });
 };
 
-// Function to handle user login
 const loginUser = (req, res) => {
   const { email, password } = req.body;
 
@@ -70,12 +65,10 @@ const loginUser = (req, res) => {
   comparePasswordAndGenerateToken(password, user, res);
 };
 
-// Function to find user by email
 const findUserByEmail = (usersData, email) => {
   return usersData.users.find((user) => user.email === email);
 };
 
-// Function to compare password and generate token
 const comparePasswordAndGenerateToken = (password, user, res) => {
   bcrypt.compare(password, user.password, (err, result) => {
     if (err || !result) {
@@ -88,7 +81,6 @@ const comparePasswordAndGenerateToken = (password, user, res) => {
   });
 };
 
-// Function to handle user logout
 const logoutUser = (req, res) => {
   // Logic for user logout (optional)
   res.status(200).send("User logged out successfully");

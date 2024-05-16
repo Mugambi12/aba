@@ -1,6 +1,6 @@
+// userController.js
 const { loadData, saveData } = require("../dataHandler/dataHandler");
 
-// Utility function to validate user data
 const validateUser = (user) => {
   return (
     user &&

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { fetchDocsData } from "../api/apiDocs";
-import { fetchUsersData } from "../api/usersApi";
-import { fetchBlogsData } from "../api/blogsApi";
+import { fetchDocsData } from "../apiController/apiDocs";
+import { fetchUsersData } from "../apiController/usersApi";
+import { fetchBlogsData } from "../apiController/blogsApi";
 
 function AllData() {
   const [docsData, setDocsData] = useState(null);
