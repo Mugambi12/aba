@@ -1,23 +1,40 @@
+.background {
+  top: -8rem;
+  height: 100dvh;
+  width: 100%;
+  position: relative;
+  object-fit: cover;
+  z-index: -1;
+}
+
 @keyframes fadeIn {
   from {
-    opacity: 0.8;
+    opacity: 0.9;
   }
   to {
     opacity: 1;
   }
 }
-.hero {
-  margin: 10% 5%;
-}
-.hero-text {
-  color: whitesmoke;
-  margin-bottom: 40px;
-}
+
 .fade-in {
   animation: fadeIn 600ms ease-in-out;
   opacity: 1;
   transition: opacity 600ms ease-in-out;
 }
+
+.hero {
+  position: absolute;
+  top: calc(35% - 8rem);
+  left: 0;
+  margin: 10% 5%;
+  width: 90%;
+}
+
+.hero-text {
+  color: whitesmoke;
+  margin-bottom: 40px;
+}
+
 .hero-title {
   font-size: 48px;
   font-weight: 600;
@@ -25,11 +42,13 @@
   margin-bottom: 10px;
   animation: fadeIn 600ms ease-in-out;
 }
+
 .hero-subtitle {
   font-size: 24px;
   font-weight: 400;
   line-height: 1.4;
 }
+
 .hero-explore {
   display: flex;
   align-items: center;
@@ -42,29 +61,36 @@
   background: whitesmoke;
   cursor: pointer;
 }
+
 .hero-explore p {
   color: #262626;
   font-size: 20px;
   font-weight: 500;
 }
+
 .hero-explore img {
   width: 50px;
   height: 50px;
 }
+
 .hero-dot-play {
   display: flex;
+  width: 100%;
   justify-content: space-between;
+  align-items: center;
   margin-top: 20px;
   margin-bottom: 50px;
 }
+
 .hero-dots {
   display: flex;
   align-items: center;
   list-style: none;
-  gap: 23px;
+  gap: 25px;
   margin-left: 10%;
   animation: fadeIn 600ms ease-in-out;
 }
+
 .hero-dot {
   width: 10px;
   height: 10px;
@@ -72,14 +98,17 @@
   background: whitesmoke;
   cursor: pointer;
 }
+
 .hero-dot.orange {
   background: orangered;
 }
+
 .hero-play {
   display: flex;
   align-items: center;
   gap: 15px;
 }
+
 .hero-play img {
   width: 40px;
   height: 40px;
@@ -87,52 +116,13 @@
   cursor: pointer;
   transition: transform 0.3s ease;
 }
+
 .hero-play img:hover {
   transform: scale(1.1);
 }
+
 .hero-play p {
   color: whitesmoke;
   font-size: 18px;
   margin-left: 10px;
-}
-
-@media screen and (max-width: 768px) {
-  .hero {
-    margin: 0 20px;
-    margin-top: 100px;
-  }
-  .hero-title {
-    font-size: 32px;
-  }
-  .hero-subtitle {
-    font-size: 18px;
-  }
-  .hero-explore {
-    margin-top: 80px;
-  }
-  .hero-explore p {
-    font-size: 16px;
-  }
-  .hero-explore img {
-    width: 40px;
-    height: 40px;
-  }
-  .hero-dot-play {
-    margin-bottom: 30px;
-  }
-  .hero-dots {
-    gap: 15px;
-    margin-left: 5%;
-  }
-  .hero-dot {
-    width: 8px;
-    height: 8px;
-  }
-  .hero-play img {
-    width: 30px;
-    height: 30px;
-  }
-  .hero-play p {
-    font-size: 16px;
-  }
 }

@@ -22,7 +22,7 @@ const Navbar = ({ videoPlayerState }) => {
     <>
       <div
         className={`header-top ${
-          isSticky && !videoPlayerState ? "add-margin-for-sticky" : ""
+          isSticky && !videoPlayerState ? "hide-on-sticky" : ""
         }`}
       >
         <ul className="header-top__contact-info">
@@ -69,7 +69,7 @@ const Navbar = ({ videoPlayerState }) => {
           </li>
           <li>
             <Link to="/auth" className="header-top__join-button">
-              Join Us
+              <span>Join Us</span>
             </Link>
           </li>
         </ul>

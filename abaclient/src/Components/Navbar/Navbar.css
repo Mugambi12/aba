@@ -1,24 +1,24 @@
+/* Basic Styling */
 .header-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 2.5%;
-  background: rgba(250, 128, 114, 0.8);
+  background: #fa8072cc;
   font-size: 14px;
 }
 
-.header-top__contact-info {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-  align-items: center;
+.header-top.hide-on-sticky {
+  display: none;
 }
 
+.header-top__contact-info,
 .header-top__social-links {
   list-style: none;
   display: flex;
   gap: 1rem;
   align-items: center;
+  color: #262626;
 }
 
 .header-top__social-links li a,
@@ -33,7 +33,7 @@
   transform: rotate(360deg);
 }
 
-.header-top__social-links li > .header-top__join-button {
+.header-top__join-button span {
   padding: 0.3rem 1rem;
   margin-inline-start: 1rem;
   border-radius: 50px;
@@ -44,17 +44,18 @@
   transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-.header-top__social-links li > .header-top__join-button:hover {
+.header-top__join-button span:hover {
   background: #000f38;
   color: salmon;
 }
 
+/* Navbar Styling */
 .main-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: white;
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.175);
   padding: 0rem 5%;
   position: relative;
   transition: background 0.3s ease;
@@ -75,16 +76,14 @@
   gap: 1.75rem;
 }
 
-.main-nav__menu a,
-.main-nav__menu Link {
+.main-nav__menu a {
   padding: 0.5rem 0;
-  color: whitesmoke;
+  color: gainsboro;
   font-weight: 400;
   transition: color 0.175s ease-in-out, border-bottom 0.175s ease-in-out;
 }
 
-.main-nav__menu a:hover,
-.main-nav__menu Link:hover {
+.main-nav__menu a:hover {
   color: salmon;
   border-bottom: 0.1875rem solid salmon;
 }
@@ -102,31 +101,29 @@
   color: white;
 }
 
-.header-top.add-margin-for-sticky {
-  margin-bottom: 5.5rem;
-}
-
 .main-nav.sticky {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   margin: 0;
-  padding: 0rem 5%;
+  padding: 0.5rem 5%;
   background: whitesmoke;
-  border-bottom: 2px salmon solid;
+  border-bottom: 2px solid salmon;
   z-index: 1000;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-.main-nav.sticky .main-nav__menu a,
-.main-nav.sticky .main-nav__menu Link {
+.main-nav.sticky + .page-header {
+  padding-top: 5rem;
+}
+
+.main-nav.sticky .main-nav__menu a {
   color: #000f38;
 }
 
-.main-nav.sticky .main-nav__menu a:hover,
-.main-nav.sticky .main-nav__menu Link:hover {
+.main-nav.sticky .main-nav__menu a:hover {
   color: salmon;
-  border-color: rgba(0, 15, 56, 0.8);
 }
 
 .main-nav.sticky .main-nav__contact {
@@ -143,6 +140,7 @@
   color: salmon;
 }
 
+/* Dropdown Menu Styling */
 .dropdown-menu {
   position: absolute;
   top: calc(100% + 0.8rem);
@@ -152,8 +150,7 @@
   border-radius: 8px;
   box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
   z-index: 10;
-  transition: fadeIn 0.3s ease-in-out, display 0.3s ease-in-out,
-    transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .main-nav__menu li {
@@ -162,6 +159,8 @@
 
 .main-nav__menu li:hover .dropdown-menu {
   display: block;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .dropdown-menu__item {
@@ -170,7 +169,7 @@
 
 .dropdown-menu__item a {
   width: 100%;
-  color: #000f38;
+  color: gray;
   text-decoration: none;
   transition: color 0.3s ease-in-out;
 }
@@ -180,8 +179,8 @@
   border-bottom: none;
 }
 
-/*
-@media screen and (max-width: 768px) {
-
+/* Additional CSS for smoother transitions */
+.main-nav .dropdown-menu {
+  opacity: 0;
+  transform: translateY(-10px);
 }
-*/

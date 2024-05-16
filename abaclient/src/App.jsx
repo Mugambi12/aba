@@ -9,9 +9,10 @@ import Preloader from "./Components/Preloader/Preloader";
 
 // Lazy load components
 const LazyApiDocs = React.lazy(() => import("./pages/ApiDocs.jsx"));
-const LazyHomePage = React.lazy(() => import("./pages/Home"));
 const LazyAuthPage = React.lazy(() => import("./pages/Auth"));
+const LazyHomePage = React.lazy(() => import("./pages/Home"));
 const LazyOurStory = React.lazy(() => import("./pages/OurStory"));
+const LazyOurCompaign = React.lazy(() => import("./pages/OurCompaign"));
 const LazyThematicAreas = React.lazy(() => import("./pages/ThematicAreas"));
 const LazyNewsRoom = React.lazy(() => import("./pages/NewsRoom"));
 const LazyNewsPost = React.lazy(() => import("./pages/NewsPost"));
@@ -33,6 +34,7 @@ const App = () => {
             <Route path="/" element={<LazyHomePage />} />
             <Route path="/auth" element={<LazyAuthPage />} />
             <Route path="/our-story" element={<LazyOurStory />} />
+            <Route path="/our-campaign" element={<LazyOurCompaign />} />
             <Route path="/thematic-areas" element={<LazyThematicAreas />} />
             <Route path="/newsroom" element={<LazyNewsRoom />} />
             <Route path="/contact-us" element={<LazyContact />} />

@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 
-import Background from "../Components/Background/Background";
 import Navbar from "../Components/Navbar/Navbar";
-import Hero from "../Components/Hero/Hero";
+import HeroBackground from "../Components/HeroBackground/HeroBackground";
 import Title from "../Components/Title/Title";
 import Programs from "../Components/Programs/Programs";
 import About from "../Components/About/About";
@@ -53,15 +52,14 @@ const HomePage = () => {
 
   return (
     <>
-      <Background playStatus={playStatus} heroCount={heroCount} fade={fade} />
       <Navbar videoPlayerState={videoPlayerState} />
-      <Hero
-        setHeroCount={setHeroCount}
-        heroCount={heroCount}
-        setPlayStatus={setPlayStatus}
+      <HeroBackground
         playStatus={playStatus}
-        heroData={heroData[heroCount]}
+        heroCount={heroCount}
         fade={fade}
+        heroData={heroData[heroCount]}
+        setHeroCount={setHeroCount}
+        setPlayStatus={setPlayStatus}
       />
 
       <Title title="Our Compaign" subtitle="What We Offer" />

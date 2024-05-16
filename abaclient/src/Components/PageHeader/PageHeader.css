@@ -1,52 +1,63 @@
+/* PageHeader CSS */
 .page-header {
   display: flex;
   justify-content: left;
   align-items: center;
-  height: 90%;
   padding: 20px;
+  position: relative;
+  padding-top: 5rem;
+  transition: padding-top 0.3s ease-in-out;
 }
+
 .page-header-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 80%;
+  height: 100%;
   background: black;
   opacity: 0.275;
   z-index: -1;
 }
+
 .page-header-image {
   position: absolute;
-  top: 0;
+  top: -100px;
   left: 0;
   width: 100%;
-  height: 80%;
+  height: calc(100% + 100px);
   object-fit: cover;
   z-index: -2;
 }
+
 .page-header-titles {
   color: whitesmoke;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 10% 0 5% 50px;
+  margin: 8% 0 8% 50px;
 }
+
 .page-header-title {
   font-size: 50px;
   font-weight: bold;
   margin-bottom: 10px;
 }
+
 .page-header-subtitle {
   font-size: 20px;
 }
+
 .page-header-subtitle span {
   color: #4f8dca;
   margin-right: 12px;
 }
+
 .page-header-subtitle .subtitle-text {
   font-size: 16px;
   color: whitesmoke;
 }
+
 .page-header-subtitle i {
   color: orangered;
   margin-right: 12px;
