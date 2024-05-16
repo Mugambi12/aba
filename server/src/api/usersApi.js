@@ -1,46 +1,87 @@
-// usersApi.js
 const { loadData, saveData } = require("../dataHandler/dataHandler");
 
+// Utility function to validate user data
+const validateUser = (user) => {
+  return (
+    user &&
+    user.username &&
+    user.email &&
+    user.name &&
+    user.age &&
+    user.gender &&
+    user.country &&
+    user.occupation
+  );
+};
+
 exports.getAllUsers = (req, res) => {
-  const usersData = loadData().users;
-  res.status(200).json(usersData);
-  console.log("Querying all users");
+  try {
+    const usersData = loadData().users;
+    res.status(200).json(usersData);
+    console.log("Querying all users");
+  } catch (error) {
+    res.status(500).send("An error occurred while fetching users");
+    console.error("Error querying users:", error);
+  }
 };
 
 exports.getUserById = (req, res) => {
-  const userId = req.params.id;
-  const usersData = loadData();
-  const user = usersData.users.find((user) => user.id === userId);
-  if (user) {
-    res.status(200).json(user);
-  } else {
-    res.status(404).send("User not found");
+  const userId = Number(req.params.id);
+
+  try {
+    const usersData = loadData();
+    const user = usersData.users.find((user) => user.id === userId);
+    if (user) {
+      res.status(200).json(user);
+    } else {
+      res.status(404).send("User not found");
+    }
+  } catch (error) {
+    res.status(500).send("An error occurred while fetching the user");
+    console.error("Error fetching user:", error);
   }
 };
 
 exports.updateUserById = (req, res) => {
-  const userId = req.params.id;
+  const userId = Number(req.params.id);
   const updatedUser = req.body;
-  const usersData = loadData();
-  const userIndex = usersData.users.findIndex((user) => user.id === userId);
-  if (userIndex !== -1) {
-    usersData.users[userIndex] = updatedUser;
-    saveData(usersData);
-    res.status(200).send("User updated successfully");
-  } else {
-    res.status(404).send("User not found");
+
+  if (!validateUser(updatedUser)) {
+    return res.status(400).send("Invalid user data");
+  }
+
+  try {
+    const usersData = loadData();
+    const userIndex = usersData.users.findIndex((user) => user.id === userId);
+    if (userIndex !== -1) {
+      updatedUser.id = userId;
+      usersData.users[userIndex] = updatedUser;
+      saveData(usersData);
+      res.status(200).send("User updated successfully");
+    } else {
+      res.status(404).send("User not found");
+    }
+  } catch (error) {
+    res.status(500).send("An error occurred while updating the user");
+    console.error("Error updating user:", error);
   }
 };
 
 exports.deleteUserById = (req, res) => {
-  const userId = req.params.id;
-  const usersData = loadData();
-  const userIndex = usersData.users.findIndex((user) => user.id === userId);
-  if (userIndex !== -1) {
-    usersData.users.splice(userIndex, 1);
-    saveData(usersData);
-    res.status(200).send("User deleted successfully");
-  } else {
-    res.status(404).send("User not found");
+  const userId = Number(req.params.id);
+
+  try {
+    const usersData = loadData();
+    const userIndex = usersData.users.findIndex((user) => user.id === userId);
+    if (userIndex !== -1) {
+      usersData.users.splice(userIndex, 1);
+      saveData(usersData);
+      res.status(200).send("User deleted successfully");
+    } else {
+      res.status(404).send("User not found");
+    }
+  } catch (error) {
+    res.status(500).send("An error occurred while deleting the user");
+    console.error("Error deleting user:", error);
   }
 };

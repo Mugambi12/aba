@@ -1,5 +1,5 @@
 // apiDocs.js
-const { loadApiDocs } = require("../dataHandler/dataHandler");
+const { loadApiDocs } = require("../dataHandler/apiDocsHandler");
 
 exports.getapiDocs = (req, res) => {
   const docsData = loadApiDocs().documentation;

@@ -1,4 +1,4 @@
-// usersApi.js
+// authApi.js
 const { loadData, saveData } = require("../dataHandler/dataHandler");
 
 exports.registerUser = (req, res) => {
