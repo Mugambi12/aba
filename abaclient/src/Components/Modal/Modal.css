@@ -1,0 +1,84 @@
+.delete-modal,
+.edit-modal,
+.view-modal {
+  position: fixed;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.delete-modal-content,
+.edit-modal-content,
+.view-modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  animation: modal-fade-in 0.3s ease forwards;
+}
+
+.delete-modal-title,
+.edit-modal-title,
+.view-modal-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.delete-modal-message,
+.edit-modal-message,
+.view-modal-message {
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+@keyframes modal-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.delete-modal-buttons,
+.edit-modal-buttons,
+.view-modal-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.delete-modal-buttons button,
+.edit-modal-buttons button,
+.view-modal-buttons button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.delete-modal-buttons button:first-child,
+.edit-modal-buttons button:first-child,
+.view-modal-buttons button:first-child {
+  background-color: #ff4c4c;
+  color: white;
+  border: none;
+}
+
+.delete-modal-buttons button:last-child,
+.edit-modal-buttons button:last-child,
+.view-modal-buttons button:last-child {
+  background-color: #ccc;
+  color: black;
+  border: none;
+}

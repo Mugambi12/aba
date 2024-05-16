@@ -16,7 +16,7 @@ const registerUser = (req, res) => {
   if (existingUser) {
     return res
       .status(400)
-      .json({ message: "Username or email already exists" });
+      .json({ message: "Phone number or email already exists" });
   }
 
   hashPasswordAndRegisterUser(userData, usersData, res);
@@ -25,7 +25,8 @@ const registerUser = (req, res) => {
 const checkExistingUser = (usersData, userData) => {
   return usersData.users.find(
     (user) =>
-      user.username === userData.username || user.email === userData.email
+      user.phone_number === userData.phone_number ||
+      user.email === userData.email
   );
 };
 

@@ -2,7 +2,7 @@
   "users": [
     {
       "id": 1715850712458,
-      "username": "john_doe",
+      "phone_number": "134567890",
       "email": "john@example.com",
       "name": "John Doe",
       "password": "$2b$10$8zMHkkHVWRhWzvN5W7Ked.h5vPqcEOH.LkmDDdjyRanLpNnjT9X/S",
@@ -19,11 +19,11 @@
       "lastLogin": "2024-05-15T12:30:00Z"
     },
     {
-      "id": 1715859901997,
-      "username": "alex_wong",
-      "email": "alex@example.com",
-      "name": "Alex Wong",
-      "password": "$2b$10$zLGACwVRJ4D6LpCO87jKau2s5JaFEvvuH.VtYWdloeorfyCGXKWom",
+      "id": 1715860363702,
+      "phone_number": "987654321",
+      "email": "jane@example.com",
+      "name": "Jane Smith",
+      "password": "$2b$10$cmo8TTlmCyUzqD/GqEYOmuaVJnfnLv5pZ/Sc8v/w.2qShyMMM9uGe",
       "age": 30,
       "gender": "male",
       "country": "USA",
@@ -37,12 +37,12 @@
       "lastLogin": "2024-05-15T12:30:00Z"
     },
     {
-      "id": 1715860363702,
-      "username": "jane_smith",
-      "email": "jane@example.com",
-      "name": "Jane Smith",
-      "password": "$2b$10$cmo8TTlmCyUzqD/GqEYOmuaVJnfnLv5pZ/Sc8v/w.2qShyMMM9uGe",
-      "age": 30,
+      "id": 1715864970908,
+      "phone_number": "123456789",
+      "email": "alan@example.com",
+      "name": "Alan Wong",
+      "password": "$2b$10$3otwi7WqTK6IzpGb6s1r4uoDkXwBFWflhA0ondSDUIJsd/r6BAhA.",
+      "dob": "2024-05-15",
       "gender": "male",
       "country": "USA",
       "occupation": "Software Engineer",
@@ -90,25 +90,11 @@
     },
     {
       "title": "The Art of Coding",
-      "authorId": 1,
-      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
-      "id": 6
-    },
-    {
-      "title": "The Art of Coding",
       "authorId": 4,
       "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
       "createdAt": "2024-05-14T13:00:00Z",
       "updatedAt": "2024-05-14T14:00:00Z",
       "id": 7
-    },
-    {
-      "title": "The Art of Coding",
-      "authorId": 4,
-      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
-      "createdAt": "2024-05-14T13:00:00Z",
-      "updatedAt": "2024-05-14T14:00:00Z",
-      "id": 8
     }
   ]
 }
