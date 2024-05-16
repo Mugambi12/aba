@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import "./HeroBackground.css";
 import video1 from "../../assets/video/video1.mp4";
 import image1 from "../../assets/image1.png";
@@ -7,30 +8,52 @@ import arrow_btn from "../../assets/arrow_btn.png";
 import play_icon from "../../assets/play_icon.png";
 import pause_icon from "../../assets/pause_icon.png";
 
-const HeroBackground = ({
-  playStatus,
-  heroCount,
-  fade,
-  heroData,
-  setHeroCount,
-  setPlayStatus,
-}) => {
-  const fadeClass = fade ? "fade-in" : "";
+const HeroBackground = () => {
+  const [playStatus, setPlayStatus] = useState(false);
+  const [heroCount, setHeroCount] = useState(0);
+  const [heroData, setHeroData] = useState([
+    {
+      title: "Welcome to ABA",
+      subtitle: "Your trusted partner in innovative solutions",
+      image: image1,
+    },
+    {
+      title: "Client Portal",
+      subtitle: "Access your account and manage services with ease",
+      image: image2,
+    },
+    {
+      title: "Biodiversity",
+      subtitle: "Discover our commitment to preserving the environment",
+      image: image3,
+    },
+  ]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setHeroCount((prevCount) => (prevCount + 1) % 3);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const togglePlayStatus = () => {
+    setPlayStatus(!playStatus);
+  };
+
+  const nextHero = () => {
+    setHeroCount((prevCount) => (prevCount + 1) % 3);
+  };
 
   const renderBackground = () => {
-    if (playStatus) {
-      return (
-        <video className={`background ${fadeClass}`} autoPlay loop muted>
-          <source src={video1} type="video/mp4" />
-        </video>
-      );
-    }
-
-    const images = [image1, image2, image3];
-    return (
+    return playStatus ? (
+      <video className="background" autoPlay loop muted>
+        <source src={video1} type="video/mp4" />
+      </video>
+    ) : (
       <img
-        src={images[heroCount]}
-        className={`background ${fadeClass}`}
+        src={heroData[heroCount].image}
+        className="background"
         alt="background"
       />
     );
@@ -40,38 +63,33 @@ const HeroBackground = ({
     <div className="hero-background">
       {renderBackground()}
       <div className="hero">
-        <div className={`hero-text ${fadeClass}`}>
-          <p className="hero-title">{heroData.title}</p>
-          <p className="hero-subtitle">{heroData.subtitle}</p>
+        <div className="hero-text">
+          <p className="hero-title">{heroData[heroCount].title}</p>
+          <p className="hero-subtitle">{heroData[heroCount].subtitle}</p>
         </div>
 
-        <div
-          className={`hero-explore ${fadeClass}`}
-          onClick={() => setHeroCount((prevCount) => (prevCount + 1) % 3)}
-        >
+        <div className="hero-explore" onClick={nextHero}>
           <p>Explore the features</p>
           <img src={arrow_btn} alt="Arrow button" />
         </div>
 
         <div className="hero-dot-play">
-          <ul className={`hero-dots ${fadeClass}`}>
-            {Array.from({ length: 3 }, (_, index) => (
+          <ul className="hero-dots">
+            {[0, 1, 2].map((index) => (
               <li
                 key={index}
-                onClick={() => setHeroCount(index)}
                 className={`hero-dot ${heroCount === index ? "orange" : ""}`}
+                onClick={() => setHeroCount(index)}
               />
             ))}
           </ul>
 
-          <div className="hero-play">
+          <div className="hero-play" onClick={togglePlayStatus}>
             <img
               src={playStatus ? pause_icon : play_icon}
               alt={playStatus ? "Pause icon" : "Play icon"}
-              onClick={() => setPlayStatus(!playStatus)}
-              aria-label={playStatus ? "Pause video" : "Play video"}
             />
-            <p>See the video</p>
+            <p>{playStatus ? "Pause Video" : "Play Video"}</p>
           </div>
         </div>
       </div>

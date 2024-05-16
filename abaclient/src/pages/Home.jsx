@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import Navbar from "../Components/Navbar/Navbar";
 import HeroBackground from "../Components/HeroBackground/HeroBackground";
@@ -15,52 +15,12 @@ import Sidebar from "../Components/NewsRoom/Sidebar/Sidebar";
 import InlineContact from "../Components/Contact/InlineContact";
 
 const HomePage = () => {
-  const heroData = [
-    {
-      title: "Welcome to ABA",
-      subtitle: "Your trusted partner in innovative solutions",
-    },
-    {
-      title: "Client Portal",
-      subtitle: "Access your account and manage services with ease",
-    },
-    {
-      title: "Biodiversity",
-      subtitle: "Discover our commitment to preserving the environment",
-    },
-  ];
-
-  const [heroCount, setHeroCount] = useState(0);
-  const [playStatus, setPlayStatus] = useState(false);
-  const [fade, setFade] = useState(false);
   const [videoPlayerState, setVideoPlayerState] = useState(false);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setHeroCount((count) => (count === 2 ? 0 : count + 1));
-    }, 8000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  useEffect(() => {
-    setFade(true);
-    const timer = setTimeout(() => setFade(false), 600);
-
-    return () => clearTimeout(timer);
-  }, [heroCount]);
 
   return (
     <>
       <Navbar videoPlayerState={videoPlayerState} />
-      <HeroBackground
-        playStatus={playStatus}
-        heroCount={heroCount}
-        fade={fade}
-        heroData={heroData[heroCount]}
-        setHeroCount={setHeroCount}
-        setPlayStatus={setPlayStatus}
-      />
+      <HeroBackground />
 
       <Title title="Our Compaign" subtitle="What We Offer" />
       <Programs />

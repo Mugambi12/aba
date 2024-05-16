@@ -1,5 +1,5 @@
 .background {
-  top: -8rem;
+  top: -100px;
   height: 100dvh;
   width: 100%;
   position: relative;
@@ -24,7 +24,7 @@
 
 .hero {
   position: absolute;
-  top: calc(35% - 8rem);
+  top: calc(30% - 8rem);
   left: 0;
   margin: 10% 5%;
   width: 90%;
