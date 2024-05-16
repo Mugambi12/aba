@@ -46,21 +46,27 @@ function UserData({
                     className="table-button"
                     onClick={() => handleShowViewModal("user", user.id)}
                   >
-                    <span className="view-button">View</span>
+                    <span className="view-button">
+                      <i className="fas fa-eye"></i>
+                    </span>
                   </td>
 
                   <td
                     className="table-button"
                     onClick={() => handleShowEditModal("user", user.id)}
                   >
-                    <span className="edit-button">Edit</span>
+                    <span className="edit-button">
+                      <i className="fas fa-edit"></i>
+                    </span>
                   </td>
 
                   <td
                     className="table-button"
                     onClick={() => handleShowDeleteModal("user", user.id)}
                   >
-                    <span className="delete-button">Delete</span>
+                    <span className="delete-button">
+                      <i className="fas fa-trash-alt"></i>
+                    </span>
                   </td>
                 </td>
               </tr>

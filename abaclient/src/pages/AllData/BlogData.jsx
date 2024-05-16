@@ -18,7 +18,7 @@ function BlogData({
             <th>Content</th>
             <th>Created At</th>
             <th>Updated At</th>
-            <th>Actions</th> {/* Changed from 'Delete' to 'Actions' */}
+            <th>Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -36,19 +36,25 @@ function BlogData({
                     className="table-button"
                     onClick={() => handleShowViewModal("blog", blog.id)}
                   >
-                    <span className="view-button">View</span>
+                    <span className="view-button">
+                      <i className="fas fa-eye"></i>
+                    </span>
                   </span>
                   <span
                     className="table-button"
                     onClick={() => handleShowEditModal("blog", blog.id)}
                   >
-                    <span className="edit-button">Edit</span>
+                    <span className="edit-button">
+                      <i className="fas fa-edit"></i>
+                    </span>
                   </span>
                   <span
                     className="table-button"
                     onClick={() => handleShowDeleteModal("blog", blog.id)}
                   >
-                    <span className="delete-button">Delete</span>
+                    <span className="delete-button">
+                      <i className="fas fa-trash-alt"></i>
+                    </span>
                   </span>
                 </td>
               </tr>

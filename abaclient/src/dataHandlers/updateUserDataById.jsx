@@ -1,8 +1,8 @@
 import { BASE_URL } from "../Config/Config";
 
-export async function fetchUserDataByID() {
+export async function updateUserDataByID() {
   try {
-    const response = await fetch(`${BASE_URL}/users/1715850051760`);
+    const response = await fetch(`${BASE_URL}/users`);
     const data = await response.json();
     return data;
   } catch (error) {

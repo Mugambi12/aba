@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { fetchUsersData } from "../../dataHandlers/getAllUsers";
-import { deleteUserDataByID } from "../../dataHandlers/deleteUserById";
-import { fetchBlogsData } from "../../dataHandlers/getAllBlogs";
-import { deleteBlogDataByID } from "../../dataHandlers/deleteBlogById";
+import { fetchUsersData } from "../../dataHandlers/getAllUsersData";
+import { deleteUserDataByID } from "../../dataHandlers/deleteUserDataById";
+import { fetchBlogsData } from "../../dataHandlers/getAllBlogsData";
+import { deleteBlogDataByID } from "../../dataHandlers/deleteBlogDataById";
 import DeleteModal from "../../Components/Modal/DeleteModal";
 import EditModal from "../../Components/Modal/EditModal";
 import ViewModal from "../../Components/Modal/ViewModal";

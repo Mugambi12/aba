@@ -8,7 +8,7 @@ import {
 import Preloader from "./Components/Preloader/Preloader";
 
 // Lazy load components
-const LazyApiDocs = React.lazy(() => import("./pages/apiDocs"));
+const LazyApiDocs = React.lazy(() => import("./pages/ApiDocs.jsx"));
 const LazyHomePage = React.lazy(() => import("./pages/Home"));
 const LazyAuthPage = React.lazy(() => import("./pages/Auth"));
 const LazyOurStory = React.lazy(() => import("./pages/OurStory"));

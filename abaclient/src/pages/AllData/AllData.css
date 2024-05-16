@@ -37,15 +37,15 @@ table .table-button {
 }
 
 table .table-button .view-button {
-  color: dodgerblue;
+  color: #666;
 }
 
 table .table-button .edit-button {
-  color: limegreen;
+  color: #4169e1;
 }
 
 table .table-button .delete-button {
-  color: crimson;
+  color: #ff6347;
 }
 
 /* Responsive table */

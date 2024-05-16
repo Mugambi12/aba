@@ -1,4 +1,4 @@
-import "./Modal.css";
+import "./Modals.css";
 
 function ViewModal({ itemType, itemId, onClose }) {
   // Add your view modal logic here
@@ -9,6 +9,7 @@ function ViewModal({ itemType, itemId, onClose }) {
         {/* Add your view modal UI here */}
         <h2>View {itemType}</h2>
         <p>View {itemType} details here...</p>
+        <p>Item ID: {itemId}</p>
         <div className="view-modal-buttons">
           <button onClick={onClose}>Close</button>
         </div>

@@ -1,4 +1,4 @@
-import "./Modal.css";
+import "./Modals.css";
 
 function DeleteModal({ itemType, itemId, onDelete, onClose }) {
   const handleConfirmDelete = () => {

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { fetchDocsData } from "../dataHandlers/getDocsApi";
 
-function ApiDocs() {
+function ApiDocumentation() {
   const [docsData, setDocsData] = useState(null);
 
   useEffect(() => {
@@ -44,4 +44,4 @@ function ApiDocs() {
   );
 }
 
-export default ApiDocs;
+export default ApiDocumentation;

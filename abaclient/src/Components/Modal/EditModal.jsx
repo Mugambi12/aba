@@ -1,4 +1,4 @@
-import "./Modal.css";
+import "./Modals.css";
 
 function EditModal({ itemType, itemId, onClose }) {
   // Add your edit modal logic here
