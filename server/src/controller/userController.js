@@ -17,6 +17,11 @@ const validateUser = (user) => {
 const getAllUsers = (req, res) => {
   try {
     const usersData = loadData().users;
+    // hide password
+    usersData.forEach((user) => {
+      delete user.password;
+    });
+
     res.status(200).json(usersData);
     console.log("Querying all users");
   } catch (error) {

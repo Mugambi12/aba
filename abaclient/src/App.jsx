@@ -8,6 +8,7 @@ import {
 import Preloader from "./Components/Preloader/Preloader";
 
 // Lazy load components
+const LazyApiDocs = React.lazy(() => import("./pages/apiDocs"));
 const LazyHomePage = React.lazy(() => import("./pages/Home"));
 const LazyAuthPage = React.lazy(() => import("./pages/Auth"));
 const LazyOurStory = React.lazy(() => import("./pages/OurStory"));
@@ -36,6 +37,8 @@ const App = () => {
             <Route path="/contact-us" element={<LazyContactPage />} />
 
             <Route path="/all-data" element={<LazyAllData />} />
+
+            <Route path="/docs/api" element={<LazyApiDocs />} />
 
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>

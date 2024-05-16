@@ -1,11 +1,11 @@
 {
   "users": [
     {
-      "id": 1715850051760,
-      "username": "jane_smith",
-      "email": "jane@example.com",
+      "id": 1715850712458,
+      "username": "john_doe",
+      "email": "john@example.com",
       "name": "John Doe",
-      "password": "$2b$10$nfaLbCCwNeIPWPIT1kRPMedy3ufU3kLkioU40Kfif18wgDptdimEi",
+      "password": "$2b$10$8zMHkkHVWRhWzvN5W7Ked.h5vPqcEOH.LkmDDdjyRanLpNnjT9X/S",
       "age": 30,
       "gender": "male",
       "country": "USA",
@@ -19,11 +19,29 @@
       "lastLogin": "2024-05-15T12:30:00Z"
     },
     {
-      "id": 1715850712458,
-      "username": "john_doe",
-      "email": "john@example.com",
-      "name": "John Doe",
-      "password": "$2b$10$8zMHkkHVWRhWzvN5W7Ked.h5vPqcEOH.LkmDDdjyRanLpNnjT9X/S",
+      "id": 1715859901997,
+      "username": "alex_wong",
+      "email": "alex@example.com",
+      "name": "Alex Wong",
+      "password": "$2b$10$zLGACwVRJ4D6LpCO87jKau2s5JaFEvvuH.VtYWdloeorfyCGXKWom",
+      "age": 30,
+      "gender": "male",
+      "country": "USA",
+      "occupation": "Software Engineer",
+      "interests": [
+        "coding",
+        "reading",
+        "hiking"
+      ],
+      "registeredAt": "2024-05-15T12:00:00Z",
+      "lastLogin": "2024-05-15T12:30:00Z"
+    },
+    {
+      "id": 1715860363702,
+      "username": "jane_smith",
+      "email": "jane@example.com",
+      "name": "Jane Smith",
+      "password": "$2b$10$cmo8TTlmCyUzqD/GqEYOmuaVJnfnLv5pZ/Sc8v/w.2qShyMMM9uGe",
       "age": 30,
       "gender": "male",
       "country": "USA",
