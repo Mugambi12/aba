@@ -1,20 +1,91 @@
 // authApi.js
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
 const { loadData, saveData } = require("../dataHandler/dataHandler");
+
+// Function to generate JWT token
+const generateToken = (userData) => {
+  return jwt.sign(userData, "your_secret_key", { expiresIn: "1h" });
+};
 
 exports.registerUser = (req, res) => {
   const userData = req.body;
+
+  console.log("User Data", userData);
+
+  // Load users data from storage
   const usersData = loadData();
-  // Add logic for user registration
-  saveData(usersData);
-  res.status(200).send("User registered successfully");
+
+  console.log("Users Data", usersData);
+
+  // Check if the username or email is already taken
+  const existingUser = usersData.users.find(
+    (user) =>
+      user.username === userData.username || user.email === userData.email
+  );
+  if (existingUser) {
+    return res
+      .status(400)
+      .json({ message: "Username or email already exists" });
+  }
+
+  // Hash the password
+  bcrypt.hash(userData.password, 10, (err, hashedPassword) => {
+    if (err) {
+      console.error("Error hashing password:", err);
+      return res.status(500).json({ message: "Error hashing password" });
+    }
+
+    // Create a new user object
+    const newUser = {
+      id: Date.now(),
+      ...userData,
+      password: hashedPassword,
+    };
+
+    console.log("New User", newUser);
+
+    // Add the new user to the users array
+    usersData.users.push(newUser);
+
+    // Save the updated users data to storage
+    saveData(usersData);
+
+    // Generate JWT token for the new user
+    const token = generateToken(newUser);
+
+    // Respond with success message and token
+    res.status(200).json({ message: "User registered successfully", token });
+  });
 };
 
 exports.loginUser = (req, res) => {
-  // Add logic for user login
-  res.status(200).send("User logged in successfully");
+  const { username, password } = req.body; // Extract username and password from request body
+
+  // Load users data from storage
+  const usersData = loadData();
+
+  // Find the user with the provided username
+  const user = usersData.users.find((user) => user.username === username);
+  if (!user) {
+    return res.status(401).json({ message: "Invalid username or password" });
+  }
+
+  // Check if the provided password matches the stored hashed password
+  bcrypt.compare(password, user.password, (err, result) => {
+    if (err || !result) {
+      return res.status(401).json({ message: "Invalid username or password" });
+    }
+
+    // Generate JWT token for the authenticated user
+    const token = generateToken(user);
+
+    // Respond with success message and token
+    res.status(200).json({ message: "User logged in successfully", token });
+  });
 };
 
 exports.logoutUser = (req, res) => {
-  // Add logic for user logout
+  // Logic for user logout (optional)
   res.status(200).send("User logged out successfully");
 };

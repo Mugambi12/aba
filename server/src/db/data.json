@@ -1,10 +1,11 @@
 {
   "users": [
     {
-      "id": 1,
-      "username": "john_doe",
-      "email": "john@example.com",
+      "id": 1715850051760,
+      "username": "jane_smith",
+      "email": "jane@example.com",
       "name": "John Doe",
+      "password": "$2b$10$nfaLbCCwNeIPWPIT1kRPMedy3ufU3kLkioU40Kfif18wgDptdimEi",
       "age": 30,
       "gender": "male",
       "country": "USA",
@@ -18,38 +19,22 @@
       "lastLogin": "2024-05-15T12:30:00Z"
     },
     {
-      "id": 2,
-      "username": "jane_smith",
-      "email": "jane@example.com",
-      "name": "Jane Smith",
-      "age": 25,
-      "gender": "female",
-      "country": "Canada",
-      "occupation": "Data Scientist",
-      "interests": [
-        "machine learning",
-        "traveling",
-        "music"
-      ],
-      "registeredAt": "2024-05-14T10:00:00Z",
-      "lastLogin": "2024-05-15T10:45:00Z"
-    },
-    {
-      "id": 3,
-      "username": "alex_wong",
-      "email": "alex@example.com",
-      "name": "Alex Wong",
-      "age": 28,
+      "id": 1715850085188,
+      "username": "john_doe",
+      "email": "john@example.com",
+      "name": "John Doe",
+      "password": "$2b$10$ocJvnBiOjmdAwq.ADwspYuJxq6wQ1T3vznQzJlUc83/anxzFlAm/y",
+      "age": 30,
       "gender": "male",
-      "country": "UK",
-      "occupation": "Product Manager",
+      "country": "USA",
+      "occupation": "Software Engineer",
       "interests": [
-        "product design",
-        "photography",
-        "yoga"
+        "coding",
+        "reading",
+        "hiking"
       ],
-      "registeredAt": "2024-05-13T09:30:00Z",
-      "lastLogin": "2024-05-15T11:20:00Z"
+      "registeredAt": "2024-05-15T12:00:00Z",
+      "lastLogin": "2024-05-15T12:30:00Z"
     }
   ],
   "blogs": [
