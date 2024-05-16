@@ -50,7 +50,7 @@ const Leadership = () => {
     <>
       <section className="global-leadership">
         <div className="overview">
-          <h3 className="title">Global leadership</h3>
+          <h3 className="title">Global Team</h3>
           <hr className="underline-short" />
         </div>
 

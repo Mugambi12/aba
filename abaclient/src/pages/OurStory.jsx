@@ -6,6 +6,7 @@ import PageHeader from "../Components/PageHeader/PageHeader";
 import CEOMessage from "../Components/About/CEOMessage";
 import Contribution from "../Components/About/Contribution";
 import Leadership from "../Components/About/Leadership";
+import PurposeStatement from "../Components/About/PurposeStatement";
 
 const OurStory = () => {
   return (
@@ -18,8 +19,9 @@ const OurStory = () => {
       />
       <CEOMessage />
       <Contribution />
-      <Leadership />
+      <PurposeStatement />
       <InlineContact />
+      <Leadership />
       <Footer />
     </>
   );

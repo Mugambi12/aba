@@ -13,8 +13,9 @@ const LazyHomePage = React.lazy(() => import("./pages/Home"));
 const LazyAuthPage = React.lazy(() => import("./pages/Auth"));
 const LazyOurStory = React.lazy(() => import("./pages/OurStory"));
 const LazyThematicAreas = React.lazy(() => import("./pages/ThematicAreas"));
-const LazyNewsRoomPage = React.lazy(() => import("./pages/NewsRoom"));
-const LazyContactPage = React.lazy(() => import("./pages/Contact"));
+const LazyNewsRoom = React.lazy(() => import("./pages/NewsRoom"));
+const LazyNewsPost = React.lazy(() => import("./pages/NewsPost"));
+const LazyContact = React.lazy(() => import("./pages/Contact"));
 const LazyAllData = React.lazy(() => import("./pages/AllData/AllData"));
 
 const App = () => {
@@ -33,8 +34,8 @@ const App = () => {
             <Route path="/auth" element={<LazyAuthPage />} />
             <Route path="/our-story" element={<LazyOurStory />} />
             <Route path="/thematic-areas" element={<LazyThematicAreas />} />
-            <Route path="/newsroom" element={<LazyNewsRoomPage />} />
-            <Route path="/contact-us" element={<LazyContactPage />} />
+            <Route path="/newsroom" element={<LazyNewsRoom />} />
+            <Route path="/contact-us" element={<LazyContact />} />
 
             <Route path="/all-data" element={<LazyAllData />} />
 

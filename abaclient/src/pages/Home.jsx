@@ -11,7 +11,7 @@ import Contact from "../Components/Contact/Contact";
 import Footer from "../Components/Footer/Footer";
 import SocialMedia from "../Components/SocialMedia/SocialMedia";
 import VideoPlayer from "../Components/VideoPlayer/VideoPlayer";
-import News from "../Components/NewsRoom/News/News";
+import News from "../Components/NewsRoom/NewsRoom/NewsRoom";
 import Sidebar from "../Components/NewsRoom/Sidebar/Sidebar";
 import InlineContact from "../Components/Contact/InlineContact";
 

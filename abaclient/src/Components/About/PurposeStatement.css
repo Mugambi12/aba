@@ -1,0 +1,38 @@
+.purpose-statement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10%;
+}
+
+.statement-section {
+  width: 100%;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.statement-section-title {
+  display: flex;
+  align-items: center;
+}
+
+.statement-header-line {
+  flex-shrink: 0;
+  width: 50px;
+  height: 4px;
+  background: #f7c08a;
+  margin: -12px 10px 0 10px;
+  transform: translateY(1px);
+}
+
+.statement-header {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.statement-body {
+  font-size: 16px;
+  margin-top: 10px;
+}
