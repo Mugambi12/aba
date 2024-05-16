@@ -1,7 +1,18 @@
 const fs = require("fs");
 
 const dbURL = "./src/db/data.json";
-//const dbURL = "../db/data.json";
+const docsURL = "./src/db/docs/docs.json";
+
+// Get API documentation
+function loadDocs() {
+  try {
+    const data = fs.readFileSync(docsURL, "utf8");
+    return JSON.parse(data);
+  } catch (error) {
+    console.error("Error reading data:", error);
+    return { documentation: [] };
+  }
+}
 
 // Load data from JSON file
 function loadData() {
@@ -24,4 +35,4 @@ function saveData(data) {
   }
 }
 
-module.exports = { loadData, saveData };
+module.exports = { loadDocs, loadData, saveData };

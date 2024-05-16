@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { getapiDocs } = require("../controller/apiDocsController");
+const { getapiDocs } = require("../controller/docsController");
 
 router.get("/", getapiDocs);
 
