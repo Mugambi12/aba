@@ -8,84 +8,94 @@ const generateToken = (userData) => {
   return jwt.sign(userData, "your_secret_key", { expiresIn: "1h" });
 };
 
-exports.registerUser = (req, res) => {
+// Function to handle user registration
+const registerUser = (req, res) => {
   const userData = req.body;
 
-  console.log("User Data", userData);
-
-  // Load users data from storage
   const usersData = loadData();
 
-  console.log("Users Data", usersData);
-
-  // Check if the username or email is already taken
-  const existingUser = usersData.users.find(
-    (user) =>
-      user.username === userData.username || user.email === userData.email
-  );
+  const existingUser = checkExistingUser(usersData, userData);
   if (existingUser) {
     return res
       .status(400)
       .json({ message: "Username or email already exists" });
   }
 
-  // Hash the password
+  hashPasswordAndRegisterUser(userData, usersData, res);
+};
+
+// Function to check if username or email already exists
+const checkExistingUser = (usersData, userData) => {
+  return usersData.users.find(
+    (user) =>
+      user.username === userData.username || user.email === userData.email
+  );
+};
+
+// Function to hash password and register user
+const hashPasswordAndRegisterUser = (userData, usersData, res) => {
   bcrypt.hash(userData.password, 10, (err, hashedPassword) => {
     if (err) {
       console.error("Error hashing password:", err);
       return res.status(500).json({ message: "Error hashing password" });
     }
 
-    // Create a new user object
     const newUser = {
       id: Date.now(),
       ...userData,
       password: hashedPassword,
     };
 
-    console.log("New User", newUser);
-
-    // Add the new user to the users array
     usersData.users.push(newUser);
 
-    // Save the updated users data to storage
     saveData(usersData);
 
-    // Generate JWT token for the new user
     const token = generateToken(newUser);
 
-    // Respond with success message and token
     res.status(200).json({ message: "User registered successfully", token });
   });
 };
 
-exports.loginUser = (req, res) => {
-  const { username, password } = req.body; // Extract username and password from request body
+// Function to handle user login
+const loginUser = (req, res) => {
+  const { email, password } = req.body;
 
-  // Load users data from storage
   const usersData = loadData();
 
-  // Find the user with the provided username
-  const user = usersData.users.find((user) => user.username === username);
+  const user = findUserByEmail(usersData, email);
   if (!user) {
-    return res.status(401).json({ message: "Invalid username or password" });
+    return res.status(401).json({ message: "Invalid email or password" });
   }
 
-  // Check if the provided password matches the stored hashed password
+  comparePasswordAndGenerateToken(password, user, res);
+};
+
+// Function to find user by email
+const findUserByEmail = (usersData, email) => {
+  return usersData.users.find((user) => user.email === email);
+};
+
+// Function to compare password and generate token
+const comparePasswordAndGenerateToken = (password, user, res) => {
   bcrypt.compare(password, user.password, (err, result) => {
     if (err || !result) {
-      return res.status(401).json({ message: "Invalid username or password" });
+      return res.status(401).json({ message: "Invalid email or password" });
     }
 
-    // Generate JWT token for the authenticated user
     const token = generateToken(user);
 
-    // Respond with success message and token
     res.status(200).json({ message: "User logged in successfully", token });
   });
 };
 
-exports.logoutUser = (req, res) => {
+// Function to handle user logout
+const logoutUser = (req, res) => {
   // Logic for user logout (optional)
   res.status(200).send("User logged out successfully");
+};
+
+module.exports = {
+  registerUser,
+  loginUser,
+  logoutUser,
 };

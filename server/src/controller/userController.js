@@ -14,7 +14,7 @@ const validateUser = (user) => {
   );
 };
 
-exports.getAllUsers = (req, res) => {
+const getAllUsers = (req, res) => {
   try {
     const usersData = loadData().users;
     res.status(200).json(usersData);
@@ -25,7 +25,7 @@ exports.getAllUsers = (req, res) => {
   }
 };
 
-exports.getUserById = (req, res) => {
+const getUserById = (req, res) => {
   const userId = Number(req.params.id);
 
   try {
@@ -42,7 +42,7 @@ exports.getUserById = (req, res) => {
   }
 };
 
-exports.updateUserById = (req, res) => {
+const updateUserById = (req, res) => {
   const userId = Number(req.params.id);
   const updatedUser = req.body;
 
@@ -67,7 +67,7 @@ exports.updateUserById = (req, res) => {
   }
 };
 
-exports.deleteUserById = (req, res) => {
+const deleteUserById = (req, res) => {
   const userId = Number(req.params.id);
 
   try {
@@ -84,4 +84,11 @@ exports.deleteUserById = (req, res) => {
     res.status(500).send("An error occurred while deleting the user");
     console.error("Error deleting user:", error);
   }
+};
+
+module.exports = {
+  getAllUsers,
+  getUserById,
+  updateUserById,
+  deleteUserById,
 };

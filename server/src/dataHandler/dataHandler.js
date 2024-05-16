@@ -1,6 +1,7 @@
 const fs = require("fs");
 
 const dbURL = "./src/db/data.json";
+//const dbURL = "../db/data.json";
 
 // Load data from JSON file
 function loadData() {
