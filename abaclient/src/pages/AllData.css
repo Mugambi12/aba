@@ -81,3 +81,63 @@ tbody tr:nth-child(even) {
     content: attr(data-label);
   }
 }
+
+/* AllData.css */
+
+.modal {
+  position: fixed;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* ensure the modal is on top of everything */
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  animation: modal-fade-in 0.3s ease forwards; /* fade in animation */
+}
+
+@keyframes modal-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.modal-buttons button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.modal-buttons button:first-child {
+  background-color: #ff4c4c; /* red color for delete button */
+  color: white;
+  border: none;
+}
+
+.modal-buttons button:last-child {
+  background-color: #ccc; /* gray color for cancel button */
+  color: black;
+  border: none;
+}

@@ -4,9 +4,33 @@ import { deleteUserDataByID } from "../dataHandlers/deleteUserById";
 import { fetchBlogsData } from "../dataHandlers/getAllBlogs";
 import "./AllData.css";
 
+function DeleteModal({ userId, onDelete, onClose }) {
+  const handleConfirmDelete = () => {
+    onDelete(userId);
+    onClose();
+  };
+
+  return (
+    <div className="modal">
+      <div className="modal-content">
+        <h2>Confirm Deletion</h2>
+        <p>Are you sure you want to delete this user?</p>
+        <p>This action cannot be undone.</p>
+        <p>User ID: {userId}</p>
+        <div className="modal-buttons">
+          <button onClick={handleConfirmDelete}>Delete</button>
+          <button onClick={onClose}>Cancel</button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function AllData() {
   const [usersData, setUsersData] = useState(null);
   const [blogsData, setBlogsData] = useState(null);
+  const [showModal, setShowModal] = useState(false);
+  const [userIdToDelete, setUserIdToDelete] = useState(null);
 
   useEffect(() => {
     async function fetchData() {
@@ -25,6 +49,15 @@ function AllData() {
     console.log(res);
     const updatedUsers = await fetchUsersData();
     setUsersData(updatedUsers);
+  };
+  const handleShowModal = (id) => {
+    setUserIdToDelete(id);
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+    setUserIdToDelete(null);
   };
 
   return (
@@ -68,7 +101,7 @@ function AllData() {
                   <td>{user.lastLogin}</td>
                   <td
                     style={{ padding: "5px", cursor: "pointer" }}
-                    onClick={() => handleDeleteUser(user.id)}
+                    onClick={() => handleShowModal(user.id)}
                   >
                     Delete
                   </td>
@@ -107,6 +140,15 @@ function AllData() {
           </tbody>
         </table>
       </div>
+
+      {/* Modal for confirming deletion */}
+      {showModal && (
+        <DeleteModal
+          userId={userIdToDelete}
+          onDelete={handleDeleteUser}
+          onClose={handleCloseModal}
+        />
+      )}
     </div>
   );
 }
