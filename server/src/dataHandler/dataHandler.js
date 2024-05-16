@@ -1,7 +1,7 @@
 const fs = require("fs");
 
-const dbURL = "./src/db/data.json";
 const docsURL = "./src/db/docs/docs.json";
+const dbURL = "./src/db/data.json";
 
 // Get API documentation
 function loadDocs() {
