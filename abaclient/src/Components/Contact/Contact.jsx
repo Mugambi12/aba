@@ -22,7 +22,6 @@ const Contact = () => {
       setResult("Form submitted successfully.");
       event.target.reset();
     } else {
-      console.log("Error:", data);
       setResult(`Error: ${data.message}`);
     }
   };
@@ -33,20 +32,13 @@ const Contact = () => {
   return (
     <div className="contact-container">
       <div className="contact-info">
-        <h3>
-          Send Us a Message
-          <i className="fas fa-envelope icon"></i>
-        </h3>
-        <p>
-          Have any questions or concerns? Feel free to reach out! We're here to
-          assist you and will get back to you promptly.
-        </p>
+        <h3>Send Us a Message</h3>
         <div className="map-container">
           <iframe
             title="Google Maps"
             src={googleMapsEmbedURL}
             width="100%"
-            height="300"
+            height="400"
             style={{ border: 0 }}
             allowFullScreen=""
             loading="lazy"
@@ -55,10 +47,7 @@ const Contact = () => {
       </div>
 
       <div className="contact-form">
-        <h3>
-          Write to us
-          <i className="fas fa-pencil-alt icon"></i>
-        </h3>
+        <h3>Write to us</h3>
         <form onSubmit={handleSubmit}>
           <label htmlFor="name">Your Name</label>
           <input
@@ -89,7 +78,6 @@ const Contact = () => {
 
           <button type="submit" className="submit-button">
             Send Message
-            <i className="fas fa-paper-plane icon"></i>
           </button>
         </form>
         <span className="form-result">{result}</span>

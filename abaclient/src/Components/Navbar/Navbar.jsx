@@ -8,7 +8,7 @@ const Navbar = ({ videoPlayerState }) => {
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
-    setIsSticky(scrollPosition > 100);
+    setIsSticky(scrollPosition > 50);
   };
 
   useEffect(() => {
