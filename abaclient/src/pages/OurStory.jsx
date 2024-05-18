@@ -11,7 +11,7 @@ const OurStory = () => {
   const data = [
     {
       BgImg:
-        "https://images.pexels.com/photos/33153/raisting-sattelit-reception-signal.jpg?auto=compress&cs=tinysrgb&w=100dvw&h=100dvh&fit=crop&dpr=2",
+        "https://images.pexels.com/photos/5420369/pexels-photo-5420369.jpeg?auto=compress&cs=tinysrgb&w=100dvh&h=100dvh&fit=crop&crop=entropy&ar=1:1&fm=jpg",
       title: "Our Story",
       focus: "About Us",
     },

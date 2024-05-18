@@ -1,15 +1,15 @@
 import Navbar from "../Components/Navbar/Navbar";
-import Footer from "../Components/Footer/Footer";
+import PageHeader from "../Components/PageHeader/PageHeader";
 import News from "../Components/NewsRoom/NewsRoom/NewsRoom";
 import Sidebar from "../Components/NewsRoom/Sidebar/Sidebar";
-import PageHeader from "../Components/PageHeader/PageHeader";
 import Media from "../Components/NewsRoom/Media/Media";
+import Footer from "../Components/Footer/Footer";
 
 const NewsRoomPage = () => {
   const data = [
     {
       BgImg:
-        "https://images.pexels.com/photos/33153/raisting-sattelit-reception-signal.jpg?auto=compress&cs=tinysrgb&w=100dvw&h=100dvh&fit=crop&dpr=2",
+        "https://images.pexels.com/photos/2872418/pexels-photo-2872418.jpeg?auto=compress&cs=tinysrgb&w=100dvh&h=100dvh&fit=crop&crop=entropy&ar=5:2&fm=jpg",
       title: "News Room",
       focus: "Latest News",
     },

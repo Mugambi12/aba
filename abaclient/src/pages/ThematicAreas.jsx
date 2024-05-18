@@ -11,14 +11,14 @@ const ThematicAreas = () => {
       title: "Thematic Areas",
       focus: "Our Focus",
       BgImg:
-        "https://images.pexels.com/photos/9722072/pexels-photo-9722072.jpeg?auto=compress&cs=tinysrgb&w=100dvh&h=100dvh&fit=crop&crop=entropy&ar=5:2&fm=jpg",
+        "https://images.pexels.com/photos/4642453/pexels-photo-4642453.jpeg?auto=compress&cs=tinysrgb&w=100dvh&h=100dvh&fit=crop&crop=entropy&ar=2:1&fm=jpg",
     },
     {
       title: "Habitat Preservation and Restoration",
       focus:
         "Focusing on the Protection and Restoration of Critical Ecosystems",
       BgImg:
-        "https://images.pexels.com/photos/4577147/pexels-photo-4577147.jpeg?auto=compress&cs=tinysrgb&w=100dvh&h=100dvh&fit=crop&crop=entropy&ar=5:3&fm=jpg",
+        "https://images.pexels.com/photos/2153824/pexels-photo-2153824.jpeg?auto=compress&cs=tinysrgb&w=100dvh&h=100dvh&fit=crop&crop=entropy&ar=2:1&fm=jpg",
       activities:
         "This thematic area concentrates on preserving and restoring vital habitats such as forests, wetlands, grasslands, and marine ecosystems. Efforts include reforestation, combating desertification, protecting coastal and marine biodiversity, and promoting sustainable land management practices. Key activities involve planting native trees to restore deforested areas, implementing erosion control measures, and rehabilitating degraded wetlands to enhance water quality and provide habitat for wildlife. Additionally, this area involves monitoring ecosystem health, conducting biodiversity surveys, and collaborating with local communities to develop and implement habitat management plans that ensure the long-term conservation of these critical ecosystems.",
     },
@@ -26,7 +26,7 @@ const ThematicAreas = () => {
       title: "Species Conservation",
       focus: "Safeguarding Endangered Flora and Fauna",
       BgImg:
-        "https://images.pexels.com/photos/4394471/pexels-photo-4394471.jpeg?auto=compress&cs=tinysrgb&w=100dvh&h=100dvh&fit=crop&crop=entropy&ar=3:1&fm=jpg",
+        "https://images.pexels.com/photos/6711703/pexels-photo-6711703.jpeg?auto=compress&cs=tinysrgb&w=100dvh&h=100dvh&fit=crop&crop=entropy&ar=2:1&fm=jpg",
       activities:
         "This area focuses on implementing programs to protect endangered and threatened species. Activities may include anti-poaching initiatives, establishing wildlife corridors, conducting breeding programs, and researching genetic diversity to ensure the survival of key species across the continent. Specific actions involve patrolling protected areas to deter poachers, constructing and maintaining corridors to connect fragmented habitats, and setting up captive breeding programs for critically endangered species. Research efforts aim to understand the genetic makeup of species populations, which can inform conservation strategies such as reintroducing genetically diverse individuals into the wild to bolster population resilience.",
     },

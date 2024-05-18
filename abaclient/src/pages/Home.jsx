@@ -28,8 +28,8 @@ const HomePage = () => {
 
       <div className="landing-page">
         <Title
-          title="News Room"
-          subtitle="Stay updated with our latest stories and publications"
+          title="Latest News"
+          subtitle="Insights from Our Conservation Efforts"
         />
         <div className="posts-summary">
           <News />

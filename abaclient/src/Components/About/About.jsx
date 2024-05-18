@@ -1,6 +1,5 @@
 import React from "react";
 import "./About.css";
-import about_img from "../../assets/images/about.png";
 import play_icon from "../../assets/images/play-icon.png";
 
 const About = ({ setVideoPlayerState }) => {
@@ -8,7 +7,7 @@ const About = ({ setVideoPlayerState }) => {
     <div className="about">
       <div className="about-left">
         <img
-          src="https://media.istockphoto.com/id/1389848477/photo/shot-of-a-farmer-standing-on-a-field.jpg?b=1&s=612x612&w=0&k=20&c=QZK6m1xEG88wewiWffgnFqlf9H_dD4rC1NmRJ-TysiA="
+          src="https://images.pexels.com/photos/7944396/pexels-photo-7944396.jpeg?auto=compress&cs=tinysrgb&w=100dvh&h=100dvh&fit=crop&crop=entropy&ar=1:1&fm=jpg"
           className="about-img"
           alt="About us image"
         />

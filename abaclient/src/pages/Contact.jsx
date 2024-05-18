@@ -10,7 +10,7 @@ const ContactPage = () => {
   const data = [
     {
       BgImg:
-        "https://images.pexels.com/photos/220769/pexels-photo-220769.jpeg?auto=compress&cs=tinysrgb&w=100dvh&h=100dvh&fit=crop&crop=entropy&ar=2:1&fm=jpg",
+        "https://images.pexels.com/photos/5529604/pexels-photo-5529604.jpeg?auto=compress&cs=tinysrgb&w=100dvh&h=100dvh&fit=crop&crop=entropy&ar=4:3&fm=jpg",
       title: "Contact Us",
       focus: "Get in Touch",
     },
