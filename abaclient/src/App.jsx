@@ -15,7 +15,7 @@ const LazyOurStory = React.lazy(() => import("./pages/OurStory"));
 const LazyOurCompaign = React.lazy(() => import("./pages/OurCompaign"));
 const LazyThematicAreas = React.lazy(() => import("./pages/ThematicAreas"));
 const LazyNewsRoom = React.lazy(() => import("./pages/NewsRoom"));
-const LazyNewsPost = React.lazy(() => import("./pages/NewsPost"));
+const LazyNewsPost = React.lazy(() => import("./pages/NewsSinglePost.jsx"));
 const LazyContact = React.lazy(() => import("./pages/Contact"));
 const LazyAllData = React.lazy(() => import("./pages/AllData/AllData"));
 
@@ -37,6 +37,7 @@ const App = () => {
             <Route path="/our-campaign" element={<LazyOurCompaign />} />
             <Route path="/thematic-areas" element={<LazyThematicAreas />} />
             <Route path="/newsroom" element={<LazyNewsRoom />} />
+            <Route path="/news-post" element={<LazyNewsPost />} />
             <Route path="/contact-us" element={<LazyContact />} />
 
             <Route path="/all-data" element={<LazyAllData />} />
