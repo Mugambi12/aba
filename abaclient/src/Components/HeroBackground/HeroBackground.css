@@ -1,9 +1,30 @@
-.background {
-  top: -100px;
-  height: 100dvh;
-  width: 100%;
+/* HeroBackground CSS */
+
+.hero-background {
   position: relative;
+  height: 100vh;
+  top: -100px;
+  overflow: hidden;
+  margin-bottom: -100px;
+}
+
+.hero-background .background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  z-index: -2;
+}
+
+.hero-background .hero-background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0 0.25);
   z-index: -1;
 }
 
@@ -24,10 +45,15 @@
 
 .hero {
   position: absolute;
-  top: calc(30% - 8rem);
+  top: 20%;
   left: 0;
   margin: 10% 5%;
   width: 90%;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-text {
@@ -36,7 +62,7 @@
 }
 
 .hero-title {
-  font-size: 48px;
+  font-size: 3rem; /* 48px */
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: 10px;
@@ -44,7 +70,7 @@
 }
 
 .hero-subtitle {
-  font-size: 24px;
+  font-size: 1.5rem; /* 24px */
   font-weight: 400;
   line-height: 1.4;
 }
@@ -54,7 +80,7 @@
   align-items: center;
   gap: 50px;
   width: fit-content;
-  margin-top: 120px;
+  margin-top: 110px;
   padding: 5px 8px;
   padding-left: 30px;
   border-radius: 70px;
@@ -64,7 +90,7 @@
 
 .hero-explore p {
   color: #262626;
-  font-size: 20px;
+  font-size: 1.25rem; /* 20px */
   font-weight: 500;
 }
 
@@ -107,6 +133,7 @@
   display: flex;
   align-items: center;
   gap: 15px;
+  margin-top: -20px;
 }
 
 .hero-play img {
@@ -114,6 +141,7 @@
   height: 40px;
   border-radius: 50%;
   cursor: pointer;
+  border: 1px solid salmon;
   transition: transform 0.3s ease;
 }
 
@@ -123,6 +151,6 @@
 
 .hero-play p {
   color: whitesmoke;
-  font-size: 18px;
+  font-size: 1.125rem; /* 18px */
   margin-left: 10px;
 }

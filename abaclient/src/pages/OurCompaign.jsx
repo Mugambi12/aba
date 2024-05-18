@@ -10,7 +10,7 @@ const OurCompaign = () => {
       <PageHeader
         backgroundImage={BackgroundImage}
         title="Our Compaign"
-        subtitle="Our Compaign"
+        focus="Our Compaign"
       />
       <Footer />
     </>

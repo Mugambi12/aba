@@ -18,17 +18,17 @@
 }
 
 .thematic-areas-summary-title {
-  font-size: 24px;
+  color: #000f38;
+  font-size: 28px;
   font-weight: bold;
   margin-bottom: 5px;
   text-align: left;
 }
 
 .thematic-areas-summary-title-underline {
-  width: 70%;
+  width: 80%;
   height: 2px;
-  background: gray;
-  margin-bottom: 20px;
+  background: #ffa07a;
   border: none;
 }
 

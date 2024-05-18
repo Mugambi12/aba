@@ -15,7 +15,7 @@ const OurStory = () => {
       <PageHeader
         backgroundImage={BackgroundImage}
         title="Our Story"
-        subtitle="About Us"
+        focus="About Us"
       />
       <CEOMessage />
       <Contribution />

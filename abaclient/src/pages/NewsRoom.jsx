@@ -13,7 +13,7 @@ const NewsRoomPage = () => {
       <PageHeader
         backgroundImage={BackgroundImage}
         title="News Room"
-        subtitle="Latest News"
+        focus="Latest News"
       />
 
       <div className="landing-page">

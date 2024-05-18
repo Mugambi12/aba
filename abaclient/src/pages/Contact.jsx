@@ -14,7 +14,7 @@ const ContactPage = () => {
       <PageHeader
         backgroundImage={BackgroundImage}
         title="Contact"
-        subtitle="Contact Us"
+        focus="Contact Us"
       />
 
       <ContactInfo />
