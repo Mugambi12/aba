@@ -8,13 +8,22 @@ import InlineContact from "../Components/Contact/InlineContact";
 import ContactInfo from "../Components/Contact/ContactInfo";
 
 const ContactPage = () => {
+  const data = [
+    {
+      BgImg:
+        "https://images.pexels.com/photos/33153/raisting-sattelit-reception-signal.jpg?auto=compress&cs=tinysrgb&w=100dvw&h=100dvh&fit=crop&dpr=2",
+      title: "Contact Us",
+      focus: "Get in Touch",
+    },
+  ];
+
   return (
     <>
       <Navbar />
       <PageHeader
-        backgroundImage={BackgroundImage}
-        title="Contact"
-        focus="Contact Us"
+        backgroundImage={data[0].BgImg}
+        title={data[0].title}
+        focus={data[0].focus}
       />
 
       <ContactInfo />
