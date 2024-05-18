@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import backgroundImage from "../../assets/image3.png";
+import BgImg from "../../assets/image3.png";
 import "./Auth.css";
 
 const Auth = () => {
@@ -16,11 +16,7 @@ const Auth = () => {
 
   return (
     <div className="auth-container-fluid">
-      <img
-        src={backgroundImage}
-        alt="Background"
-        className="background-image"
-      />
+      <img src={BgImg} alt="Background" className="background-image" />
       <div
         className={`auth-container zoomin-element ${isSignIn ? "" : "active"}`}
       >

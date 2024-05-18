@@ -3,15 +3,11 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import "./PageHeader.css";
 
-const PageHeader = ({ backgroundImage, title, focus }) => {
+const PageHeader = ({ BgImg, title, focus }) => {
   return (
     <div className="page-header">
       <div className="page-header-overlay"></div>
-      <img
-        className="page-header-image"
-        src={backgroundImage}
-        alt="Background"
-      />
+      <img className="page-header-image" src={BgImg} alt="Background" />
       <div className="page-header-titles">
         <div className="page-header-title">{title}</div>
         <div className="page-header-subtitle">
@@ -29,7 +25,7 @@ const PageHeader = ({ backgroundImage, title, focus }) => {
 PageHeader.propTypes = {
   title: PropTypes.string.isRequired,
   focus: PropTypes.string.isRequired,
-  backgroundImage: PropTypes.string.isRequired,
+  BgImg: PropTypes.string.isRequired,
 };
 
 export default PageHeader;

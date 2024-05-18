@@ -68,7 +68,7 @@ const ThematicAreas = () => {
     <>
       <Navbar />
       <PageHeader
-        backgroundImage={data[0].BgImg}
+        BgImg={data[0].BgImg}
         title={data[0].title}
         focus={data[0].focus}
       />
@@ -76,42 +76,42 @@ const ThematicAreas = () => {
       <Summery />
 
       <Headings
-        backgroundImage={data[1].BgImg}
+        BgImg={data[1].BgImg}
         title={data[1].title}
         focus={data[1].focus}
       />
       <Content activities={data[1].activities} />
 
       <Headings
-        backgroundImage={data[2].BgImg}
+        BgImg={data[2].BgImg}
         title={data[2].title}
         focus={data[2].focus}
       />
       <Content activities={data[2].activities} />
 
       <Headings
-        backgroundImage={data[3].BgImg}
+        BgImg={data[3].BgImg}
         title={data[3].title}
         focus={data[3].focus}
       />
       <Content activities={data[3].activities} />
 
       <Headings
-        backgroundImage={data[4].BgImg}
+        BgImg={data[4].BgImg}
         title={data[4].title}
         focus={data[4].focus}
       />
       <Content activities={data[4].activities} />
 
       <Headings
-        backgroundImage={data[5].BgImg}
+        BgImg={data[5].BgImg}
         title={data[5].title}
         focus={data[5].focus}
       />
       <Content activities={data[5].activities} />
 
       <Headings
-        backgroundImage={data[6].BgImg}
+        BgImg={data[6].BgImg}
         title={data[6].title}
         focus={data[6].focus}
       />

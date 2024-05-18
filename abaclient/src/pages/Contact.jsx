@@ -1,17 +1,16 @@
-import BackgroundImage from "../assets/image3.png";
-import Contact from "../Components/Contact/Contact";
-import Footer from "../Components/Footer/Footer";
 import Navbar from "../Components/Navbar/Navbar";
 import PageHeader from "../Components/PageHeader/PageHeader";
-import Title from "../Components/Title/Title";
-import InlineContact from "../Components/Contact/InlineContact";
 import ContactInfo from "../Components/Contact/ContactInfo";
+import InlineContact from "../Components/Contact/InlineContact";
+import Title from "../Components/Title/Title";
+import Contact from "../Components/Contact/Contact";
+import Footer from "../Components/Footer/Footer";
 
 const ContactPage = () => {
   const data = [
     {
       BgImg:
-        "https://images.pexels.com/photos/33153/raisting-sattelit-reception-signal.jpg?auto=compress&cs=tinysrgb&w=100dvw&h=100dvh&fit=crop&dpr=2",
+        "https://images.pexels.com/photos/220769/pexels-photo-220769.jpeg?auto=compress&cs=tinysrgb&w=100dvh&h=100dvh&fit=crop&crop=entropy&ar=2:1&fm=jpg",
       title: "Contact Us",
       focus: "Get in Touch",
     },
@@ -21,7 +20,7 @@ const ContactPage = () => {
     <>
       <Navbar />
       <PageHeader
-        backgroundImage={data[0].BgImg}
+        BgImg={data[0].BgImg}
         title={data[0].title}
         focus={data[0].focus}
       />
@@ -30,7 +29,7 @@ const ContactPage = () => {
 
       <InlineContact />
 
-      <Title title="Contact Us" subtitle="Get in Touch" />
+      <Title title={data[0].title} subtitle={data[0].focus} />
       <Contact />
       <Footer />
     </>
