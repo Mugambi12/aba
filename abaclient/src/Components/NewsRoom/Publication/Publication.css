@@ -13,7 +13,7 @@
 
 .publication-item {
   flex: 1 1 calc(31% - 20px);
-  max-width: 33%;
+  max-width: 33.33%;
   box-sizing: border-box;
   padding: 15px;
   border: 1px solid #d1d9e6;
@@ -79,7 +79,7 @@
 .publication-buttons {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 15px;
   margin-top: 15px;
 }
 
@@ -88,7 +88,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5px;
+  gap: 10px;
   flex: 1;
   padding: 10px 20px;
   border: 1px solid #ccc;
@@ -143,4 +143,10 @@
 .pagination-btn:hover:not(:disabled) {
   background: #80bdff;
   color: #fff;
+}
+
+.ellipsis {
+  padding: 10px 15px;
+  font-size: 14px;
+  color: #333;
 }

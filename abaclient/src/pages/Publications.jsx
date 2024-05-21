@@ -62,6 +62,278 @@ const Publications = () => {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nulla nec mi vehicula ultricies",
       title: "Publication 6",
     },
+    {
+      authors: "Jane Doe",
+      date: "2021-11-30",
+      file: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      summary:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nulla nec mi vehicula ultricies",
+      title: "Publication 7",
+    },
+    {
+      authors: "Jane Doe",
+      date: "2021-11-30",
+      file: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      summary:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nulla nec mi vehicula ultricies",
+      title: "Publication 8",
+    },
+    {
+      authors: "Jane Doe",
+      date: "2021-11-30",
+      file: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      summary:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nulla nec mi vehicula ultricies",
+      title: "Publication 9",
+    },
+    {
+      authors: "Jane Doe",
+      date: "2021-11-30",
+      file: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      summary:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nulla nec mi vehicula ultricies",
+      title: "Publication 10",
+    },
+    {
+      authors: "Jane Doe",
+      date: "2021-11-30",
+      file: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      summary:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nulla nec mi vehicula ultricies",
+      title: "Publication 11",
+    },
+    {
+      authors: "Jane Doe",
+      date: "2021-11-30",
+      file: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      summary:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nulla nec mi vehicula ultricies",
+      title: "Publication 12",
+    },
+    {
+      authors: "Jane Doe",
+      date: "2021-11-30",
+      file: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      summary:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nulla nec mi vehicula ultricies",
+      title: "Publication 13",
+    },
+    {
+      authors: "Jane Doe",
+      date: "2021-11-30",
+      file: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      summary:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nulla nec mi vehicula ultricies",
+      title: "Publication 14",
+    },
+    {
+      authors: "Jane Doe",
+      date: "2021-11-30",
+      file: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      summary:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nulla nec mi vehicula ultricies",
+      title: "Publication 15",
+    },
+    {
+      authors: "Jane Doe",
+      date: "2021-11-30",
+      file: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      summary:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nulla nec mi vehicula ultricies",
+      title: "Publication 16",
+    },
+    {
+      authors: "Jane Doe",
+      date: "2021-11-30",
+      file: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      summary:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nulla nec mi vehicula ultricies",
+      title: "Publication 17",
+    },
+    {
+      authors: "Jane Doe",
+      date: "2021-11-30",
+      file: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      summary:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nulla nec mi vehicula ultricies",
+      title: "Publication 18",
+    },
+    {
+      authors: "Jane Doe",
+      date: "2021-11-30",
+      file: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      summary:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nulla nec mi vehicula ultricies",
+      title: "Publication 19",
+    },
+    {
+      authors: "Jane Doe",
+      date: "2021-11-30",
+      file: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      summary:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nulla nec mi vehicula ultricies",
+      title: "Publication 20",
+    },
+    {
+      authors: "John Doe",
+      date: "2021-09-01",
+      file: "/src/assets/image1.png",
+      summary:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nulla nec mi vehicula ultricies",
+      title: "Publication 1",
+    },
+    {
+      authors: "Jane Doe",
+      date: "2021-11-09",
+      file: "https://drive.google.com/file/d/1QZ7RGqmoSoeIIt4MpJqyYIZFyCwBH_CO/view?usp=sharing",
+      summary:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nulla nec mi vehicula ultricies",
+      title: "Publication 2",
+    },
+    {
+      authors: "John Doe",
+      date: "2021-11-15",
+      file: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      summary:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nulla nec mi vehicula ultricies",
+      title: "Publication 3",
+    },
+    {
+      authors: "Jane Doe",
+      date: "2021-11-20",
+      file: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      summary:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nulla nec mi vehicula ultricies",
+      title: "Publication 4",
+    },
+    {
+      authors: "John Doe",
+      date: "2021-11-25",
+      file: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      summary:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nulla nec mi vehicula ultricies",
+      title: "Publication 5",
+    },
+    {
+      authors: "Jane Doe",
+      date: "2021-11-30",
+      file: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      summary:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nulla nec mi vehicula ultricies",
+      title: "Publication 6",
+    },
+    {
+      authors: "Jane Doe",
+      date: "2021-11-30",
+      file: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      summary:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nulla nec mi vehicula ultricies",
+      title: "Publication 7",
+    },
+    {
+      authors: "Jane Doe",
+      date: "2021-11-30",
+      file: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      summary:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nulla nec mi vehicula ultricies",
+      title: "Publication 8",
+    },
+    {
+      authors: "Jane Doe",
+      date: "2021-11-30",
+      file: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      summary:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nulla nec mi vehicula ultricies",
+      title: "Publication 9",
+    },
+    {
+      authors: "Jane Doe",
+      date: "2021-11-30",
+      file: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      summary:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nulla nec mi vehicula ultricies",
+      title: "Publication 10",
+    },
+    {
+      authors: "Jane Doe",
+      date: "2021-11-30",
+      file: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      summary:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nulla nec mi vehicula ultricies",
+      title: "Publication 11",
+    },
+    {
+      authors: "Jane Doe",
+      date: "2021-11-30",
+      file: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      summary:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nulla nec mi vehicula ultricies",
+      title: "Publication 12",
+    },
+    {
+      authors: "Jane Doe",
+      date: "2021-11-30",
+      file: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      summary:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nulla nec mi vehicula ultricies",
+      title: "Publication 13",
+    },
+    {
+      authors: "Jane Doe",
+      date: "2021-11-30",
+      file: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      summary:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nulla nec mi vehicula ultricies",
+      title: "Publication 14",
+    },
+    {
+      authors: "Jane Doe",
+      date: "2021-11-30",
+      file: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      summary:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nulla nec mi vehicula ultricies",
+      title: "Publication 15",
+    },
+    {
+      authors: "Jane Doe",
+      date: "2021-11-30",
+      file: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      summary:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nulla nec mi vehicula ultricies",
+      title: "Publication 16",
+    },
+    {
+      authors: "Jane Doe",
+      date: "2021-11-30",
+      file: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      summary:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nulla nec mi vehicula ultricies",
+      title: "Publication 17",
+    },
+    {
+      authors: "Jane Doe",
+      date: "2021-11-30",
+      file: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      summary:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nulla nec mi vehicula ultricies",
+      title: "Publication 18",
+    },
+    {
+      authors: "Jane Doe",
+      date: "2021-11-30",
+      file: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      summary:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nulla nec mi vehicula ultricies",
+      title: "Publication 19",
+    },
+    {
+      authors: "Jane Doe",
+      date: "2021-11-30",
+      file: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      summary:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nulla nec mi vehicula ultricies",
+      title: "Publication 20",
+    },
   ];
 
   return (
