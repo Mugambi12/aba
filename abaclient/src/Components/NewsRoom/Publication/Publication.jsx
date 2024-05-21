@@ -1,6 +1,7 @@
-import React, { useState } from "react";
 import "./Publication.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import React, { useState } from "react";
+import Pagination from "../../Pagination/Pagination";
 
 const Publication = ({ publicationData }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -42,67 +43,11 @@ const Publication = ({ publicationData }) => {
   };
 
   const goToPage = (page) => setCurrentPage(page);
-
-  const renderPaginationButtons = () => {
-    const buttons = [];
-    const maxButtonsToShow = 5;
-
-    if (totalPages <= maxButtonsToShow) {
-      for (let i = 1; i <= totalPages; i++) {
-        buttons.push(
-          <button
-            key={i}
-            className={`pagination-btn ${currentPage === i ? "active" : ""}`}
-            onClick={() => goToPage(i)}
-          >
-            {i}
-          </button>
-        );
-      }
-    } else {
-      const startPage =
-        currentPage <= Math.floor(maxButtonsToShow / 2)
-          ? 1
-          : Math.min(
-              currentPage - Math.floor(maxButtonsToShow / 2),
-              totalPages - maxButtonsToShow + 1
-            );
-      const endPage =
-        startPage + maxButtonsToShow - 1 <= totalPages
-          ? startPage + maxButtonsToShow - 1
-          : totalPages;
-
-      if (startPage > 1) {
-        buttons.push(
-          <span key="start-ellipsis" className="ellipsis">
-            <i className="fas fa-ellipsis"></i>
-          </span>
-        );
-      }
-
-      for (let i = startPage; i <= endPage; i++) {
-        buttons.push(
-          <button
-            key={i}
-            className={`pagination-btn ${currentPage === i ? "active" : ""}`}
-            onClick={() => goToPage(i)}
-          >
-            {i}
-          </button>
-        );
-      }
-
-      if (endPage < totalPages) {
-        buttons.push(
-          <span key="end-ellipsis" className="ellipsis">
-            <i className="fas fa-ellipsis"></i>
-          </span>
-        );
-      }
-    }
-
-    return buttons;
-  };
+  const onNextPage = () =>
+    setCurrentPage((prev) => Math.min(prev + 1, totalPages));
+  const onPrevPage = () => setCurrentPage((prev) => Math.max(prev - 1, 1));
+  const onFirstPage = () => setCurrentPage(1);
+  const onLastPage = () => setCurrentPage(totalPages);
 
   return (
     <div className="publications-container">
@@ -148,37 +93,15 @@ const Publication = ({ publicationData }) => {
         ))}
       </div>
 
-      <div className="publication-pagination">
-        <button
-          className="pagination-btn"
-          onClick={() => goToPage(1)}
-          disabled={currentPage === 1}
-        >
-          <i className="fas fa-angle-double-left"></i>
-        </button>
-        <button
-          className="pagination-btn"
-          onClick={() => goToPage(currentPage - 1)}
-          disabled={currentPage === 1}
-        >
-          <i className="fas fa-chevron-left"></i>
-        </button>
-        {renderPaginationButtons()}
-        <button
-          className="pagination-btn"
-          onClick={() => goToPage(currentPage + 1)}
-          disabled={currentPage === totalPages}
-        >
-          <i className="fas fa-chevron-right"></i>
-        </button>
-        <button
-          className="pagination-btn"
-          onClick={() => goToPage(totalPages)}
-          disabled={currentPage === totalPages}
-        >
-          <i className="fas fa-angle-double-right"></i>
-        </button>
-      </div>
+      <Pagination
+        totalPages={totalPages}
+        currentPage={currentPage}
+        onPageChange={goToPage}
+        onNextPage={onNextPage}
+        onPrevPage={onPrevPage}
+        onFirstPage={onFirstPage}
+        onLastPage={onLastPage}
+      />
     </div>
   );
 };
