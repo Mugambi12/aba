@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Publication.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const Publication = ({ publicationData }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -97,14 +98,14 @@ const Publication = ({ publicationData }) => {
           onClick={goToFirstPage}
           disabled={currentPage === 1}
         >
-          First
+          <i className="fas fa-angle-double-left"></i>
         </button>
         <button
           className="pagination-btn"
           onClick={goToPrevPage}
           disabled={currentPage === 1}
         >
-          Prev
+          <i className="fas fa-chevron-left"></i>
         </button>
         {[...Array(totalPages)].map((_, index) => (
           <button
@@ -122,14 +123,14 @@ const Publication = ({ publicationData }) => {
           onClick={goToNextPage}
           disabled={currentPage === totalPages}
         >
-          Next
+          <i className="fas fa-chevron-right"></i>
         </button>
         <button
           className="pagination-btn"
           onClick={goToLastPage}
           disabled={currentPage === totalPages}
         >
-          Last
+          <i className="fas fa-angle-double-right"></i>
         </button>
       </div>
     </div>
