@@ -82,14 +82,14 @@
   gap: 1.75rem;
 }
 
-.main-nav__menu a {
+.main-nav__menu .main-nav__menu_link {
   padding: 0.5rem 0;
   color: gainsboro;
   font-weight: 400;
   transition: color 0.175s ease-in-out, border-bottom 0.175s ease-in-out;
 }
 
-.main-nav__menu a:hover {
+.main-nav__menu .main-nav__menu_link:hover {
   color: salmon;
   border-bottom: 0.1875rem solid salmon;
 }
@@ -124,11 +124,11 @@
   padding-top: 5rem;
 }
 
-.main-nav.sticky .main-nav__menu a {
+.main-nav.sticky .main-nav__menu .main-nav__menu_link {
   color: #000f38;
 }
 
-.main-nav.sticky .main-nav__menu a:hover {
+.main-nav.sticky .main-nav__menu .main-nav__menu_link:hover {
   color: salmon;
 }
 
@@ -148,20 +148,21 @@
 
 /* Dropdown Menu Styling */
 .dropdown-menu {
+  display: none;
   position: absolute;
+  padding: 0.8rem;
   top: calc(100% + 0.65rem);
   left: 0;
-  display: none;
+  width: auto;
+  min-width: 10rem;
+  max-width: 30rem;
+  box-sizing: border-box;
   flex-direction: column;
   background: whitesmoke;
   border-radius: 8px;
   box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
   z-index: 10;
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-  min-width: 10rem;
-  max-width: 30rem;
-  width: auto;
-  box-sizing: border-box;
 }
 
 .main-nav__menu li {
@@ -175,11 +176,11 @@
 }
 
 .dropdown-menu__item {
-  padding: 0rem 1rem;
-  font-size: 0.9rem;
+  padding-block: 0.3rem;
+  font-size: 1rem;
 }
 
-.dropdown-menu__item a {
+.dropdown-menu__item .dropdown-menu__item_link {
   display: block;
   width: 100%;
   color: gray;
@@ -188,7 +189,7 @@
   white-space: nowrap;
 }
 
-.dropdown-menu__item a:hover {
+.dropdown-menu__item .dropdown-menu__item_link:hover {
   color: salmon;
   border-bottom: none;
 }

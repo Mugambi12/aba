@@ -17,7 +17,7 @@ table {
 
 /* Table header styles */
 thead {
-  background-color: #f2f2f2;
+  background: #f2f2f2;
 }
 
 th,
@@ -28,7 +28,7 @@ td {
 
 /* Alternate row colors for better readability */
 tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
+  background: #f9f9f9;
 }
 
 table .table-button {

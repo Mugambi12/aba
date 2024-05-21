@@ -87,51 +87,81 @@ const Navbar = ({ videoPlayerState }) => {
           </div>
           <ul className="main-nav__menu">
             <li>
-              <a href="/">Home</a>
+              <a className="main-nav__menu_link" href="/">
+                Home
+              </a>
             </li>
             <li>
-              <a href="/our-story">Our Story</a>
+              <a className="main-nav__menu_link" href="/our-story">
+                Our Story
+              </a>
             </li>
             <li>
-              <a href="/our-campaign">Our Campaign</a>
+              <a className="main-nav__menu_link" href="/our-campaign">
+                Our Campaign
+              </a>
             </li>
             <li>
-              <a href="/thematic-areas">Thematic Areas</a>
+              <a className="main-nav__menu_link" href="/thematic-areas">
+                Thematic Areas
+              </a>
               <ul className="dropdown-menu">
                 <li className="dropdown-menu__item">
-                  <a href="#!">Habitat Preservation and Restoration</a>
+                  <a className="dropdown-menu__item_link" href="#!">
+                    Habitat Preservation and Restoration
+                  </a>
                 </li>
                 <li className="dropdown-menu__item">
-                  <a href="#!">Species Conservation</a>
+                  <a className="dropdown-menu__item_link" href="#!">
+                    Species Conservation
+                  </a>
                 </li>
                 <li className="dropdown-menu__item">
-                  <a href="#!">Community Engagement and Education</a>
+                  <a className="dropdown-menu__item_link" href="#!">
+                    Community Engagement and Education
+                  </a>
                 </li>
                 <li className="dropdown-menu__item">
-                  <a href="#!">Climate Change Mitigation and Adaptation</a>
+                  <a className="dropdown-menu__item_link" href="#!">
+                    Climate Change Mitigation and Adaptation
+                  </a>
                 </li>
                 <li className="dropdown-menu__item">
-                  <a href="#!">Sustainable Use of Natural Resources</a>
+                  <a className="dropdown-menu__item_link" href="#!">
+                    Sustainable Use of Natural Resources
+                  </a>
                 </li>
                 <li className="dropdown-menu__item">
-                  <a href="#!">Policy Advocacy and Governance</a>
+                  <a className="dropdown-menu__item_link" href="#!">
+                    Policy Advocacy and Governance
+                  </a>
                 </li>
               </ul>
             </li>
             <li>
-              <a href="/our-impact">Our Impact</a>
+              <a className="main-nav__menu_link" href="/our-impact">
+                Our Impact
+              </a>
             </li>
             <li>
-              <a href="/newsroom">News & Publications</a>
+              <a className="main-nav__menu_link" href="/newsroom">
+                News & Publications
+              </a>
               <ul className="dropdown-menu">
                 <li className="dropdown-menu__item">
-                  <a href="#!">Newsroom</a>
+                  <a className="dropdown-menu__item_link" href="/newsroom">
+                    Newsroom
+                  </a>
                 </li>
                 <li className="dropdown-menu__item">
-                  <a href="#!">Single News</a>
+                  <a className="dropdown-menu__item_link" href="/news-post">
+                    Single News
+                  </a>
                 </li>
                 <li className="dropdown-menu__item">
-                  <a href="#!">Publications</a>
+                  <a className="dropdown-menu__item_link" href="/publications">
+                    Publications
+                  </a>
                 </li>
               </ul>
             </li>

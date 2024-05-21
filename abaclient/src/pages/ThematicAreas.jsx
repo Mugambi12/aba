@@ -6,13 +6,13 @@ import Headings from "../Components/ThematicAreas/Headings";
 import Content from "../Components/ThematicAreas/Content";
 
 const ThematicAreas = () => {
+  const headerData = {
+    title: "Thematic Areas",
+    focus: "Our Focus",
+    BgImg:
+      "https://images.pexels.com/photos/4642453/pexels-photo-4642453.jpeg?auto=compress&cs=tinysrgb&w=100dvh&h=100dvh",
+  };
   const data = [
-    {
-      title: "Thematic Areas",
-      focus: "Our Focus",
-      BgImg:
-        "https://images.pexels.com/photos/4642453/pexels-photo-4642453.jpeg?auto=compress&cs=tinysrgb&w=100dvh&h=100dvh&fit=crop&crop=entropy&ar=2:1&fm=jpg",
-    },
     {
       title: "Habitat Preservation and Restoration",
       focus:
@@ -67,13 +67,16 @@ const ThematicAreas = () => {
   return (
     <>
       <Navbar />
-      <PageHeader
+      <PageHeader headerData={headerData} />
+
+      <Summery />
+
+      <Headings
         BgImg={data[0].BgImg}
         title={data[0].title}
         focus={data[0].focus}
       />
-
-      <Summery />
+      <Content activities={data[0].activities} />
 
       <Headings
         BgImg={data[1].BgImg}
@@ -109,13 +112,6 @@ const ThematicAreas = () => {
         focus={data[5].focus}
       />
       <Content activities={data[5].activities} />
-
-      <Headings
-        BgImg={data[6].BgImg}
-        title={data[6].title}
-        focus={data[6].focus}
-      />
-      <Content activities={data[6].activities} />
 
       <Footer />
     </>

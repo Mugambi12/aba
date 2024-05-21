@@ -7,29 +7,23 @@ import Contact from "../Components/Contact/Contact";
 import Footer from "../Components/Footer/Footer";
 
 const ContactPage = () => {
-  const data = [
-    {
-      BgImg:
-        "https://images.pexels.com/photos/5529604/pexels-photo-5529604.jpeg?auto=compress&cs=tinysrgb&w=100dvh&h=100dvh&fit=crop&crop=entropy&ar=4:3&fm=jpg",
-      title: "Contact Us",
-      focus: "Get in Touch",
-    },
-  ];
+  const headerData = {
+    BgImg:
+      "https://images.pexels.com/photos/798/bench-people-smartphone-sun.jpg?auto=compress&cs=tinysrgb&w=100dvh&h=100dvh",
+    title: "Contact Us",
+    focus: "Get in Touch",
+  };
 
   return (
     <>
       <Navbar />
-      <PageHeader
-        BgImg={data[0].BgImg}
-        title={data[0].title}
-        focus={data[0].focus}
-      />
+      <PageHeader headerData={headerData} />
 
       <ContactInfo />
 
       <InlineContact />
 
-      <Title title={data[0].title} subtitle={data[0].focus} />
+      <Title title={headerData.title} subtitle={headerData.focus} />
       <Contact />
       <Footer />
     </>
