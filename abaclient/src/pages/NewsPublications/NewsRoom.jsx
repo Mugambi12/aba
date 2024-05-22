@@ -1,9 +1,9 @@
-import Navbar from "../Components/Navbar/Navbar";
-import PageHeader from "../Components/PageHeader/PageHeader";
-import News from "../Components/NewsRoom/NewsRoom/NewsRoom";
-import Sidebar from "../Components/NewsRoom/Sidebar/Sidebar";
-import Media from "../Components/NewsRoom/Media/Media";
-import Footer from "../Components/Footer/Footer";
+import Navbar from "../../Components/Navbar/Navbar";
+import PageHeader from "../../Components/PageHeader/PageHeader";
+import News from "../../Components/NewsRoom/NewsRoom/NewsRoom";
+import Sidebar from "../../Components/NewsRoom/Sidebar/Sidebar";
+import Media from "../../Components/NewsRoom/Media/Media";
+import Footer from "../../Components/Footer/Footer";
 
 const NewsRoomPage = () => {
   const headerData = {

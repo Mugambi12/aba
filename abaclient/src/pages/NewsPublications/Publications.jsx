@@ -1,9 +1,9 @@
 import React from "react";
-import Navbar from "../Components/Navbar/Navbar";
-import PageHeader from "../Components/PageHeader/PageHeader";
-import Publication from "../Components/NewsRoom/Publication/Publication";
-import Title from "../Components/Title/Title";
-import Footer from "../Components/Footer/Footer";
+import Navbar from "../../Components/Navbar/Navbar";
+import PageHeader from "../../Components/PageHeader/PageHeader";
+import Publication from "../../Components/NewsRoom/Publication/Publication";
+import Title from "../../Components/Title/Title";
+import Footer from "../../Components/Footer/Footer";
 
 const Publications = () => {
   const headerData = {

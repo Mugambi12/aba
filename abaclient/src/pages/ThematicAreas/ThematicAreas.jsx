@@ -1,9 +1,9 @@
-import Navbar from "../Components/Navbar/Navbar";
-import Footer from "../Components/Footer/Footer";
-import PageHeader from "../Components/PageHeader/PageHeader";
-import Summery from "../Components/ThematicAreas/Summery";
-import Headings from "../Components/ThematicAreas/Headings";
-import Content from "../Components/ThematicAreas/Content";
+import Navbar from "../../Components/Navbar/Navbar";
+import Footer from "../../Components/Footer/Footer";
+import PageHeader from "../../Components/PageHeader/PageHeader";
+import Summery from "../../Components/ThematicAreas/Summery";
+import Headings from "../../Components/ThematicAreas/Headings";
+import Content from "../../Components/ThematicAreas/Content";
 
 const ThematicAreas = () => {
   const headerData = {

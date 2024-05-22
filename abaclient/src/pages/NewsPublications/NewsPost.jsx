@@ -1,7 +1,7 @@
-import Navbar from "../Components/Navbar/Navbar";
-import PageHeader from "../Components/PageHeader/PageHeader";
-import NewsArticle from "../Components/NewsRoom/NewsPost/NewsArticle";
-import Footer from "../Components/Footer/Footer";
+import Navbar from "../../Components/Navbar/Navbar";
+import PageHeader from "../../Components/PageHeader/PageHeader";
+import NewsArticle from "../../Components/NewsRoom/NewsPost/NewsArticle";
+import Footer from "../../Components/Footer/Footer";
 
 const NewsPost = () => {
   const headerData = {

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { fetchDocsData } from "../dataHandlers/getDocsApi";
+import { fetchDocsData } from "../../dataHandlers/getDocsApi";
 
 function ApiDocumentation() {
   const [docsData, setDocsData] = useState(null);

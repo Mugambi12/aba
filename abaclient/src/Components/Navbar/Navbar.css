@@ -2,9 +2,7 @@
 .navbar {
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #212529;
+  color: rgb(0 45 49);
   z-index: 10;
   width: 100%;
   position: relative;
@@ -14,7 +12,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 2.5%;
+  padding: 0.25rem 2.5%;
   background: salmon;
   font-size: 14px;
 }
@@ -25,13 +23,12 @@
   display: flex;
   gap: 1rem;
   align-items: center;
-  color: #333;
 }
 
 .header-top__social-links li a,
 .header-top__social-links li i {
-  color: white;
-  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  color: rgb(0 45 49);
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .header-top__social-links li a:hover,
@@ -41,19 +38,19 @@
 }
 
 .header-top__join-button span {
-  padding: 0.3rem 1rem;
+  padding: 0.175rem 1rem;
   margin-inline-start: 1rem;
   border-radius: 50px;
   background: transparent;
-  color: #000f38;
+  color: whitesmoke;
   border: none;
   cursor: pointer;
-  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .header-top__join-button span:hover {
-  background: #000f38;
-  color: #ffffff;
+  background: rgb(0 45 49);
+  color: whitesmoke;
 }
 
 /* Navbar Styling */
@@ -61,8 +58,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: white;
-  backdrop-filter: blur(2px);
+  color: black;
+  background: transparent;
   padding: 0rem 5%;
   transition: background 0.3s ease;
 }
@@ -85,8 +82,9 @@
 .main-nav__menu .main-nav__menu_link {
   padding: 0.5rem 0;
   color: gainsboro;
+  font-size: 1.1rem;
   font-weight: 400;
-  transition: color 0.175s ease-in-out, border-bottom 0.175s ease-in-out;
+  transition: color 0.175s ease, border-bottom 0.175s ease;
 }
 
 .main-nav__menu .main-nav__menu_link:hover {
@@ -99,7 +97,7 @@
   padding: 0.375rem 1.5rem;
   background: #f0f0f0;
   color: #262626;
-  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .main-nav__contact:hover {
@@ -112,7 +110,6 @@
   top: 0;
   left: 0;
   right: 0;
-  margin: 0;
   padding: 0.5rem 5%;
   background: whitesmoke;
   border-bottom: 2px solid salmon;
@@ -120,16 +117,8 @@
   transition: background 0.3s ease, color 0.3s ease;
 }
 
-.main-nav.sticky + .page-header {
-  padding-top: 5rem;
-}
-
 .main-nav.sticky .main-nav__menu .main-nav__menu_link {
   color: #000f38;
-}
-
-.main-nav.sticky .main-nav__menu .main-nav__menu_link:hover {
-  color: salmon;
 }
 
 .main-nav.sticky .main-nav__contact {
@@ -150,52 +139,63 @@
 .dropdown-menu {
   display: none;
   position: absolute;
-  padding: 0.8rem;
   top: calc(100% + 0.65rem);
-  left: 0;
+  left: -2rem;
   width: auto;
-  min-width: 10rem;
+  min-width: 12rem;
   max-width: 30rem;
-  box-sizing: border-box;
-  flex-direction: column;
+  padding: 0.8rem;
   background: whitesmoke;
   border-radius: 8px;
   box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s ease, transform 0.3s ease;
   z-index: 10;
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  opacity: 0;
+  transform: translateY(-8px);
 }
 
 .main-nav__menu li {
   position: relative;
 }
 
-.main-nav__menu li:hover .dropdown-menu {
-  display: flex;
+.main-nav__menu li:hover > .dropdown-menu {
+  display: block;
   opacity: 1;
   transform: translateY(0);
 }
 
 .dropdown-menu__item {
-  padding-block: 0.3rem;
-  font-size: 1rem;
+  position: relative;
 }
 
-.dropdown-menu__item .dropdown-menu__item_link {
+.dropdown-menu__item_link {
   display: block;
-  width: 100%;
-  color: gray;
-  text-decoration: none;
-  transition: color 0.3s ease-in-out;
-  white-space: nowrap;
+  padding: 0.5rem;
+  color: black;
+  font-weight: 500;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-.dropdown-menu__item .dropdown-menu__item_link:hover {
-  color: salmon;
-  border-bottom: none;
+.dropdown-menu__item_link:hover {
+  background: #000f38;
+  color: whitesmoke;
+  border-radius: 8px;
 }
 
-/* Additional CSS for smoother transitions */
-.main-nav .dropdown-menu {
-  opacity: 0;
-  transform: translateY(-8px);
+.dropdown-menu .dropdown-menu {
+  left: 100%;
+  top: 0;
+  transform: translateX(8px);
+  z-index: 10;
+}
+
+.dropdown-menu__item:hover > .dropdown-menu {
+  display: block;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Hiding header on sticky nav */
+.hide-on-sticky {
+  display: none;
 }

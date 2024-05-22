@@ -1,12 +1,12 @@
 import React from "react";
-import Navbar from "../Components/Navbar/Navbar";
-import Footer from "../Components/Footer/Footer";
-import InlineContact from "../Components/Contact/InlineContact";
-import PageHeader from "../Components/PageHeader/PageHeader";
-import CEOMessage from "../Components/OurStory/CEOMessage";
-import Contribution from "../Components/OurStory/Contribution";
-import Leadership from "../Components/OurStory/Leadership";
-import PurposeStatement from "../Components/OurStory/PurposeStatement";
+import Navbar from "../../Components/Navbar/Navbar";
+import Footer from "../../Components/Footer/Footer";
+import InlineContact from "../../Components/Contact/InlineContact";
+import PageHeader from "../../Components/PageHeader/PageHeader";
+import CEOMessage from "../../Components/OurStory/CEOMessage";
+import Contribution from "../../Components/OurStory/Contribution";
+import Leadership from "../../Components/OurStory/Leadership";
+import PurposeStatement from "../../Components/OurStory/PurposeStatement";
 
 const OurStory = () => {
   const headerData = {

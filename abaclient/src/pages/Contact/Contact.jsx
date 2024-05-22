@@ -1,10 +1,10 @@
-import Navbar from "../Components/Navbar/Navbar";
-import PageHeader from "../Components/PageHeader/PageHeader";
-import ContactInfo from "../Components/Contact/ContactInfo";
-import InlineContact from "../Components/Contact/InlineContact";
-import Title from "../Components/Title/Title";
-import Contact from "../Components/Contact/Contact";
-import Footer from "../Components/Footer/Footer";
+import Navbar from "../../Components/Navbar/Navbar";
+import PageHeader from "../../Components/PageHeader/PageHeader";
+import ContactInfo from "../../Components/Contact/ContactInfo";
+import InlineContact from "../../Components/Contact/InlineContact";
+import Title from "../../Components/Title/Title";
+import Contact from "../../Components/Contact/Contact";
+import Footer from "../../Components/Footer/Footer";
 
 const ContactPage = () => {
   const headerData = {
