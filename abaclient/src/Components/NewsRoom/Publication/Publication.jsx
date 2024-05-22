@@ -1,5 +1,3 @@
-import "./Publication.css";
-import "@fortawesome/fontawesome-free/css/all.min.css";
 import React, { useState } from "react";
 import Pagination from "../../Pagination/Pagination";
 
@@ -51,15 +49,15 @@ const Publication = ({ publicationData }) => {
 
   return (
     <div className="publications-container">
-      <div className="publications-items">
+      <ul className="publications-items">
         {currentPublications.map((publication, index) => (
-          <div key={index} className="publication-item">
-            <div className="publication-pdf">
-              <embed src={publication.file} type="application/pdf" />
-            </div>
+          <li key={index} className="publication-item">
             <div className="publication-info">
               <div className="publication-info-title">{publication.title}</div>
               <div className="publication-ownership">
+                <div className="publication-file-type">
+                  File type: {publication.type}.
+                </div>
                 <div className="publication-info-author">
                   Published by: {publication.authors}
                 </div>
@@ -70,28 +68,27 @@ const Publication = ({ publicationData }) => {
               <div className="publication-info-summary">
                 {publication.summary}
               </div>
-              <div className="publication-buttons">
-                <button
-                  className="download-btn"
-                  onClick={() => handleDownload(publication.file)}
-                >
-                  <span>Download</span>
-                  <i className="fas fa-download"></i>
-                </button>
-                <button
-                  className="share-btn"
-                  onClick={() =>
-                    handleShare(publication.title, window.location.href)
-                  }
-                >
-                  <span>Share</span>
-                  <i className="fas fa-share-alt"></i>
-                </button>
-              </div>
             </div>
-          </div>
+
+            <div className="publication-buttons">
+              <button
+                className="download-btn"
+                onClick={() => handleDownload(publication.file)}
+              >
+                <span>Download</span>
+              </button>
+              <button
+                className="share-btn"
+                onClick={() =>
+                  handleShare(publication.title, window.location.href)
+                }
+              >
+                <span>Share</span>
+              </button>
+            </div>
+          </li>
         ))}
-      </div>
+      </ul>
 
       <Pagination
         totalPages={totalPages}
