@@ -3,7 +3,7 @@ import Pagination from "../../Pagination/Pagination";
 
 const Publication = ({ publicationData }) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const publicationsPerPage = 3;
+  const publicationsPerPage = 5;
 
   const totalPages = Math.ceil(publicationData.length / publicationsPerPage);
   const indexOfLastPublication = currentPage * publicationsPerPage;
